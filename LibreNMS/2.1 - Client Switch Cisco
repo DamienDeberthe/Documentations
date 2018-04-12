@@ -1,0 +1,7 @@
+snmp-server location LOCALISATION
+snmp-server contact user@domain.com
+
+snmp-server community SNMP-COMMUNITY ro
+snmp-server host x.x.x.x traps version 2c SNMP-COMMUNITY  # x.x.x.x -> IP serveur LibreNMS
+
+snmp-server server
