@@ -1,4 +1,6 @@
-Let's Encrypt generate Wildcard (not tested) : 
+***** NOT TESTED *****
+
+Let's Encrypt generate Wildcard : 
 
 "
 git clone https://github.com/certbot/certbot
