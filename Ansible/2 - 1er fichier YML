@@ -1,0 +1,30 @@
+Le but d'Ansible est de pouvoir centraliser des actions automatiques à distance.
+Pour cela il va falloir crée des fichiers de types .yml.
+Ces fichiers vont contenir les instructions à réaliser à distance sur les machines.
+
+- Création dossier de configuration :
+Tous les fichiers d'automatisation seront dans ce dossier.
+# mkdir /etc/ansible/configurations
+
+- Présentation d'un fichier YML :
+# touch /etc/ansible/configurations/copy-file.yml
+
+!!! ATTENTION !!!
+La mise en page est importante et doit être respectée afin que l'instruction soit lue correctement
+
+Contenu du fichier yml :
+
+"
+# copy-file.yml
+---
+
+- hosts: all		#Il est possible de selectionner le,les hosts/groupes qui recevront les instructions
+  remote_user: root	#Droits
+
+  tasks:
+  - name: 1. Copy files			#Lors de l'execution de l'instruction, le nom apparaitra. Utilise pour connaitre l'avancé...
+    copy: src=/root/file1 dest=/tmp/	#Voici l'instruction. Ici copie un fichier "/root/file1" situé sur le serveur ansible vers les hosts dans le dossier "/tmp/"
+"
+
+- Execution de l'instruction :
+ansible-playbook /etc/ansible/configurations/copy-file.yml
