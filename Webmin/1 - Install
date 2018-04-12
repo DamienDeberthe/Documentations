@@ -1,0 +1,31 @@
+TUTO INSTALLATION WEBMIN
+
+
+-> Ajouter au fichier "/etc/apt/source.list":
+"
+deb http://download.webmin.com/download/repository sarge contrib
+deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
+"
+
+-> Executer la commande:
+# apt-get update
+
+-> Installation webmin:
+# apt-get install webmin
+
+-> Connexion interface graphique:
+https://[IP_serveur]:10000/
+
+-> Identifiants identique aux identifiants de machine
+
+-> Changer la langue:
+Menu à gauche
+Paramètres (icones de rouages)
+Language
+Cocher "Personal choice" et selectionner French (FR) UTF8
+Enregistrer
+
+
+---
+Source: 
+https://doc.ubuntu-fr.org/webmin
