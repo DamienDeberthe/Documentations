@@ -134,13 +134,3 @@ $config['nagios_plugins'] = "/usr/lib/nagios/plugins";
 
 - Verifier: /etc/cron.d/librenms
 */5 * * * * librenms /opt/librenms/check-services.php >> /dev/null 2>&1
-
-
---- AJOUTER HOST SUR INTERFACE WEB ---
-
-- Depuis l'interface web:
-
--> "Devices" ; "Add Device"
-
--> Hostname: Adresse IP ou nom DNS de la cible
-   Community: Nom de la communauté SNMP
