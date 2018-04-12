@@ -1,0 +1,20 @@
+Sur la machine cliente:
+
+nano /etc/rsyslog.conf
+
+-> UDP:
+*.* @[IP_srv_graylog]:5140;RSYSLOG_SyslogProtocol23Format
+
+-> TCP:
+*.* @@[IP_srv_graylog]:5140;RSYSLOG_SyslogProtocol23Format
+
+- Le numéro du port doit être aussi de 1024 pour avoir les permissions necessaire
+
+---
+Source: https://marketplace.graylog.org/addons/a47beb3b-0bd9-4792-a56a-33b27b567856
+
+
+Sur le serveur:
+Dans l'onglet "System/Inputs", selectionner "Input"
+Dans Select Input selectionner "Syslog TCP ou UDP" suivant le choix precedent -> Launch new input
+Selectionner le node : l'unique serveur installé, donner un titre et renseigner le bon port
