@@ -1,0 +1,122 @@
+SHOW:
+
+Information interface:
+sh interface fa0/0
+
+
+INTERFACE:
+
+Configuration d'une interface:
+interface fa0/0
+
+Adresse ip interface:
+ip address x.x.x.x y.y.y.y 	-> x=Adresse IP y=Masque de sous-réseau
+
+Configuration interface virtuelle: (Pour vlans)
+interface fa0/0.1
+encapsulation dot1Q z		-> z=Numéro ID du VLAN
+
+
+SERVEUR DHCP:
+
+Declaration du pool:
+ip dhcp pool AZERTY		-> AZERTY=Nom du pool
+
+Déclaration de la plage d'adresse ditribuées:
+network x.x.x.x y.y.y.y		-> x=Adresse réseau y=Masque de sous-réseau
+
+Exclusion d'adresse IP:
+ip dhcp excluded-address e.e.e.e a.a.a.a	-> e=Première adresse du range d'adresse IP à exclure
+						   a=Dernier adresse du range d'adresse IP à exclure
+Déclaration des options:
+default-routeur p.p.p.p		-> p=Adresse IP de la passerelle par défaut
+dns-server d.d.d.d		-> d=Adresse IP du serveur DNS
+domain-name abcde.com		-> abcde.com=Nom de domaine
+
+
+ROUTE STATIQUE:
+
+ip route d.d.d.d m.m.m.m p.p.p.p
+-> d= Réseau de destination
+-> m= Masque de sous-réseau
+-> p= Adresse IP de la passerelle
+
+
+RIP:
+
+Configuration de rip:
+routeur rip
+
+Version de rip:
+version 1|2
+
+Déclaration des réseaux:
+network x.x.x.x		-> x=Réseaux connectés aux interfaces, sans indiqué le masque donc octets à 0 pour indiquer le masque (exemple: 172.16.0.0 pour /16)
+
+Desactiver routes sommaire:
+no auto-summary
+
+Désactivation d'émission et de reception d'une interface:
+passive-interface fa0/0		-> Dans la logique port qui est branché derrière un réseau sans routeur
+
+Afficher en temps réel les informations sur le réseau:
+debug ip rip
+
+Redistribution route statique:
+redistribute static
+
+
+OSPF:
+
+Configuration de OSPF:
+routeur ospf NNN	-> Numéro de process
+
+Declaration des réseaux:
+network x.x.x.x	w.w.w.w area NUM	-> x=Réseaux connectés aux interfaces w=Wildcard	NUM=Numéro d'area, doit être la même pour communiquer
+
+Désactivation d'émission et de reception d'une interface:
+passive-interface fa0/0		-> Dans la logique port qui est branché derrière un réseau sans routeur
+
+
+NAT:
+
+Configuration de l'interface:
+ip nat inside|outside		-> Inside=Interface vers le réseau Privé  Outside:Interface vers le réseau Public
+
+Configuration access-list:
+access list AAA permit x.x.x.x y.y.y.y
+-> AAA=Numéro de l'access list
+-> x=Adresse IP du réseau privé y=Masque de sous-réseau inversé (0.0.0.255 pour /24)
+
+Translation d'adresse dynamique avec surcharge:
+ip nat inside source list AAA interface fa0/0 overload	->	AAA=Numéro de l'access list   fa0/0: Interface de sortie, IP publique
+
+Translation d'adresse statique (correspondance 1 à 1):
+ip nat inside source static SSS TTT		-> SSS=Adresse du LAN à translater	TTT=Adresse IP publique
+
+
+ACL:
+
+Access list standard:
+access-list 1 permit "reseau source" "wildcard"
+
+Access-list etendue:
+access-list 100 permit/any (IP/TCP/UDP/ICMP) "reseau source" "wildcard" "Destination avec wildcard" eq "numero de port"
+						any				any
+
+Affecter à un port:
+ip access-group 100 IN/OUT
+
+
+HSRP:
+
+HSRP permet la redondance en créant une VIP partagé entre 2 routeurs:
+interface fa0/0
+Attribution de la VIP avec un numéro de process. Le numéro doit être identique entre les 2 interfaces se partageant la VIP.
+(config-if) standby 10 ip x.x.x.x 	(utilise le même masque de sous-réseau que le réseau de l'interface)
+Surveillance de l'autre port du routeur:
+(config-if)standby 10 track fa0/1
+interface fa0/1
+Utilisant d'un autre numéro de process! :
+(config-if) standby 11 ip x.x.x.x
+(config-if) standby 11 track fa0/0

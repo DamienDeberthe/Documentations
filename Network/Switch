@@ -1,0 +1,89 @@
+IDENTIFICATION:
+
+Mot de passe du switch: (Le mot de passe est "cisco")
+line console 0
+password cisco
+login
+exit
+
+line vty 0 4
+password cisco
+login
+exit
+enable password cisco
+
+Mot de passe "enable": (Le mot de passe est "damien" et est crypté)
+enable secret damien
+
+SSH:
+hostname ROUTEUR
+ip domain-name DOMAIN.COM
+crypto key generate rsa modulus 1024
+ip shh version 2
+username DAMIEN privilege 15 secret PASSWORD
+
+line vty 0 15
+login local
+transport input ssh
+
+enable secret PASSWORD
+
+
+SHOW:
+
+Afficher données spanning tree:
+show spanning-tree vlan NNN	-> NNN=Numéro ID du VLAN
+
+
+INTERFACE:
+
+Configuration d'une interface:
+interface fa0/0
+
+Adresse ip interface:
+ip address x.x.x.x y.y.y.y 	-> x=Adresse IP y=Masque de sous-réseau
+
+Interface access: (1 seul VLAN)
+switchport mode access
+switch access vlan NNN 		-> NNN=Numéro ID du VLAN
+
+Interface trunk: (plusieurs VLANS)
+switport mode trunk
+switchport trunk allowed vlan MMM,NNN,OOO	-> MMM,NNN,OOO=Numéros ID des VLANS
+
+Interface trunk avec VLAN natif (la trame de ce VLAN ne sera pas tagué mais passera quand meme le trunk):
+switchport trunk native vlan NNN	-> NNN=Numéro ID du VLAN
+
+
+VLAN:
+
+Création et nom de VLAN:
+vlan NNN	-> NNN=Numéro ID du VLAN
+name azerty	-> azerty=Nom du VLAN
+
+Configuration du vlan:
+Interface vlan NNN	-> NNN=Numéro ID du VLAN
+
+VTP: (diffuse VLANS)
+
+Pour le switch serveur vtp:
+vtp mode serveur
+vtp domain XXX		-> XXX=Domaine utilisé entre les client/serveur
+vtp password YYY	-> YYY=Mot de passe identique entre client/serveur
+vtp version2
+(activer les liens vers les switchs client en trunk)
+
+Pour les clients VTP:
+vtp mode client
+vtp password...
+
+SPANNING TREE:
+
+Activer spanning tree:
+spanning-tree mode rapid-pvst
+
+Rendre commutateur maitre d'un VLAN:
+spanning-tree vlan NNN root primary	-> NNN=Numéro ID du VLAN
+
+Choisir la priorité:
+spanning-tree vlan NNN priority 4096(ou 4096*2, *3 ...)		-> NNN=Numéro ID du VLAN
