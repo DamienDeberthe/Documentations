@@ -1,0 +1,63 @@
+TUTO INSTRUCTIONS YML
+
+
+Comme vu precedemment il existe plusieurs instructions possibles, voici les plus courantes:
+
+
+---> PAQUETS
+
+-> Installation/Verification d'un paquet:
+- name: Install Apache
+  apt: name=apache2 state=present
+
+-> Installation/Verification de plusieurs paquets:
+- name: Installation paquets template
+  apt: name={{item}} state=present
+      with_items:
+       - sudo
+       - htop
+       - lynx
+
+
+---> SERVICES
+
+-> Lancer/Verifier qu'un service est enable:
+- name: Service Apache
+  service: name=apache2 state=running enabled=yes
+
+-> Restart un service
+service: name=apache2 state=restarted
+
+
+---> LANCER COMMANDE A DISTANCE
+
+-> Lancer une commande à distance avec l'attribut action:
+- name: Commande supprimer fichiers temporaire
+  action: command rm /tmp/file1
+
+-> Lancer une commande à distance avec le shell:
+- name: Commande supprimer fichiers temporaire
+  shell: /bin/rm -rf /tmp/*
+
+
+---> AJOUTER LIGNE DANS UN FICHIER DISTANT
+
+-> Ajouter une ligne à la fin du fichier
+- name: Ajouter une ligne dans le fichier /root/file2
+  lineinfile: dest=/root/file2 backup=yes line="Ajout de ligne fin"
+
+-> Ajouter une ligne avant une ligne:
+- name: Ajout de la ligne apres franck
+  lineinfile: dest=/root/file2 insertbefore="line2" line="line1"
+
+-> Ajouter une ligne après une ligne:
+- name: Ajout de la ligne apres
+  lineinfile: dest=/root/file2 insertafter="line2" line="line3"
+
+
+---> 
+
+
+
+Liste de tous les paramètres:
+http://docs.ansible.com/ansible/list_of_all_modules.html
