@@ -100,3 +100,13 @@ echo ${OSSTR}
 - mv distro /usr/bin/distro
 - chmod 755 /usr/bin/distro
 - /etc/init.d/snmpd restart
+
+
+--- AJOUTER HOST SUR INTERFACE WEB ---
+
+- Depuis l'interface web:
+
+-> "Devices" ; "Add Device"
+
+-> Hostname: Adresse IP ou nom DNS de la cible
+Community: Nom de la communauté SNMP
