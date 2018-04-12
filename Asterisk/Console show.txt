@@ -1,0 +1,10 @@
+A EXECUTER EN MODE CONSOLE D'ASTERISK
+
+- Affiche tous les numéros SIP, les utilisateurs, les adresses IP et le statut:
+sip show peers
+
+- Affiche des informations sur le numéro:
+sip show peer [Numéro]
+
+- Afficher les numéros inscrit dans la/les queue(s):
+queue show [Nom_Queue]
