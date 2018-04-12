@@ -1,0 +1,15 @@
+Let's Encrypt generate Wildcard (not tested) : 
+
+"
+git clone https://github.com/certbot/certbot
+cd certbot
+git checkout v0.22.0
+sudo ./certbot-auto --os-packages-only
+./tools/venv.sh
+source venv/bin/activate
+sudo ./certbot -d domain.com -d *.domain.com --manual --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory certonly
+"
+
+---
+Source :
+https://community.letsencrypt.org/t/certbot-0-22-0-release-with-acmev2-and-wildcard-support/55061/8
