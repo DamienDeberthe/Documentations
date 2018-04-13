@@ -7,6 +7,6 @@ Pour cela, il existe 2 types de sites possibles :
   <br/> URL pour y accéder : user.github.io
   
 * **Project Site : Nombre illimités.**
-  <br/>Créer un repository, par exemple : « *Project-Page* »
+  <br/>Créer un repository, par exemple : « *Project-Page* » et créer une branche nommée **gh-pages** qui contient le fichier index.html
+  <br/>L'URL pour y accéder sera : user.github.io/Project-Page
   
-  comme nom le nom du dossier appelé dans l’URL. Par exemple si le repository s’appelle : « Project-Page », alors pour accéder au site l’URL sera « github.io/Project-Page ». 
