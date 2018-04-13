@@ -11,5 +11,5 @@ Pour cela, il existe 2 types de sites possibles :
 * **Project Site : Nombre illimités.**
   <br/>Créer un repository, par exemple : « *Project-Page* » et créer une branche nommée **gh-pages** qui contient le fichier index.html.
   <br/>L'URL pour y accéder sera : user.github.io/Project-Page
-
+  <br/>**ATTENTION** : Le nom du dossier est sensible à la casse
 * BONUS : Pour customiser l'URL, nom de domaine, thèmes etc... Se rendre dans "Settings" du repository paragraphe "GitHub Pages"
