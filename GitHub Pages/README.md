@@ -9,6 +9,5 @@ Pour cela, il existe 2 types de sites possibles :
   <br/> URL pour y accéder : user.github.io
   
 * **Project Site : Nombre illimités.**
-  <br/>Créer un repository, par exemple : « *Project-Page* » et créer une branche nommée **gh-pages** qui contient le fichier index.html
+  <br/>Créer un repository, par exemple : « *Project-Page* » et créer une branche nommée **gh-pages** qui contient le fichier index.html.
   <br/>L'URL pour y accéder sera : user.github.io/Project-Page
-  
