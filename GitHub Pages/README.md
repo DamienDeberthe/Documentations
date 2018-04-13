@@ -1,3 +1,5 @@
+## GITHUB PAGES
+
 GITHUB permet de créer et hébergés des sites web dit statiques : HTML, CSS, JS… Pas de PHP et de base de données.
 
 Pour cela, il existe 2 types de sites possibles :
