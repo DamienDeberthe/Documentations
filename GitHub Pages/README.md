@@ -14,6 +14,6 @@ Pour cela, il existe 2 types de sites possibles :
   <br/>**ATTENTION** : Le nom du dossier est sensible à la casse
 * BONUS : Pour customiser l'URL, nom de domaine, thèmes etc... Se rendre dans "Settings" du repository paragraphe "GitHub Pages"
 
---
+--<br/>
 Sources: 
 https://learntocodewith.me/tutorials/github-pages/
