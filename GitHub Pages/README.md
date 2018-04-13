@@ -13,3 +13,7 @@ Pour cela, il existe 2 types de sites possibles :
   <br/>L'URL pour y accéder sera : user.github.io/Project-Page
   <br/>**ATTENTION** : Le nom du dossier est sensible à la casse
 * BONUS : Pour customiser l'URL, nom de domaine, thèmes etc... Se rendre dans "Settings" du repository paragraphe "GitHub Pages"
+
+--
+Sources: 
+https://learntocodewith.me/tutorials/github-pages/
