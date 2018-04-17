@@ -1,4 +1,5 @@
-## Utiliser Git sur Github
+Utiliser Git sur Github :
 
-* Copier un repository depuis Github :
-git clone https://github.com/DamienDeberthe/*.git **/dossier/sur/machine/Linux**
+- Copier un repository depuis Github :
+git clone https://github.com/DamienDeberthe/*.git /dossier/sur/machine/Linux
+
