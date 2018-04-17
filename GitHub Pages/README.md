@@ -26,6 +26,7 @@ https://learntocodewith.me/tutorials/github-pages/
 
 GITHUB permet l'hebergement mais aussi la mise en ligne de ces sites web avec son propre nom de domaine !
 
+### Project Site
 Pour cela il y a 2 étapes à suivre :
 
 * **Création du fichier CNAME dans le repository :**
