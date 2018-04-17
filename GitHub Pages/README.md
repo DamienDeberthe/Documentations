@@ -1,4 +1,4 @@
-## GITHUB PAGES CREATION
+## GITHUB PAGES - CREATION
 
 GITHUB permet de créer et hébergés des sites web dit statiques : HTML, CSS, JS… Pas de PHP et de base de données.
 
@@ -22,7 +22,7 @@ Sources:
 https://learntocodewith.me/tutorials/github-pages/
 
 
-## GITHUB PAGES DNS PUBLIC
+## GITHUB PAGES - DNS PUBLIC
 
 GITHUB permet l'hebergement mais aussi la mise en ligne de ces sites web avec son propre nom de domaine !
 
