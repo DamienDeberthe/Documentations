@@ -33,4 +33,4 @@ Pour cela il y a 2 étapes à suivre :
   <br/>Exemple : *github-pages.deberthe.fr*
   
 * **Création du CNAME sur le serveur DNS :**
-  <br/>Créer un enregistrement CNAME 
+  <br/>Créer un enregistrement CNAME pointant vers "user.github.io.". Github Pages s'occupe de faire la redirection vers le bon repository par le biais du fichier CNAME.
