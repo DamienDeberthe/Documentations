@@ -1,20 +1,22 @@
 Utiliser Git sur Github :
 
-Commandes d'affichages : 
+### Commande d'affichage ###
 Une fois dans un emplacement/dossier "gité".
 
 - Afficher le statut du repository :
 git status
 
-
+### Utilisation de Git ###
 
 - Copier un repository depuis Github :
 git clone https://github.com/DamienDeberthe/*.git /dossier/sur/machine/Linux
 
 Une fois le repository copié, le but est de crée/modifier/supprimer des codes/fichiers.
 
-1. git add <files_modifier>
+1. git add <files_ajout/modif/supp>
 2. git commit -m "ajout/modif/supp <file>"
 3. git push
 Username for 'https://github.com':
 Password for 'https://<user>@<domain>.com@github.com':
+
+Rien de plus compliqué !
