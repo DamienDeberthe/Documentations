@@ -1,5 +1,13 @@
 Utiliser Git sur Github :
 
+Commandes d'affichages : 
+Une fois dans un emplacement/dossier "gité".
+
+- Afficher le statut du repository :
+git status
+
+
+
 - Copier un repository depuis Github :
 git clone https://github.com/DamienDeberthe/*.git /dossier/sur/machine/Linux
 
