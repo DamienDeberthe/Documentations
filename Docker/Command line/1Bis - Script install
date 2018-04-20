@@ -4,7 +4,7 @@ read -r -p "Install docker?[y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     apt-get update
-	apt-get install \
+	apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
