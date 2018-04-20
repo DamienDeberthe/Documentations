@@ -23,7 +23,7 @@ Contenu du fichier yml :
 
   tasks:
   - name: 1. Copy files			#Lors de l'execution de l'instruction, le nom apparaitra. Utilise pour connaitre l'avancé...
-    copy: src=/root/file1 dest=/tmp/	#Voici l'instruction. Ici copie un fichier "/root/file1" situé sur le serveur ansible vers les hosts dans le dossier "/tmp/"
+    copy: src=/etc/hostname dest=/root/	#Voici l'instruction. Ici copie un fichier "/root/file1" situé sur le serveur ansible vers les hosts dans le dossier "/tmp/"
 "
 
 - Execution de l'instruction :
