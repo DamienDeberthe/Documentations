@@ -16,3 +16,4 @@ add-apt-repository \
    stable"
 apt-get update
 apt-get install docker-ce
+echo "Installation de Docker terminee"
