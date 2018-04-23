@@ -1,0 +1,18 @@
+1- Install VirtualBox on Windows
+
+2- Kubectl
+Download to -> https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe
+Move "kubectl.exe" into "C:\Windows\System32"
+
+3- Minikube"
+Download to : https://github.com/kubernetes/minikube/releases --> Choose version minikube-windows-amd64
+Rename "minikube-windows-amd64" into "minikube.exe"
+Move minikube.exe into "C:\Windows\System32"
+
+4- Open CMD :
+> minikube version
+> minikube start
+
+--
+Sources :
+https://www.assistanz.com/installing-minikube-on-windows-10-home-edition-using-virtualbox/
