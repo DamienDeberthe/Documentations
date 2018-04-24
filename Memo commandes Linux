@@ -1,40 +1,40 @@
 ===== MEMO COMMANDES LINUX =====
 
 
-Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
+- Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 du -sh --time * | sort -hr
 
 
-Connaitre le pourcentage de pertes de paquets en direct :
+- Connaitre le pourcentage de pertes de paquets en direct :
 mtr 192.168.0.254
 
 
-Rechercher un fichier sur la machine : 
+- Rechercher un fichier sur la machine : 
 find / -type f -iname "*file*"
 
-Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
+- Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
 grep RECHERCHE *
 
-Rechercher une chaine de caractère dans les fichiers présent dans le dossier actuel et récursivement :
+- Rechercher une chaine de caractère dans les fichiers présent dans le dossier actuel et récursivement :
 rgrep RECHERCHE *
 
 
-Verouiller compte Linux : 
+- Verouiller compte Linux : 
 passwd -l toto
 
-Déverouiller :
+- Déverouiller :
 passwd -u toto
 
-Supprimer utilisateur Linux :
+- Supprimer utilisateur Linux :
 userdel -r toto
 
 
-Ajouter un groupe à un compte existant :
+- Ajouter un groupe à un compte existant :
 usermod -a -G groupe toto
 
-Voir les groupes d'un compte :
+- Voir les groupes d'un compte :
 groups toto
 
 
-Scanner la plage réseau : 
+- Scanner la plage réseau : 
 nmap -sP 192.168.0.0/24
