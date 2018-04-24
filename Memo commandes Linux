@@ -41,3 +41,7 @@ groups toto
 
 - Scanner la plage réseau : 
 nmap -sP 192.168.0.0/24
+
+
+- Afficher les mails en attente : 
+mailq
