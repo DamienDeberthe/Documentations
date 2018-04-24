@@ -6,27 +6,27 @@ du -sh --time * | sort -hr
 
 
 - Connaitre le pourcentage de pertes de paquets en direct :
-mtr 192.168.0.254
+mtr <X.X.X.X>
 
 
 - Rechercher un fichier sur la machine : 
 find / -type f -iname "*file*"
 
 - Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
-grep RECHERCHE *
+grep SEARCH *
 
 - Rechercher une chaine de caractère dans les fichiers présent dans le dossier actuel et récursivement :
-rgrep RECHERCHE *
+rgrep SEARCH *
 
 
 - Verouiller compte Linux : 
-passwd -l toto
+passwd -l user
 
-- Déverouiller :
-passwd -u toto
+- Déverouiller compte Linux :
+passwd -u user
 
 - Supprimer utilisateur Linux :
-userdel -r toto
+userdel -r user
 
 
 - Ajouter un compte à un un groupe existant :
@@ -40,7 +40,7 @@ groups toto
 
 
 - Scanner la plage réseau : 
-nmap -sP 192.168.0.0/24
+nmap -sP 192.168.1.0/24
 
 
 - Envoi de mail en ligne de commande :
