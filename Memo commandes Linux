@@ -29,8 +29,11 @@ passwd -u toto
 userdel -r toto
 
 
-- Ajouter un groupe à un compte existant :
-usermod -a -G groupe toto
+- Ajouter un compte à un un groupe existant :
+usermod -a -G groupe user
+
+- Supprimer un utilisateur d'un groupe : 
+deluser user groupe
 
 - Voir les groupes d'un compte :
 groups toto
