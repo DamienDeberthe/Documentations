@@ -43,5 +43,8 @@ groups toto
 nmap -sP 192.168.0.0/24
 
 
+- Envoi de mail en ligne de commande :
+echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
+
 - Afficher les mails en attente : 
 mailq
