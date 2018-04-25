@@ -1,6 +1,6 @@
 #/bin/bash
 
-read -r -p "Install docker?[y/N] " response
+read -r -p "Install docker?[Y/n] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     apt-get update
