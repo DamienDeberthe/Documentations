@@ -59,23 +59,6 @@ Pour mieu s'organiser dans les conteneurs, il faut utiliser les tags:
 docker tag debian debian:install-nano-git
 Ainsi pour retrouver ce conteneur il faudra le nommer: debian:install-nano-git
 
-----------------------------------------------------------------------------------------------
-La commande "run" est un melange de la commande "create" et la commande "start".
-"create" sert a crée un conteneur (mappage de port etc...)
-"start" sert simplement à le lancer
-
-Pour qu'un docker tourne en arrière plan:
-docker create --tty -i --name "name1" debian
-(tty pour qu'il ai un terminal)
-ET												A RE-ECRIRE
-pour lancer le docker:
-docker start name1
-
-Pour lancer le conteneur "apache" avec le service "apache" d'installé + redirection des ports
-docker run -d -p 10001:80 --name=httpd1 apache
-OU
-docker create --tty -i -p 10000:80 --name=nginx1 nginx
------------------------------------------------------------------------------------------------
 
 BON EXEMPLE:
 
@@ -97,6 +80,9 @@ docker login
 docker push qualigaz/dev
 
 ### Suppression ###
+
+Eteindre un conteneur:
+docker stop [name]
 
 Supprimer conteneurs:
 docker rm [name]
