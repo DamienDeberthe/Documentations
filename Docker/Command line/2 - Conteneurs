@@ -101,5 +101,8 @@ docker push qualigaz/dev
 Supprimer conteneurs:
 docker rm [name]
 
-Supprimer images:
+Supprimer image:
 docker rmi [image]
+
+Supprimer toutes les images :
+docker rmi $(docker images -a -q)
