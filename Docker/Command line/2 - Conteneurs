@@ -64,7 +64,7 @@ BON EXEMPLE:
 
 docker create --tty -i -p 10001:80 --name=nginx1 nginx
 docker start nginx1
-docker exec -it nginx1 bash
+docker exec -it nginx1 bash OU docker attach nginx1
 
 Une fois que le conteneur est opérationnel, il est possible le transformer en image, afin de créer de nouveau conteneurs rapidement
 docker commit [name_conteneur] [name_image]
