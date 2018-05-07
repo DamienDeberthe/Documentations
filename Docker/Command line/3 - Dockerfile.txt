@@ -36,3 +36,11 @@ ATTENTION : Il faut indiquer le dossier et non le fichier dockerfile. Par exmepl
 
 
 Il faut ensuite lancer normalement l'image.
+
+### Commandes utiles dockerfile ###
+
+Recuperer un fichier avec wget et le download dans le dossier choisi: (attention installer wget avant)
+RUN     wget https://raw.githubusercontent.com/DamienDeberthe/HTML/master/index.html -P <directory>
+
+Changer le contenu d'une ligne d'un fichier:
+RUN   sed -i "s|original|text_modify|g" /tmp/file1
