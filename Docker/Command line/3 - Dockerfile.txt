@@ -1,0 +1,38 @@
+*** DOCKERFILE ***
+
+
+### EXPLICATION ###
+
+Le dockerfile va servir à forger des images directement depuis un fichier, sans devoir manipuler "l'interieur" de conteneurs. Cette technique est par exemple très pratique pour réaliser des updates.
+
+
+### MISE EN PLACE ###
+
+Pour être forger, le dockerfile doit respecter une architecture specifique :
+
++-- img-httpd
+    +-- dockerfile
+
+
+### PREMIER DOCKERFILE ###
+
+FROM httpd:latest
+        MAINTAINER DamienDeberthe
+        RUN apt-get -yqq update && apt-get install -yqq git
+        RUN rm -rf /usr/local/apache2/htdocs/*
+        RUN git clone https://github.com/DamienDeberthe/HTML.git /usr/local/apache2/htdocs/
+
+Il est possible d'ajouter plein d'autres paramètres.
+Ce dockerfile permet, à partir du conteneur HTTPD, de récuperer un site upload sur Github par le biais de gitclone.
+
+
+### CREATION DE L'IMAGE ###
+
+Une fois le dockerfile crée, il faut crée l'image.
+Voici la commande :
+docker build -t "<name>" <directory_of_docker_file>
+
+ATTENTION : Il faut indiquer le dossier et non le fichier dockerfile. Par exmeple dans notre exemple, voici se qu'il faudrait mettre "/root/img-httpd/
+
+
+Il faut ensuite lancer normalement l'image.
