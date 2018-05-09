@@ -1,0 +1,17 @@
+### INSTALL DOCKER COMPOSE ###
+curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+
+### INSTALL HARBOR ###
+wget https://storage.googleapis.com/harbor-releases/release-1.5.0/harbor-online-installer-v1.5.0.tgz
+tar xvf harbor-online-installer-v1.5.0.tgz
+cd harbor/
+
+### CONFIGURATION ###
+--> https://github.com/vmware/harbor/blob/master/docs/installation_guide.md <--
+nano harbor.cfg
+
+
+./install.sh
