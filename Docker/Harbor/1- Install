@@ -10,8 +10,18 @@ tar xvf harbor-online-installer-v1.5.0.tgz
 cd harbor/
 
 ### CONFIGURATION ###
---> https://github.com/vmware/harbor/blob/master/docs/installation_guide.md <--
+La configuration s'effectue dans le fichier harbor.cfg. Voici les principaux paramètres à modifier :
 nano harbor.cfg
 
+- hostname
+- ui_url_protocol = https
+- db_password
+- customize_crt = off
+- ssl_cert 
+- ssl_cert_key
 
+Retrouvez plus de paramètres avec les explications de fonctionnement ici :
+--> https://github.com/vmware/harbor/blob/master/docs/installation_guide.md <--
+
+Ensuite installer Harbor avec le scrit :
 ./install.sh
