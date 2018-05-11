@@ -1,0 +1,34 @@
+*** PUSH AND PULL ***
+
+Le serveur Harbor opérationnel, il nous faut pouvoir y accéder : déposer et récuperer les images des conteneurs Docker.
+
+### Push ou déposer ses images ###
+
+- Avant de pull, il faut se connecter à notre repo Harbor :
+docker login  https://harbor.domain.com
+
+- En partant d'une image standard ou forger, il faut modifier son tag :
+docker pull debian:latest
+docker tag debian:latest <harbor.domain.com>/library/debian
+docker push harbor.domain.com/library/debian
+
+Vous pouvez maintenant aller vérifier l'upload de l'image sur Harbor.
+
+
+### Pull ou récuperer ses images ###
+
+- Avant de pull, il faut se connecter à notre repo Harbor :
+docker login  https://harbor.domain.com
+
+- Notre repo privé doit être ajouter à la configuration de Docker.
+Pour cela crée/éditer le fichier /etc/docker/daemon.json :
+
+{
+  "insecure-registries" : ["harbor.domain.com"]
+}
+
+- Redemarrer le service docker pour que la modification soit pris en compte :
+service docker restart
+
+- Vous pouvez enfin pull/récuperer vos images sur votre serveur harbor :
+docker pull harbor.domain.com/library/debian
