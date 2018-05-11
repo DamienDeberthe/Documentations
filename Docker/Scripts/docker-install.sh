@@ -1,5 +1,9 @@
 #/bin/bash
 
+echo -e "\n************************************"
+echo    "******** Docker installer **********"
+echo -e "************************************\n"
+
 read -r -p "Install docker?[Y/n] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
