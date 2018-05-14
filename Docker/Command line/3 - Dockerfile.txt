@@ -44,3 +44,6 @@ RUN     wget https://raw.githubusercontent.com/DamienDeberthe/HTML/master/index.
 
 Changer le contenu d'une ligne d'un fichier:
 RUN   sed -i "s|original|text_modify|g" /tmp/file1
+
+Git clone dans un dossier :
+RUN   git clone https://github.com/ <directory>
