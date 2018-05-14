@@ -10,7 +10,7 @@ Le dockerfile va servir à forger des images directement depuis un fichier, sans
 
 Pour être forger, le dockerfile doit respecter une architecture specifique :
 
-+-- img-httpd
++-- img-1
     +-- dockerfile
 
 
