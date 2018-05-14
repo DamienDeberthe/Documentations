@@ -3,7 +3,8 @@
 
 ### EXPLICATION ###
 
-Le dockerfile va servir à forger des images directement depuis un fichier, sans devoir manipuler "l'interieur" de conteneurs. Cette technique est par exemple très pratique pour réaliser des updates.
+Le dockerfile va servir à forger des images directement depuis un fichier, sans devoir manipuler "l'interieur" de conteneurs.
+Cette technique est par exemple très pratique pour réaliser des updates.
 
 
 ### MISE EN PLACE ###
