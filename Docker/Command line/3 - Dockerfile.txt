@@ -20,8 +20,8 @@ Pour être forger, le dockerfile doit respecter une architecture specifique :
 FROM httpd:latest
         MAINTAINER DamienDeberthe
         RUN apt-get -yqq update && apt-get install -yqq git
-        RUN rm -rf /usr/local/apache2/htdocs/*
-        RUN git clone https://github.com/DamienDeberthe/HTML.git /usr/local/apache2/htdocs/
+        RUN rm -rf /usr/local/apache2/htdocs/* && git clone https://github.com/DamienDeberthe/HTML.git /usr/local/apache2/htdocs/
+
 
 Ce dockerfile permet de crée une image d'un conteneur avec un serveur web et le code récuperé depuis un repo Git (ici Github).
 Très utile pour le déploiement automatisé !
