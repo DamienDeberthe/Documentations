@@ -12,6 +12,7 @@ Connaitre le pourcentage de pertes de paquets en direct :
 mtr <X.X.X.X>
 ```
 <br/>
+
 Rechercher un fichier sur la machine : 
 ```bash
 find / -type f -iname "*file*"
@@ -25,6 +26,7 @@ Rechercher une chaine de caractère dans les fichiers présent dans le dossier a
 rgrep SEARCH *
 ```
 <br/>
+
 Verouiller compte Linux : 
 ```bash
 passwd -l user
