@@ -5,10 +5,10 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 ```bash
 du -sh --time * | sort -hr
 ```
-
-- Connaitre le pourcentage de pertes de paquets en direct :
+Connaitre le pourcentage de pertes de paquets en direct :
+```bash
 mtr <X.X.X.X>
-
+```
 
 - Rechercher un fichier sur la machine : 
 find / -type f -iname "*file*"
