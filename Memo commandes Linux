@@ -43,6 +43,10 @@ groups toto
 nmap -sP 192.168.1.0/24
 
 
+- Crée rapidement un serveur web pour récuperer des données dans un dossier.
+Executer cette commande à la racine du dossier de partage :
+python -m SimpleHTTPServer 80
+
 - Envoi de mail en ligne de commande :
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
 
