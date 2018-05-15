@@ -5,30 +5,37 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 ```bash
 du -sh --time * | sort -hr
 ```
+
 Connaitre le pourcentage de pertes de paquets en direct :
 ```bash
 mtr <X.X.X.X>
 ```
 
-- Rechercher un fichier sur la machine : 
+Rechercher un fichier sur la machine : 
+```bash
 find / -type f -iname "*file*"
-
-- Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
+```
+Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
+```bash
 grep SEARCH *
-
-- Rechercher une chaine de caractère dans les fichiers présent dans le dossier actuel et récursivement :
+```
+Rechercher une chaine de caractère dans les fichiers présent dans le dossier actuel et récursivement :
+```bash
 rgrep SEARCH *
+```
 
-
-- Verouiller compte Linux : 
+Verouiller compte Linux : 
+```bash
 passwd -l user
-
-- Déverouiller compte Linux :
+```
+Déverouiller compte Linux :
+```bash
 passwd -u user
-
-- Supprimer utilisateur Linux :
+```
+Supprimer utilisateur Linux :
+```bash
 userdel -r user
-
+```
 
 - Ajouter un compte à un un groupe existant :
 usermod -a -G groupe user
