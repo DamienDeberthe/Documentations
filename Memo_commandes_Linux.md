@@ -1,16 +1,16 @@
 ## MEMO COMMANDES LINUX
 
 
-Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
+- Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
 du -sh --time * | sort -hr
 ```
-
-Connaitre le pourcentage de pertes de paquets en direct :
+<br/>
+- Connaitre le pourcentage de pertes de paquets en direct :
 ```bash
 mtr <X.X.X.X>
 ```
-
+<br/>
 Rechercher un fichier sur la machine : 
 ```bash
 find / -type f -iname "*file*"
@@ -23,7 +23,7 @@ Rechercher une chaine de caractère dans les fichiers présent dans le dossier a
 ```bash
 rgrep SEARCH *
 ```
-
+<br/>
 Verouiller compte Linux : 
 ```bash
 passwd -l user
