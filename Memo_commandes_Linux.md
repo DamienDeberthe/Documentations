@@ -6,6 +6,7 @@
 du -sh --time * | sort -hr
 ```
 <br/>
+
 Connaitre le pourcentage de pertes de paquets en direct :
 ```bash
 mtr <X.X.X.X>
