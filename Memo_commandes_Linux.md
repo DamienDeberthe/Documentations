@@ -39,32 +39,44 @@ Supprimer utilisateur Linux :
 ```bash
 userdel -r user
 ```
-
-- Ajouter un compte à un un groupe existant :
+Ajouter un compte à un un groupe existant :
+```bash
 usermod -a -G groupe user
-
-- Supprimer un utilisateur d'un groupe : 
+```
+Supprimer un utilisateur d'un groupe : 
+```bash
 deluser user groupe
-
-- Voir les groupes d'un compte :
+```
+Voir les groupes d'un compte :
+```bash
 groups toto
+```
+<br/>
 
-
-- Scanner la plage réseau : 
+Scanner la plage réseau : 
+```bash
 nmap -sP 192.168.1.0/24
+```
+<br/>
 
-
-- Crée rapidement un serveur web pour récuperer des données dans un dossier.
+Crée rapidement un serveur web pour récuperer des données dans un dossier.
 Executer cette commande à la racine du dossier de partage :
+```bash
 python -m SimpleHTTPServer 80
+```
+<br/>
 
-- Envoi de mail en ligne de commande :
+Envoi de mail en ligne de commande :
+```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
-
-
-- Afficher les mails en attente : 
+```
+Afficher les mails en attente : 
+```bash
 mailq
+```
+<br/>
 
-
-- Connaitre le chemin d'execution d'une commande :
+Connaitre le chemin d'execution d'une commande :
+```bash
 which <commande> #(par exemple: which cat)
+```
