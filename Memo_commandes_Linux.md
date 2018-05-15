@@ -1,7 +1,7 @@
 ## MEMO COMMANDES LINUX
 
 
-- Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
+Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
 du -sh --time * | sort -hr
 ```
