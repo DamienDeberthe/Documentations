@@ -1,0 +1,12 @@
+### ADMIN PANEL ###
+
+
+- Mise à jour de Grav :
+cd /var/www/html/ \
+&& bin/gpm selfupgrade
+
+- Installation du plugin Admin :
+bin/gpm install admin
+
+- Attribution des droits :
+chown -R www-data:www-data /var/www/html
