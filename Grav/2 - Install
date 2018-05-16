@@ -1,7 +1,7 @@
 ### INSTALL ###
 
 
-- Recuperation des sources :
+- Executer ces commandes :
 cd /var/www/ \
 && rm -r /var/www/html \
 && git clone -b master https://github.com/getgrav/grav.git \
@@ -10,5 +10,3 @@ cd /var/www/ \
 && composer install --no-dev -o \
 && bin/grav install \
 && chown -R www-data:www-data /var/www/html
-
-- 
