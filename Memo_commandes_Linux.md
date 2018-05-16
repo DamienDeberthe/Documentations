@@ -55,11 +55,7 @@ groups toto
 
 Scanner la plage réseau : 
 ```bash
-nmap -sP 192.168.1.0/24
-```
-Exporter dans un fichier et ajouter un saut de ligne entre chaque equipement :
-```bash
-sed 's/.*Nmap/\nNmap/' <file>
+nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 ```
 <br/>
 
