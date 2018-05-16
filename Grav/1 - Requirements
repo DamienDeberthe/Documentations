@@ -20,7 +20,6 @@ a2enmod rewrite
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-
 - Redemarrage service Apache2 :
 service apache2 restart
 
