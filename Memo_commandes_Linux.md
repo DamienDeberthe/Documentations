@@ -59,7 +59,7 @@ nmap -sP 192.168.1.0/24
 ```
 Exporter dans un fichier et ajouter un saut de ligne entre chaque equipement :
 ```bash
-sed 's/.*Nmap/\nNmap/' test
+sed 's/.*Nmap/\nNmap/' <file>
 ```
 <br/>
 
