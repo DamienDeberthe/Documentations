@@ -22,4 +22,3 @@ a2enmod rewrite
 
 - Redemarrage service Apache2 :
 service apache2 restart
-
