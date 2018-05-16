@@ -10,3 +10,5 @@ bin/gpm install admin
 
 - Attribution des droits :
 chown -R www-data:www-data /var/www/html
+
+- Se connecter en HTTP à la page. Une demande de création de compte va être demandé.
