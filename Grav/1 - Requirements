@@ -2,7 +2,7 @@
 
 
 - Installer les paquets suivant :
-apt-get install apache2 php7.0  php7.0-mbstring php7.0-zip php7.0-curl php7.0-gd php7.0-json php7.0-xml libapache2-mod-php7.0
+apt-get install apache2 php7.0  php7.0-mbstring php7.0-zip php7.0-curl php7.0-gd php7.0-json php7.0-xml libapache2-mod-php7.0 git
 
 - Module apache :
 a2enmod rewrite
