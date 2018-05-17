@@ -15,6 +15,11 @@ docker push qualigaz/dev
 
 ### DEL ###
 
+docker stop <name>
+docker rm <name>
+docker rmi <image:tag>
+
+
 - Eteindre, supprimer tous les conteneurs + supprimer toutes les images :
 docker ps|sed "1 d"|awk '{print $1}'|xargs docker stop
 docker ps -a|sed "1 d"|awk '{print $1}'|xargs docker rm \
