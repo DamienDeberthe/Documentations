@@ -1,13 +1,11 @@
 FROM debian:latest
         MAINTAINER DamienDeberthe
-
         ###Requirements###
         RUN     apt-get update \
                 && apt-get install -y apache2 git \
                 && apt-get install -y php7.0 php7.0-mbstring php7.0-zip php7.0-curl php7.0-gd php7.0-json php7.0-xml libapache2-mod-php7.0 composer
         RUN     a2enmod rewrite
         RUN     sed -i '/DocumentRoot/a<Directory "/var/www/html">\nAllowOverride All\n</Directory>' /etc/apache2/sites-available/000-default.conf
-
         ###Install Grav###
         RUN     cd /var/www/ \
                 && rm -r /var/www/html \
@@ -17,11 +15,10 @@ FROM debian:latest
                 && composer install --no-dev -o \
                 && bin/grav install \
                 && chown -R www-data:www-data /var/www/html
-
         ###Install admin panel###
         RUN     cd /var/www/html \
                 && bin/gpm install -y admin
         RUN     chown -R www-data:www-data /var/www/html
-
+        ###Service apache###
         EXPOSE 80
         ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
