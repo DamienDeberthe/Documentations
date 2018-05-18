@@ -7,9 +7,9 @@ FROM debian:latest
         RUN     a2enmod rewrite
         RUN     sed -i '/DocumentRoot/a<Directory "/var/www/html">\nAllowOverride All\n</Directory>' /etc/apache2/sites-available/000-default.conf
         ### Security Apache2 ###
-        RUN sed -i "s|ServerTokens OS|ServerTokens Prod|g" /etc/apache2/conf-available/security.conf \
-        && sed -i "s|ServerSignature On|ServerSignature Off|g" /etc/apache2/conf-available/security.conf
-        RUN a2dismod -f autoindex
+        RUN     sed -i "s|ServerTokens OS|ServerTokens Prod|g" /etc/apache2/conf-available/security.conf \
+                && sed -i "s|ServerSignature On|ServerSignature Off|g" /etc/apache2/conf-available/security.conf
+        RUN     a2dismod -f autoindex
         ### Install Grav ###
         RUN     cd /var/www/ \
                 && rm -r /var/www/html \
