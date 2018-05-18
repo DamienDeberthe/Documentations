@@ -3,8 +3,10 @@
 - Redirect ports = <port_host>:<port_conteneur>
 docker create --tty -i -p 80:80 --name=<name> <image>
 docker start <name>
-docker exec -it <name> bash
+OR
+docker run -d --tty -i -p 80:80 --name=<name> <image>
 
+docker exec -it <name> bash
 - Executer une commande particuliere :
 docker exec -it vigilant_shockley bash -c "cat /etc/debian_version"
 
