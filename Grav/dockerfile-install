@@ -6,7 +6,7 @@ FROM debian:latest
                 && apt-get install -y php7.0 php7.0-mbstring php7.0-zip php7.0-curl php7.0-gd php7.0-json php7.0-xml libapache2-mod-php7.0 composer
         RUN     a2enmod rewrite
         RUN     sed -i '/DocumentRoot/a<Directory "/var/www/html">\nAllowOverride All\n</Directory>' /etc/apache2/sites-available/000-default.conf
-        ###Security Apache2###
+        ### Security Apache2 ###
         RUN sed -i "s|ServerTokens OS|ServerTokens Prod|g" /etc/apache2/conf-available/security.conf \
         && sed -i "s|ServerSignature On|ServerSignature Off|g" /etc/apache2/conf-available/security.conf
         RUN a2dismod -f autoindex
