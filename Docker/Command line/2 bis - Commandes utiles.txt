@@ -8,6 +8,7 @@ docker exec -it <name> bash
 - Executer une commande particuliere :
 docker exec -it vigilant_shockley bash -c "cat /etc/debian_version"
 
+
 ### COMMIT & PUSH ###
 
 docker commit [conteneur] qualigaz/dev:[TAG]
