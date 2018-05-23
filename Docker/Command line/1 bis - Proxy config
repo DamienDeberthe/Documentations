@@ -1,0 +1,10 @@
+- Create the directory :
+mkdir /etc/systemd/system/docker.service.d
+
+- Create the file "http-proxy.conf" in this directory :
+[Service]
+Environment="HTTP_PROXY=http://proxy.domain.com:8080/"
+
+- Reload :
+systemctl daemon-reload (-> Verify : systemctl show --property Envrionment docker
+systemctl restart docker
