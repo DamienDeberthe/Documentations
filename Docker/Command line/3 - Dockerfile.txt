@@ -21,7 +21,7 @@ FROM httpd:latest
         MAINTAINER DamienDeberthe
         RUN apt-get -yqq update && apt-get install -yqq git
         RUN rm -rf /usr/local/apache2/htdocs/* \
-        && git clone https://github.com/DamienDeberthe/HTML.git /usr/local/apache2/htdocs/
+        && git clone https://github.com/DamienDeberthe/Simple-HTML.git /usr/local/apache2/htdocs/
 
 Ce dockerfile permet de crée une image d'un conteneur avec un serveur web et le code récuperé depuis un repo Git (ici Github).
 Très utile pour le déploiement automatisé !
@@ -42,7 +42,7 @@ Il faut ensuite lancer normalement l'image.
 ### Commandes utiles dockerfile ###
 
 Recuperer un fichier avec wget et le download dans le dossier choisi: (attention installer wget avant)
-RUN     wget https://raw.githubusercontent.com/DamienDeberthe/HTML/master/index.html -P <directory>
+RUN     wget https://raw.githubusercontent.com/DamienDeberthe/Simple-HTML/master/index.html -P <directory>
 
 Changer le contenu d'une ligne d'un fichier:
 RUN   sed -i "s|original|text_modify|g" /tmp/file1
