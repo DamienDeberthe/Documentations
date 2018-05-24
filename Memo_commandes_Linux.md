@@ -80,3 +80,10 @@ Connaitre le chemin d'execution d'une commande :
 ```bash
 which <commande> #(par exemple: which cat)
 ```
+<br/>
+
+Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
+```bash
+cat file1 | xargs
+```
+Un fichier contenant plusieurs chaines de caractères sur une même ligne separé par "espace", 
