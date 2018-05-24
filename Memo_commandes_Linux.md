@@ -86,7 +86,7 @@ Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lig
 ```bash
 cat file1 | xargs
 ```
-Un fichier contenant plusieurs chaines de caractères sur une même ligne separé par "espace", resultat en un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes
+Un fichier contenant plusieurs chaines de caractères sur une même ligne separé par "espace", resultat en un fichier contenant une chaine de caractères (exemple: 1234 5678) sur plusieurs lignes :
 ```bash
-cat
+cat file2 | tr ' ' '\n'
 ```
