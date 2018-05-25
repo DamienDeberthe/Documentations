@@ -17,6 +17,10 @@ Rechercher un fichier sur la machine :
 ```bash
 find / -type f -iname "*file*" #Conserver les étoiles avant et après le nom du fichier
 ```
+Rechercher un dossier sur la machine :
+```bash
+find / -type d -iname "*dir*" #Conserver les étoiles avant et après le nom du dossier
+```
 Rechercher un fichier dans un dossier :
 ```bash
 cd <directory> && find -name "*file*" #Conserver les étoiles avant et après le nom du fichier
