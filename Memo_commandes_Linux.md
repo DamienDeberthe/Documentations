@@ -25,6 +25,8 @@ Rechercher un fichier dans un dossier :
 ```bash
 cd <directory> && find -name "*file*" #Conserver les étoiles avant et après le nom du fichier
 ```
+<br/>
+
 Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
 ```bash
 grep SEARCH *
