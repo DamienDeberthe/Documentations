@@ -15,6 +15,24 @@ enable password cisco
 Mot de passe "enable": (Le mot de passe est "damien" et est crypté)
 enable secret damien
 
+
+### SSH GOOD ###
+#Activer SSH
+router> enable
+router# configure terminal
+router(config)# username <user> password <password>
+router(config)# hostname <name>
+<name>(config)# ip domain-name <domain.com>
+<name>(config)# crypto key generate rsa modulus 1024
+<name>(config)# line vty 0 4
+<name>(config-line)# transport input ssh
+<name>(config-line)# login local
+<name>(config-line)# exit
+
+#Desactiver l'authentification mode console
+<name>(config)# aaa new-model
+<name>(config)# aaa authentication enable default none
+
 SSH:
 hostname ROUTEUR
 ip domain-name DOMAIN.COM
