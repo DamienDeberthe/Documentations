@@ -33,6 +33,9 @@ router(config)# hostname <name>
 <name>(config)# aaa new-model
 <name>(config)# aaa authentication enable default none
 
+#Crypter le mot de passe
+service password-encryption
+
 SSH:
 hostname ROUTEUR
 ip domain-name DOMAIN.COM
