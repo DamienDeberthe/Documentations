@@ -1,2 +1,23 @@
-Pre-requis :
+### Pre-requis ###
+- Routeur : Donner une adresse IP à une interface
+- Switch : Donner une adresse IP à un VLAN
 
+
+### Activer SSH ###
+router> enable
+router# configure terminal
+router(config)# username <user> password <password>
+router(config)# hostname <name>
+<name>(config)# ip domain-name <domain.com>
+<name>(config)# crypto key generate rsa modulus 1024
+<name>(config)# line vty 0 4
+<name>(config-line)# transport input ssh
+<name>(config-line)# login local
+<name>(config-line)# exit
+
+#Desactiver l'authentification mode console
+<name>(config)# aaa new-model
+<name>(config)# aaa authentication enable default none
+
+#Crypter le mot de passe
+service password-encryption
