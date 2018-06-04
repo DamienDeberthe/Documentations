@@ -31,17 +31,11 @@ docker images
 Pour afficher toutes les images :
 docker images -a
 
-Pour supprimer les images "corrompues" :
-rm /var/lib/docker/image/overlay2/imagedb/content/sha256/[IMAGE_ID]
-
 Pour connaitre la table NAT :
 iptables -t nat -L -n
 
 Pour connaitre les adresses IP des conteneurs :
 docker inspect [CONTENEUR] | grep IPAddress
-
-Pour prendre la main sur un docker en ligne : 
-docker exec -it [name] bash
 
 
 ### Gerer conteneurs ###
@@ -49,10 +43,10 @@ docker exec -it [name] bash
 Pour lancer une commande dans une instance:
 docker run debian echo "lol"
 
-Pour utiliser le terminal dans un conteneur:
-docker run -t -i debian
+Pour prendre la main sur un docker en ligne : 
+docker exec -it [name] bash
 
-Bonus: Nommer le conteneur pour plus de faciliter:
+--- Nommage des conteneurs
 docker [...] --name test debian
 
 Pour mieu s'organiser dans les conteneurs, il faut utiliser les tags:
@@ -60,17 +54,11 @@ docker tag debian debian:install-nano-git
 Ainsi pour retrouver ce conteneur il faudra le nommer: debian:install-nano-git
 
 
-BON EXEMPLE:
+### Gestion du stockage ###
 
-docker create --tty -i -p 10001:80 --name=nginx1 nginx
-docker start nginx1
-docker exec -it nginx1 bash OU docker attach nginx1
-
-Une fois que le conteneur est opérationnel, il est possible le transformer en image, afin de créer de nouveau conteneurs rapidement
-docker commit [name_conteneur] [name_image]
-Puis du coup créer un nouveau conteneur:
-docker create --tty -i -p 10002:80 --name=nginx2 nginx
-docker start nginx2
+La notion de volume dans Docker concerne la mise en place d'un repertoire partagé entre le conteneur 
+et la machine hote :
+docker create --tty -i -v <dir_to_host>:<dir_to_conteneur> debian:latest
 
 
 ### Docker Hub ###
@@ -78,6 +66,7 @@ docker start nginx2
 docker commit [conteneur] qualigaz/dev:[TAG]
 docker login
 docker push qualigaz/dev
+
 
 ### Suppression ###
 
@@ -90,10 +79,5 @@ docker rm [name]
 Supprimer image:
 docker rmi [image]
 
-
-Eteindre, supprimer tous les conteneurs + supprimer toutes les images :
-docker ps|sed "1 d"|awk '{print $1}'|xargs docker stop
-docker ps -a|sed "1 d"|awk '{print $1}'|xargs docker rm \
-&& docker images|sed "1 d"|awk '{print $3}'|sort|uniq|xargs docker rmi
--> Verifier :
-docker ps -a && docker images
+Pour supprimer les images "corrompues" :
+rm /var/lib/docker/image/overlay2/imagedb/content/sha256/[IMAGE_ID]
