@@ -47,7 +47,7 @@ passwd -u user
 ```
 Supprimer utilisateur Linux :
 ```bash
-userdel -r user
+userdel -rf user
 ```
 Ajouter un compte à un un groupe existant :
 ```bash
