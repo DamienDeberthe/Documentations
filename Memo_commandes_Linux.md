@@ -49,6 +49,12 @@ awk -F ":" '{print $1}' /etc/passwd
 ```
 
 #### Sed
+* L’option "-i" équivaut à l’insertion. Cette option permet de modifier directement le contenu du fichier. Pour vérifier le résultat il est possible d’exécuter la commande sed sans l’option "-i" au préalable.
+* Si les chaines de caractère contiennent des guillement (") pour éviter tous problèmes il est conseillé d’utiliser l’apostrophe (')
+Dans un fichier, supprimer toutes les lignes contenant des commentaires (commençant par # par exemple) :
+```bash
+sed -i "/#/d" file
+```
 Dans un fichier, remplacer une chaine de caractère spécifique par une autre :
 ```bash
 sed -i "s|SEARCH_CONTENT|REPLACE_CONTENT|g" file
