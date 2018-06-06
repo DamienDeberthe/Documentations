@@ -70,18 +70,6 @@ du -sh --time * | sort -hr
 ```
 <br/>
 
-Connaitre le pourcentage de pertes de paquets en direct :
-```bash
-mtr <X.X.X.X>
-```
-<br/>
-
-Scanner la plage réseau : 
-```bash
-nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
-```
-<br/>
-
 Crée rapidement un serveur web pour récuperer des données dans un dossier.
 Executer cette commande à la racine du dossier de partage :
 ```bash
@@ -89,13 +77,9 @@ python -m SimpleHTTPServer 80
 ```
 <br/>
 
-Envoi de mail en ligne de commande :
+Connaitre le pourcentage de pertes de paquets en direct :
 ```bash
-echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
-```
-Afficher les mails en attente : 
-```bash
-mailq
+mtr <X.X.X.X>
 ```
 <br/>
 
