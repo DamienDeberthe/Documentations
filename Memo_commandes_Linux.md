@@ -1,18 +1,7 @@
 ## MEMO COMMANDES LINUX
 
 
-Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
-```bash
-du -sh --time * | sort -hr
-```
-<br/>
-
-Connaitre le pourcentage de pertes de paquets en direct :
-```bash
-mtr <X.X.X.X>
-```
-<br/>
-
+### Recherche
 Rechercher un fichier sur la machine : 
 ```bash
 find / -type f -iname "*file*" #Conserver les étoiles avant et après le nom du fichier
@@ -37,6 +26,7 @@ rgrep SEARCH *
 ```
 <br/>
 
+### Comptes Linux
 Verouiller compte Linux : 
 ```bash
 passwd -l user
@@ -63,6 +53,29 @@ groups toto
 ```
 <br/>
 
+### Manipulation de chaines de caractères
+Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
+```bash
+cat file1 | xargs
+```
+Un fichier contenant plusieurs chaines de caractères sur une même ligne separé par "espace", resultat en un fichier contenant une chaine de caractères (exemple: 1234 5678 910) sur plusieurs lignes :
+```bash
+cat file2 | tr ' ' '\n'
+```
+
+### Autres/Divers
+Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
+```bash
+du -sh --time * | sort -hr
+```
+<br/>
+
+Connaitre le pourcentage de pertes de paquets en direct :
+```bash
+mtr <X.X.X.X>
+```
+<br/>
+
 Scanner la plage réseau : 
 ```bash
 nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
@@ -86,17 +99,25 @@ mailq
 ```
 <br/>
 
-Connaitre le chemin d'execution d'une commande :
+Scanner la plage réseau : 
 ```bash
-which <commande> #(par exemple: which cat)
+nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 ```
 <br/>
 
-Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
+Crée rapidement un serveur web pour récuperer des données dans un dossier.
+Executer cette commande à la racine du dossier de partage :
 ```bash
-cat file1 | xargs
+python -m SimpleHTTPServer 80
 ```
-Un fichier contenant plusieurs chaines de caractères sur une même ligne separé par "espace", resultat en un fichier contenant une chaine de caractères (exemple: 1234 5678 910) sur plusieurs lignes :
+<br/>
+
+Envoi de mail en ligne de commande :
 ```bash
-cat file2 | tr ' ' '\n'
+echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
 ```
+Afficher les mails en attente : 
+```bash
+mailq
+```
+<br/>
