@@ -15,6 +15,7 @@ Supprimer utilisateur Linux :
 ```bash
 userdel -rf user
 ```
+<br/>
 
 Ajouter un compte à un un groupe existant :
 ```bash
@@ -28,6 +29,7 @@ Supprimer un utilisateur d'un groupe :
 ```bash
 deluser user groupe
 ```
+<br/>
 
 Verouiller compte Linux : 
 ```bash
