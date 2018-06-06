@@ -2,6 +2,15 @@
 
 
 ### Comptes Linux
+Ajouter un compte Linux : (les deux commandes sont équivalentes)
+```bash
+adduser user1
+```
+```bash
+groupadd user1 \
+&& useradd -g user1 -s /bin/bash -d /home/user1 -m user1 \
+passwd user1
+```
 Verouiller compte Linux : 
 ```bash
 passwd -l user
