@@ -34,11 +34,18 @@ Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la p
 ```bash
 awk '{print $1}' file
 ```
-Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première et la deuxième colonne :
+Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première et la troisième colonne :
 ```bash
-awk '{print $1$2}' file
+awk '{print $1 $3}' file
 ```
-
+Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première et la troisième colonne. Ajouter une flèche entre ces deux colonnes :
+```bash
+awk '{print $1" -> "$3}' file
+```
+Un fichier contenant plusieurs colonnes, séparé par des caractères autre que des espaces (par exemple ":"). Afficher la première colonne :
+```bash
+awk -F ":" '{print $1}' /etc/passwd
+```
 Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
 ```bash
 cat file1 | xargs
