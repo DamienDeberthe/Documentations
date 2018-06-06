@@ -30,6 +30,7 @@ groups toto
 
 
 ### Manipulation de chaines de caractères
+#### Awk
 Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première colonne :
 ```bash
 awk '{print $1}' file
@@ -46,6 +47,8 @@ Un fichier contenant plusieurs colonnes, séparé par des caractères autre que 
 ```bash
 awk -F ":" '{print $1}' /etc/passwd
 ```
+
+#### Xargs
 Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
 ```bash
 cat file1 | xargs
