@@ -11,6 +11,24 @@ groupadd user1 \
 && useradd -g user1 -s /bin/bash -d /home/user1 -m user1 \
 passwd user1
 ```
+Supprimer utilisateur Linux :
+```bash
+userdel -rf user
+```
+
+Ajouter un compte à un un groupe existant :
+```bash
+usermod -a -G groupe user
+```
+Voir les groupes d'un compte :
+```bash
+groups toto
+```
+Supprimer un utilisateur d'un groupe : 
+```bash
+deluser user groupe
+```
+
 Verouiller compte Linux : 
 ```bash
 passwd -l user
@@ -18,22 +36,6 @@ passwd -l user
 Déverouiller compte Linux :
 ```bash
 passwd -u user
-```
-Supprimer utilisateur Linux :
-```bash
-userdel -rf user
-```
-Ajouter un compte à un un groupe existant :
-```bash
-usermod -a -G groupe user
-```
-Supprimer un utilisateur d'un groupe : 
-```bash
-deluser user groupe
-```
-Voir les groupes d'un compte :
-```bash
-groups toto
 ```
 <br/>
 
