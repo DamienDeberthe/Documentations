@@ -30,6 +30,15 @@ groups toto
 
 
 ### Manipulation de chaines de caractères
+Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première colonne :
+```bash
+awk '{print $1}' file
+```
+Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première et la deuxième colonne :
+```bash
+awk '{print $1$2}' file
+```
+
 Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
 ```bash
 cat file1 | xargs
