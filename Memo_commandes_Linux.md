@@ -48,6 +48,16 @@ Un fichier contenant plusieurs colonnes, séparé par des caractères autre que 
 awk -F ":" '{print $1}' /etc/passwd
 ```
 
+#### Sed
+Dans un fichier, remplacer une chaine de caractère spécifique par une autre :
+```bash
+sed -i "s|SEARCH_CONTENT|REPLACE_CONTENT|g" file
+```
+Dans un fichier, ajouter une chaine de caractère après une chaine de caractère spécifique, sur une autre ligne :
+```bash
+sed -i '/SEARCH_CONTENT/aADD_CONTENT' file
+```
+
 #### Xargs
 Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
 ```bash
