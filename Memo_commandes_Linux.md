@@ -39,7 +39,7 @@ Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la p
 ```bash
 awk '{print $1 $3}' file
 ```
-Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première et la troisième colonne. Ajouter une flèche entre ces deux colonnes :
+Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première et la troisième colonne. Ajouter une flèche (par exemple) entre ces deux colonnes :
 ```bash
 awk '{print $1" -> "$3}' file
 ```
