@@ -24,7 +24,7 @@ Rechercher une chaine de caractère dans les fichiers présent dans le dossier a
 ```bash
 rgrep SEARCH *
 ```
-<br/>
+
 
 ### Comptes Linux
 Verouiller compte Linux : 
