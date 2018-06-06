@@ -55,7 +55,7 @@ sed -i "s|SEARCH_CONTENT|REPLACE_CONTENT|g" file
 ```
 Dans un fichier, ajouter une chaine de caractère après une chaine de caractère spécifique, sur une autre ligne :
 ```bash
-sed -i '/SEARCH_CONTENT/aADD_CONTENT' file
+sed -i "/SEARCH_CONTENT/aADD_CONTENT" file
 ```
 
 #### Xargs
