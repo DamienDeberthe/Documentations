@@ -1,32 +1,6 @@
 ## MEMO COMMANDES LINUX
 
 
-### Recherche
-Rechercher un fichier sur la machine : 
-```bash
-find / -type f -iname "*file*" #Conserver les étoiles avant et après le nom du fichier
-```
-Rechercher un dossier sur la machine :
-```bash
-find / -type d -iname "*dir*" #Conserver les étoiles avant et après le nom du dossier
-```
-Rechercher un fichier dans un dossier :
-```bash
-cd <directory> && find -name "*file*" #Conserver les étoiles avant et après le nom du fichier
-```
-<br/>
-
-Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
-```bash
-grep SEARCH *
-```
-Rechercher une chaine de caractère dans les fichiers présent dans le dossier actuel et récursivement :
-```bash
-rgrep SEARCH *
-```
-<br/>
-
-
 ### Comptes Linux
 Verouiller compte Linux : 
 ```bash
@@ -63,6 +37,32 @@ cat file1 | xargs
 Un fichier contenant plusieurs chaines de caractères sur une même ligne separé par "espace", resultat en un fichier contenant une chaine de caractères (exemple: 1234 5678 910) sur plusieurs lignes :
 ```bash
 cat file2 | tr ' ' '\n'
+```
+<br/>
+
+
+### Recherche
+Rechercher un fichier sur la machine : 
+```bash
+find / -type f -iname "*file*" #Conserver les étoiles avant et après le nom du fichier
+```
+Rechercher un dossier sur la machine :
+```bash
+find / -type d -iname "*dir*" #Conserver les étoiles avant et après le nom du dossier
+```
+Rechercher un fichier dans un dossier :
+```bash
+cd <directory> && find -name "*file*" #Conserver les étoiles avant et après le nom du fichier
+```
+<br/>
+
+Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
+```bash
+grep SEARCH *
+```
+Rechercher une chaine de caractère dans les fichiers présent dans le dossier actuel et récursivement :
+```bash
+rgrep SEARCH *
 ```
 <br/>
 
