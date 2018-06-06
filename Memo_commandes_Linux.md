@@ -26,6 +26,7 @@ rgrep SEARCH *
 ```
 <br/>
 
+
 ### Comptes Linux
 Verouiller compte Linux : 
 ```bash
@@ -53,6 +54,7 @@ groups toto
 ```
 <br/>
 
+
 ### Manipulation de chaines de caractères
 Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
 ```bash
@@ -62,6 +64,8 @@ Un fichier contenant plusieurs chaines de caractères sur une même ligne separ�
 ```bash
 cat file2 | tr ' ' '\n'
 ```
+<br/>
+
 
 ### Autres/Divers
 Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
