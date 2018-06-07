@@ -4,3 +4,8 @@ wget https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Dock
 && chmod +x docker-install.sh \
 && ./docker-install.sh
 ```
+
+* Auto install :
+```bash
+curl -L https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Docker/Scripts/docker-install-auto.sh | bash
+```
