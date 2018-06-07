@@ -122,11 +122,12 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 ```bash
 du -sh --time * | sort -hr
 ```
-<br/>
-Equivalent TreeSize :
 ```bash
 adduser user1
 ```
+<br/>
+Equivalent TreeSize :
+
 <br/>
 
 Crée rapidement un serveur web pour récuperer des données dans un dossier.
