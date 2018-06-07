@@ -122,6 +122,12 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 du -sh --time * | sort -hr
 ```
 <br/>
+Equivalent TreeSize :
+```bash
+wget https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Commandes%20Linux/scripts/treesize.sh \
+&& chmod +x treesize.sh \
+bash treesize.sh
+```
 
 Crée rapidement un serveur web pour récuperer des données dans un dossier.
 Executer cette commande à la racine du dossier de partage :
