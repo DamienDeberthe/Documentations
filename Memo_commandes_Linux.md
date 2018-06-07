@@ -130,7 +130,7 @@ python -m SimpleHTTPServer 80
 ```
 <br/>
 
-Connaitre le pourcentage de pertes de paquets en direct (Nécessaire :<code>apt-get install mtr</code>):
+Connaitre le pourcentage de pertes de paquets en direct (Nécessaire : <code>apt-get install mtr</code>):
 ```bash
 mtr <X.X.X.X>
 ```
