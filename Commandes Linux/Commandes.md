@@ -121,7 +121,7 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 ```bash
 du -sh --time * | sort -hr
 ```
-Afficher 
+Equivalent TreeSize :
 ```bash
 wget  \
 && chmod +x treesize.sh \
@@ -136,7 +136,7 @@ python -m SimpleHTTPServer 80
 ```
 <br/>
 
-Connaitre le pourcentage de pertes de paquets en direct (Nécessaire : <code>apt-get install mtr</code>):
+Connaitre le pourcentage de pertes de paquets en direct (**Nécessaire** : <code>apt-get install mtr</code>):
 ```bash
 mtr <X.X.X.X>
 ```
