@@ -127,7 +127,12 @@ wget https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Comm
 && chmod +x treesize.sh \
 && bash treesize.sh
 ```
+Afficher au format HTML (*-H TITLE_OF_TREE*), toute l'arborescence depuis un dossier en triant par taille de fichiers (*--sort=size*) :
+```bash
+tree /var/ -F -h --sort=size --du --nolinks -C -H TITLE_OF_TREE -T TITLE_OF_PAGE > index.html
+```
 <br/>
+
 
 Crée rapidement un serveur web pour récuperer des données dans un dossier.
 Executer cette commande à la racine du dossier de partage :
