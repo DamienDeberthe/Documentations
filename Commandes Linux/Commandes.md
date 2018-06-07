@@ -123,7 +123,9 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 du -sh --time * | sort -hr
 ```
 ```bash
-adduser user1
+wget  \
+&& chmod +x treesize.sh \
+&& bash treesize.sh
 ```
 <br/>
 Equivalent TreeSize :
