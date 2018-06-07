@@ -121,8 +121,6 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 ```bash
 du -sh --time * | sort -hr
 ```
-<br/>
-
 Afficher 
 ```bash
 wget  \
