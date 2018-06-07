@@ -123,7 +123,7 @@ du -sh --time * | sort -hr
 ```
 Equivalent TreeSize :
 ```bash
-wget  \
+wget https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Commandes%20Linux/scripts/treesize.sh \
 && chmod +x treesize.sh \
 && bash treesize.sh
 ```
