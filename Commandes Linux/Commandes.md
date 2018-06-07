@@ -1,6 +1,14 @@
 ## MEMO COMMANDES LINUX
 
 
+Afficher 
+```bash
+wget  \
+&& chmod +x treesize.sh \
+&& bash treesize.sh
+```
+<br/>
+
 ### Comptes Linux
 Ajouter un compte Linux : (les deux commandes sont équivalentes)
 ```bash
@@ -122,13 +130,7 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 du -sh --time * | sort -hr
 ```
 <br/>
-Afficher 
-```bash
-wget  \
-&& chmod +x treesize.sh \
-&& bash treesize.sh
-```
-<br/>
+
 
 Crée rapidement un serveur web pour récuperer des données dans un dossier.
 Executer cette commande à la racine du dossier de partage :
