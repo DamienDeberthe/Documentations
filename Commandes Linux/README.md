@@ -123,11 +123,11 @@ du -sh --time * | sort -hr
 ```
 <br/>
 Equivalent TreeSize :
-```bash
+<code>
 wget  \
 && chmod +x treesize.sh \
 && bash treesize.sh
-```
+</code>
 <br/>
 
 Crée rapidement un serveur web pour récuperer des données dans un dossier.
