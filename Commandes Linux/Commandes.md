@@ -129,7 +129,7 @@ wget https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Comm
 ```
 Afficher au format HTML (*-H TITLE_OF_TREE*), toute l'arborescence depuis un dossier en triant par taille de fichiers (*--sort=size*) et affichant les types de file  :
 ```bash
-tree <dir> -F -h --sort=size --du --nolinks -C -H TITLE_OF_TREE -T TITLE_OF_PAGE > index.html
+tree <dir> -F -h --sort=size --du --nolinks -C -H TITLE_OF_TREE -T TITLE_OF_WEB_PAGE > index.html
 ```
 <br/>
 
