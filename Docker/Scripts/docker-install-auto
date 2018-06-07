@@ -20,4 +20,3 @@ echo -e "************************************\n"
     apt-get --yes --force-yes install docker-ce
     echo -e "***\nDocker successfully install.\nDon't forget to test with 'docker run hello-world'\n***"
     echo "Bye Bye."
-fi
