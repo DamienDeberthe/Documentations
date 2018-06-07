@@ -4,9 +4,9 @@ echo -e "\n************************************"
 echo    "******** Docker installer **********"
 echo -e "************************************\n"
 
-read -r -p "Install docker?[Y/n] " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
-then
+#read -r -p "Install docker?[Y/n] " response
+#if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+#then
     apt-get update
         apt-get --yes --force-yes install \
     apt-transport-https \
@@ -22,6 +22,6 @@ then
         apt-get update
         apt-get --yes --force-yes install docker-ce
         echo -e "***\nDocker successfully install.\nDon't forget to test with 'docker run hello-world'\n***"
-else
+#else
     echo "Bye Bye."
 fi
