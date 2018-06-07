@@ -6,7 +6,6 @@ Ajouter un compte Linux : (les deux commandes sont équivalentes)
 ```bash
 adduser user1
 ```
-
 ```bash
 groupadd user1 \
 && useradd -g user1 -s /bin/bash -d /home/user1 -m user1 \
@@ -122,14 +121,13 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 ```bash
 du -sh --time * | sort -hr
 ```
+<br/>
+Equivalent TreeSize :
 ```bash
 wget  \
 && chmod +x treesize.sh \
 && bash treesize.sh
 ```
-<br/>
-Equivalent TreeSize :
-
 <br/>
 
 Crée rapidement un serveur web pour récuperer des données dans un dossier.
