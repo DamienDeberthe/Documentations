@@ -121,7 +121,7 @@ Afficher la taille des éléments du dossier actuel avec leur date, trié par ta
 ```bash
 du -sh --time * | sort -hr
 ```
-Equivalent TreeSize :
+Equivalent TreeSize (permet d'afficher la taille des dossiers, du plus gros au plus leger):
 ```bash
 wget https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Commandes%20Linux/scripts/treesize.sh \
 && chmod +x treesize.sh \
