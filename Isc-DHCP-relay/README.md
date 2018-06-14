@@ -1,6 +1,10 @@
+## Installation
+
 ```bash
 apt-get install -y isc-dhcp-relay
 ```
+
+## Configuration
 
 Fichier de configuration : <code>/etc/default/isc-dhcp-relay</code>
 
