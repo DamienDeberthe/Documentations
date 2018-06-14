@@ -22,5 +22,9 @@ Installer le paquet <code>iptables-persistent</code> :
 ```bash
 apt-get install -y iptables-persistent
 ```
+Sauvegarder les règles :
+```bash
+iptables-save > /etc/iptables/rules.v4
+```
 
 Les règles se trouvent dans le fichier : <code>/etc/iptables/rules.v4</code>
