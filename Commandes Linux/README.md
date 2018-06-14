@@ -153,6 +153,12 @@ nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 ```
 <br/>
 
+Ajouter une route Debian : Ajouter au fichier <code>/etc/network/interfaces</code>
+```bash
+up route add -net <network_destination> gw <IP_gateway> dev <interface>
+up route add -net 192.168.99.0/24 gw 192.168.1.0 dev eth0
+```
+
 Envoi de mail en ligne de commande :
 ```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
