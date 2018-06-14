@@ -153,10 +153,10 @@ nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 ```
 <br/>
 
-Ajouter une route Debian : Ajouter au fichier <code>/etc/network/interfaces</code> :<br/>
-<code>up route add -net <network_destination> gw <IP_gateway> dev <interface></code><br/>
-Exemple :
+Ajouter une route Debian : Ajouter au fichier <code>/etc/network/interfaces</code> :
 ```bash
+#up route add -net <network_destination> gw <IP_gateway> dev <interface>
+#Exemple add route static
 up route add -net 192.168.99.0/24 gw 192.168.1.0 dev eth0
 ```
 
