@@ -5,7 +5,7 @@ net.ipv4.ip_forward=1
 ```
 
 ### Activer le NAT
-* Règle IPTABLE :
+* Règle IPTABLE, avec eth0 = interface réseau WAN :
 ```bash
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 ```
