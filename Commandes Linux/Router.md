@@ -1,10 +1,10 @@
-## Routage
+### Routage
 Pour activer le routage, éditer le fichier <code>/etc/sysctl.conf</code> et décommenter/ajouter la ligne :
 ```bash
 net.ipv4.ip_forward=1
 ```
 
-## Activer le NAT
+### Activer le NAT
 * Règle IPTABLE :
 ```bash
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
