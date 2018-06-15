@@ -167,5 +167,11 @@ echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.c
 Afficher les mails en attente : 
 ```bash
 mailq
+#OR
+postqueue -p
+```
+Supprimer tout les mails en attente :
+```bash
+postsuper -d ALL
 ```
 <br/>
