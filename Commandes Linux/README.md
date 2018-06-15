@@ -159,7 +159,7 @@ Ajouter une route Debian.<br/> Ajouter au fichier <code>/etc/network/interfaces<
 #Exemple add route static
 up route add -net 192.168.99.0/24 gw 192.168.1.0 dev eth0
 ```
-<br/><br/>
+<br/>
 
 Envoi simple de mail en ligne de commande :
 ```bash
