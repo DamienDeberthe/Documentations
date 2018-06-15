@@ -152,17 +152,21 @@ Scanner la plage réseau :
 nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 ```
 <br/>
-
 Ajouter une route Debian. Ajouter au fichier <code>/etc/network/interfaces</code> :
 ```bash
 #up route add -net <network_destination> gw <IP_gateway> dev <interface_IP_gateway>
 #Exemple add route static
 up route add -net 192.168.99.0/24 gw 192.168.1.0 dev eth0
 ```
+<br/>
 
-Envoi de mail en ligne de commande :
+Envoi simple de mail en ligne de commande :
 ```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
+```
+Envoi de mail en ligne de commande en spécifiant l'adresse mail d'envoi :
+```bash
+echo "Email send from '$HOSTNAME'" | mail -s "Mail test" -a "From: user@domain.com" <destinataire>@domain.com
 ```
 Afficher les mails en attente : 
 ```bash
