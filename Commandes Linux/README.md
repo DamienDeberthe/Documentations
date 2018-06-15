@@ -116,27 +116,6 @@ rgrep SEARCH *
 <br/>
 
 
-### Network
-Ajouter une route Debian.<br/> Ajouter au fichier <code>/etc/network/interfaces</code> :
-```bash
-#up route add -net <network_destination> gw <IP_gateway> dev <interface_IP_gateway>
-#Exemple add route static
-up route add -net 192.168.99.0/24 gw 192.168.1.0 dev eth0
-```
-<br/>
-
-Scanner la plage réseau : 
-```bash
-nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
-```
-<br/>
-
-Connaitre le pourcentage de pertes de paquets en direct (**Nécessaire** : <code>apt-get install mtr</code>):
-```bash
-mtr <X.X.X.X>
-```
-<br/>
-
 ### Autres/Divers
 Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
@@ -162,21 +141,37 @@ python -m SimpleHTTPServer 80
 ```
 <br/>
 
+Connaitre le pourcentage de pertes de paquets en direct (**Nécessaire** : <code>apt-get install mtr</code>):
+```bash
+mtr <X.X.X.X>
+```
+<br/>
+
+Scanner la plage réseau : 
+```bash
+nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
+```
+<br/>
+
+Ajouter une route Debian. Ajouter au fichier <code>/etc/network/interfaces</code> :
+```bash
+#up route add -net <network_destination> gw <IP_gateway> dev <interface_IP_gateway>
+#Exemple add route static
+up route add -net 192.168.99.0/24 gw 192.168.1.0 dev eth0
+```
+
 Envoi simple de mail en ligne de commande :
 ```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
 ```
-Envoi de mail en ligne de commande en spécifiant l'adresse mail d'envoi :
-```bash
-echo "Email send from '$HOSTNAME'" | mail -s "Mail test" -a "From: user@domain.com" <destinataire>@domain.com
-```
+Envoi simple de mail en ligne de commande, en ajoutant  :
 Afficher les mails en attente : 
 ```bash
 mailq
 #OR
 postqueue -p
 ```
-Supprimer tout les mails en attente :
+Pour supprimer tout les mails en attentes :
 ```bash
 postsuper -d ALL
 ```
