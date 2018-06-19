@@ -18,12 +18,11 @@ Verification de l'installation :
 cd /opt/eff.org/certbot/venv/bin/
 ./certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --manual -d '*.domain.com' --manual-public-ip-logging-ok
 ```
-<p>A cette étape :</p>
-<br/>
-<code>
--------------------------------------------------------------------------------<br/>
-Please deploy a DNS TXT record under the name<br/>
-_acme-challenge.domain.tld with the following value:<br/>
-</code>
-<br/>
+
+A cette étape :
+```bash
+-------------------------------------------------------------------------------
+Please deploy a DNS TXT record under the name
+_acme-challenge.domain.tld with the following value:
+```
 Il faut ajouter l'enregistrement TXT à votre domaine.
