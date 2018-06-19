@@ -21,9 +21,9 @@ cd /opt/eff.org/certbot/venv/bin/
 <p>A cette étape :</p>
 <br/>
 <code>
--------------------------------------------------------------------------------
-Please deploy a DNS TXT record under the name
-_acme-challenge.domain.tld with the following value:
+-------------------------------------------------------------------------------<br/>
+Please deploy a DNS TXT record under the name<br/>
+_acme-challenge.domain.tld with the following value:<br/>
 </code>
 <br/>
 Il faut ajouter l'enregistrement TXT à votre domaine.
