@@ -27,6 +27,6 @@ _acme-challenge.domain.tld with the following value:
 ```
 Il faut ajouter l'enregistrement TXT au domaine.
 
-Les certificats se trouvent dans le dossier :<br>
+Le chemin des certificats est :<br>
 <i>/etc/letsencrypt/live/domain.com/fullchain.pem<br>
 /etc/letsencrypt/live/domain.com/privkey.pem</i>
