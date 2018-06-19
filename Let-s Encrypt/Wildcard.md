@@ -1,6 +1,6 @@
 Source : https://blog.blaisot.org/letsencrypt-wildcard-part1.html
 
-## Installation de certbot
+### Installation de certbot
 ```bash
 mkdir /opt/certbot && cd /opt/certbot
 wget https://dl.eff.org/certbot-auto
@@ -12,7 +12,7 @@ Verification de l'installation :
 /opt/eff.org/certbot/venv/bin/certbot --version
 ```
 
-## Génération du Wildcard
+### Génération du Wildcard
 
 ```bash
 cd /opt/eff.org/certbot/venv/bin/
@@ -27,6 +27,8 @@ _acme-challenge.domain.tld with the following value:
 ```
 Il faut ajouter l'enregistrement TXT au domaine.
 
+### Certificats
+Vous devriez obtenir "Congratulations! ..." se qui signifie que la génération des certificats c'est bien passé.<br>
 Le chemin des certificats est :<br>
 <i>/etc/letsencrypt/live/domain.com/fullchain.pem<br>
 /etc/letsencrypt/live/domain.com/privkey.pem</i>
