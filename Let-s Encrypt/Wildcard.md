@@ -25,4 +25,8 @@ A cette étape :
 Please deploy a DNS TXT record under the name
 _acme-challenge.domain.tld with the following value:
 ```
-Il faut ajouter l'enregistrement TXT à votre domaine.
+Il faut ajouter l'enregistrement TXT au domaine.
+
+Les certificats se trouvent dans le dossier :<br>
+<i>/etc/letsencrypt/live/domain.com/fullchain.pem<br>
+/etc/letsencrypt/live/domain.com/privkey.pem</i>
