@@ -18,7 +18,7 @@ Verification de l'installation :
 cd /opt/eff.org/certbot/venv/bin/
 ./certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --manual -d '*.domain.com' --manual-public-ip-logging-ok
 ```
-A cette étape :
+<p>A cette étape :</p>
 <br/>
 <code>
 -------------------------------------------------------------------------------
