@@ -39,7 +39,7 @@
 ```
 * Afficher le résultat d'une commande :
 ```bash
-  - name: 1.cat /etc/passwd
+  - name: 1. cat /etc/passwd
     shell: cat /etc/passwd
     register: out
   - name: 2. Affichage du resultat de la commande
