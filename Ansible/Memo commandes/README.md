@@ -37,7 +37,7 @@
   - name: 1. Command 
     shell: 
 ```
-* Afficher le résultat d'une commande :
+* Afficher le résultat d'une commande : (eviter les "-" dans le nom des variables)
 ```bash
   - name: 1. cat /etc/passwd
     shell: cat /etc/passwd
