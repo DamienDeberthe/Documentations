@@ -2,7 +2,7 @@
 
 ### Fichier YML
 
-Simple fichier YML :
+* Simple fichier YML :
 ```bash
 # file.yml
 ---
@@ -16,4 +16,4 @@ Simple fichier YML :
 
 ```
 
-Exécution des commandes en sudo, avec le paramètre <code>--ask-become-pass</code> lors de l’exécution du playbook :
+* Exécution des commandes en sudo, avec le paramètre <code>--ask-become-pass</code> lors de l’exécution du playbook :
