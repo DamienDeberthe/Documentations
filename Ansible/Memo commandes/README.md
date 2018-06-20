@@ -41,7 +41,7 @@
 ```bash
   - name: 1. cat /etc/passwd
     shell: cat /etc/passwd
-    register: out
+    register: <var>
   - name: 2. Affichage du resultat de la commande
-    debug: var=out.stdout_lines
+    debug: var=<var>.stdout_lines
 ```
