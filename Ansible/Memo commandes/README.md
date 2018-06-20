@@ -3,11 +3,11 @@
 ### Fichier YML
 
 ```bash
-# command-1.yml
+# file.yml
 ---
 
 - hosts: 
-  remote_user:
+  remote_user: 
 
   tasks:
   - name: 1.
