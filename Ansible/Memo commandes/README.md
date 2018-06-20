@@ -1,7 +1,7 @@
 ## MEMO COMMANDES ANSIBLE
 
 
-### Fichier YML
+### Exemples de fichiers YML
 * Simple fichier YML :
 ```bash
 # file.yml
@@ -28,4 +28,12 @@
   - name: 1.
     shell:
 
+```
+
+
+### Commandes utiles
+* Exécuter une commande bash :
+```bash
+  - name: 1. Command 
+    shell: 
 ```
