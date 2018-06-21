@@ -1,5 +1,6 @@
-# Advanced create-user like adduser. The password is the ID of the user and expire the passwd.
-# The user is add to the sudoers file and the service sudo is restart
+# Advanced create-user like adduser. 
+# The password is the ID of the user and it's expire.
+# The user is add to the sudoers file and the service sudo is restart.
 # create-user-advanced.yml
 ---
 
