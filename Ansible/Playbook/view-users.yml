@@ -1,0 +1,13 @@
+# view-users.yml
+---
+
+- hosts: <hosts>
+  remote_user: ansible
+  become: yes
+
+  tasks:
+  - name: 1. cat /etc/passwd
+    shell: cat /etc/passwd | grep "/bash" | awk -F ":" '{print $1}' | sed '1i\SERVER USERS\' | sed '2i\------------\' && echo "------------"
+    register: users
+  - name: 2. List of users
+    debug: var=users.stdout_lines
