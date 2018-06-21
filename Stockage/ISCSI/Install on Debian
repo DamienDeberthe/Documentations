@@ -9,7 +9,7 @@
 - Création de la LUN:
 Editer le fichier: /etc/iet/ietd.conf
 "
-Target iqn.2017.01.com.qualigaz:iscsi.target	# iqn.[année].[mois].com.[entreprise]:[identifier_de_la_target]
+Target iqn.2017.01.com.domain:iscsi.target	# iqn.[année].[mois].com.[entreprise]:[identifier_de_la_target]
 Lun 0 Path=/dev/sdb,Type=blockio		# Path=[disque_dur],Type=[blockio/fileio]
 "
 blockio -> Gros fichier, mode block
