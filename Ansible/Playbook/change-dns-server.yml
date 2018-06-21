@@ -2,7 +2,7 @@
 # change-dns-server.yml
 ---
 
-- hosts: 
+- hosts: <host>
   remote_user: ansible
   become: yes
 
