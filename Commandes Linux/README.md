@@ -68,7 +68,7 @@ cat /etc/passwd | sed '1i\UTILISATEUR DE LA MACHINE :\'
 ```
 Ajouter une ligne au début du résultat d'une commande + saut de ligne de la deuxième :
 ```bash
-cat /etc/passwd | sed '1i\UTILISATEUR DE LA MACHINE :\ | sed '2i\\''
+cat /etc/passwd | sed '1i\UTILISATEUR DE LA MACHINE :\ | sed '2i\\'
 ```
 
 * L’option "-i" équivaut à l’insertion. Cette option permet de modifier directement le contenu du fichier. Pour vérifier le résultat il est possible d’exécuter la commande sed sans l’option "-i" au préalable.
