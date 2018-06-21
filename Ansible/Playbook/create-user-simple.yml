@@ -2,8 +2,8 @@
 # create-user-simple.yml
 ---
 
-- hosts: 
-  remote_user: 
+- hosts: <hosts>
+  remote_user: ansible
   become: yes
 
   vars:
