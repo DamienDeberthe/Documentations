@@ -1,3 +1,4 @@
+# Simple create-user like adduser and the password is the ID of the user
 # create-user.yml
 ---
 
@@ -15,10 +16,12 @@
   - name: 2. Create user {{ user }}
     shell: useradd -g {{ user }} -s /bin/bash -d /home/{{ user }} -m {{ user }}
 
-# Generate the pass with:
-# openssl passwd -1 -salt 3Zdze7Vx <passwd>
-  - name: 3. Passwd to {{ user }}
+  - name: 3. Generate the passwd
+    shell: openssl passwd -1 -salt 3Zdze7Vx {{ user }}
+    register: hash_passwd
+
+  - name: 3.1 Passwd to {{ user }} is {{ user }}
     user:
       name={{ user }}
       update_password=always
-      password=<add_result_of_the_command_openssl>
+      password={{hash_passwd.stdout}}
