@@ -1,0 +1,35 @@
+# create-user-advanced.yml
+---
+
+- hosts: 
+  remote_user: 
+  become: yes
+
+  vars:
+    user: <ID_new_user>
+
+  tasks:
+  - name: 1. Create group {{ user }}
+    shell: groupadd {{ user }}
+
+  - name: 2. Create user {{ user }}
+    shell: useradd -g {{ user }} -s /bin/bash -d /home/{{ user }} -m {{ user }}
+
+  - name: 3. Generate the passwd
+    shell: openssl passwd -1 -salt 3Zdze7Vx {{ user }}
+    register: hash_passwd
+
+  - name: 3.1 Passwd to {{ user }} is {{ user }}
+    user:
+      name={{ user }}
+      update_password=always
+      password={{hash_passwd.stdout}}
+
+  - name: 4. Expire the passwd for change at the first connection
+    shell: passwd -e {{ user }}
+
+  - name: 5. Add the user in the sudo file
+    shell: sed -i "/root/a{{ user }}   ALL=(ALL:ALL) ALL" /etc/sudoers
+
+  - name: 6. Restart service sudo
+    service: name=sudo state=restarted
