@@ -9,3 +9,8 @@ wget https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Dock
 && chmod +x docker-install.sh \
 && ./docker-install.sh
 ```
+
+* Install docker-compose :
+```bash
+curl -L https://raw.githubusercontent.com/DamienDeberthe/Documentations/master/Docker/Scripts/docker-install-compose.sh | bash
+```
