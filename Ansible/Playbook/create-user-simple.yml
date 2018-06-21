@@ -1,5 +1,5 @@
 # Simple create-user like adduser and the password is the ID of the user
-# create-user.yml
+# create-user-simple.yml
 ---
 
 - hosts: 
