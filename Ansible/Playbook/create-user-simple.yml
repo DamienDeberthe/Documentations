@@ -2,12 +2,12 @@
 # create-user-simple.yml
 ---
 
-- hosts: <hosts>
+- hosts: <hosts>  #ADD the (group) host
   remote_user: ansible
   become: yes
 
   vars:
-    user: <ID_new_user>
+    user: <ID_new_user> #ADD the new user
 
   tasks:
   - name: 1. Create group {{ user }}
@@ -17,7 +17,7 @@
     shell: useradd -g {{ user }} -s /bin/bash -d /home/{{ user }} -m {{ user }}
 
   - name: 3. Generate the passwd
-    shell: openssl passwd -1 -salt 3Zdze7Vx {{ user }}
+    shell: python3 -c 'import crypt; print(crypt.crypt("{{ user }}", crypt.mksalt(crypt.METHOD_SHA512)))'
     register: hash_passwd
 
   - name: 3.1 Passwd to {{ user }} is {{ user }}
