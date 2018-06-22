@@ -8,6 +8,6 @@
 
   tasks:
   - name: 1. Copy file resolv.conf
-    shell: cp /etc/resolv.conf /tmp/resolv.conf.copy
+    shell: cp /etc/resolv.conf /etc/resolv.conf.copy
   - name: 2. Change IP server DNS
     shell: sed -i "s|<old_IP_DNS_server|new_IP_DNS_server|g" /etc/resolv.conf #ADD the IPs
