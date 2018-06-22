@@ -4,12 +4,12 @@
 # create-user-advanced.yml
 ---
 
-- hosts: <hosts>
+- hosts: <hosts>  #ADD the (group) host
   remote_user: ansible
   become: yes
 
   vars:
-    user: <ID_new_user>
+    user: <ID_new_user> #ADD the new user
 
   tasks:
   - name: 1. Create group {{ user }}
