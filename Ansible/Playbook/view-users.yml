@@ -2,7 +2,7 @@
 # view-users.yml
 ---
 
-- hosts: <hosts>
+- hosts: <hosts>  #ADD the (group) host
   remote_user: ansible
   become: yes
 
