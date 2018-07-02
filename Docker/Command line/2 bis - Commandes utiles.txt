@@ -13,9 +13,9 @@ docker exec -it <name> bash -c "cat /etc/debian_version"
 
 ### COMMIT & PUSH ###
 
-docker commit [conteneur] qualigaz/dev:[TAG]
+docker commit [conteneur] <ID_repo>/dev:[TAG]
 docker login
-docker push qualigaz/dev
+docker push <ID_repo>/dev
 
 
 ### DEL ###
