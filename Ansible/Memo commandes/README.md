@@ -45,8 +45,7 @@
   - name: 2. Affichage du resultat de la commande
     debug: var=<var>.stdout_lines
 ```
-
-
+<br>
 * Ignorer les erreurs et continuer l'execution du playbook (pour l'ensemble du playbook) :
 ```bash
 - hosts: <hosts>
