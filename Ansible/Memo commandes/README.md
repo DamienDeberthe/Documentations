@@ -45,3 +45,9 @@
   - name: 2. Affichage du resultat de la commande
     debug: var=<var>.stdout_lines
 ```
+* Ignorer les erreurs et continuer l'execution du playbook :
+```bash
+  - name: 1. cat impossible_file
+    shell: cat impossible_file
+    ignore_errors: yes
+```
