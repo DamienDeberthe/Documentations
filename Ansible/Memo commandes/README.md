@@ -45,7 +45,14 @@
   - name: 2. Affichage du resultat de la commande
     debug: var=<var>.stdout_lines
 ```
-* Ignorer les erreurs et continuer l'execution du playbook :
+* Ignorer les erreurs et continuer l'execution du playbook (pour l'ensemble du playbook) :
+```bash
+- hosts: <hosts>
+  remote_user: ansible
+  become: yes
+  ignore_errors: yes
+```
+* Ignorer les erreurs et continuer l'execution du playbook (pour une fonction particulière) :
 ```bash
   - name: 1. cat impossible_file
     shell: cat impossible_file
