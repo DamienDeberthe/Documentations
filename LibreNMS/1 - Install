@@ -39,7 +39,7 @@ server {
 
     root /opt/librenms/html;
     index index.php index.html index.htm;
-    server_name librenms.qualigaz.com;
+    server_name librenms.domain.com;
 
     location / {
         try_files $uri $uri/ /index.php?q=$uri&$args;
