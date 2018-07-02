@@ -63,9 +63,9 @@ docker create --tty -i -v <dir_to_host>:<dir_to_conteneur> debian:latest
 
 ### Docker Hub ###
 
-docker commit [conteneur] qualigaz/dev:[TAG]
+docker commit [conteneur] <ID_repo>/dev:[TAG]
 docker login
-docker push qualigaz/dev
+docker push <ID_repo>/dev
 
 
 ### Suppression ###
