@@ -3,7 +3,7 @@ TUTO INSTALLATION ANSIBLE:
 - Installation:
 # apt-get install ansible
 
-- Création paire de clées sur le serveur Ansible
+- Création paire de clées sur le serveur Ansible (connecté au compte root) :
 # ssh-keygen
 
 - Partage de la clé publique du serveur aux machines clientes
