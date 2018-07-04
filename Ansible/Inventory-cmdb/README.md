@@ -5,6 +5,7 @@
 apt-get install python-pip \
 && pip install ansible-cmdb
 ```
+<br>
 
 * Collect informations about your hosts (store in the dir <out>) :
 ```bash
