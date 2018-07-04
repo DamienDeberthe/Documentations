@@ -20,9 +20,9 @@ ansible -i /etc/ansible/hosts -m setup --tree out/ all --user ansible
 * Generate inventory
 ** Simple one-page :
 ```bash
-ansible-cmdb -t html_fancy <dir_out_where_hosts_store> > inventory.html
+ansible-cmdb -t html_fancy <dir_out_where_hosts_store> > simple-inventory.html
 ```
-** For big infrastructure (one page per server)
+** Advanced page for big infrastructure (one page per server) :
 ```bash
-ansible-cmdb -t html_fancy_split <dir_out_where_hosts_store> > inventory.html
+ansible-cmdb -t html_fancy_split <dir_out_where_hosts_store> > advanced-inventory.html
 ```
