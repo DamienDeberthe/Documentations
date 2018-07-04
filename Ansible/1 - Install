@@ -24,7 +24,7 @@ srv-web3-test
 
 - Test du fichier hosts
 Pinguer tous les hotes:
-# ansible -m ping all
+ ansible -m ping all --user <name_user_connexion>
 Pinguer un hote en particuliers:
  ansible -m ping [Nom_hote] --user <name_user_connexion>
 
