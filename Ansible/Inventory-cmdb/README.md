@@ -15,3 +15,9 @@ Example :
 ```bash
 ansible -i /etc/ansible/hosts -m setup --tree out/ all --user ansible
 ```
+<br>
+
+* Generate inventory
+** Simple one-page :
+ansible-cmdb -t html_fancy <dir_out_where_hosts_store> > inventory.html
+** For big infrastructure (one page per server)
