@@ -26,7 +26,8 @@ ansible -i /etc/ansible/hosts -m setup --tree out/ all --user ansible
 ```bash
 ansible-cmdb -t html_fancy <dir_out_where_hosts_store> > simple-inventory.html
 ```
-* Advanced page for big infrastructure (one page per server) :
+* Advanced page for big infrastructure (one page per server) : 
 ```bash
-ansible-cmdb -t html_fancy_split <dir_out_where_hosts_store> > advanced-inventory.html
+ansible-cmdb -t html_fancy_split <dir_out_where_hosts_store>
 ```
+The web files are store in the directory **smdb** (which has just been created).
