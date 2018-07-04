@@ -33,5 +33,5 @@ ansible-cmdb -t html_fancy_split <dir_out_where_hosts_store>
 The web files are store in the directory **smdb** (which has just been created).
 * TXT format :
 ```bash
-ansible-cmdb -t txt_table <dir_out_where_hosts_store>
+ansible-cmdb -t txt_table <dir_out_where_hosts_store> > inventory.txt
 ```
