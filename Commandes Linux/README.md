@@ -147,6 +147,18 @@ nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 <br/>
 
 
+### Stresstest
+Simuler la RAM à 50% et 1 CPU à 100% :
+```bash
+stress --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.5;}' < /proc/meminfo)k --vm-keep -m 1
+```
+Simuler la RAM à 90% et 2 CPU à 100% :
+```bash
+stress --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.9;}' < /proc/meminfo)k --vm-keep -m 2
+```
+<br/>
+
+
 ### Autres/Divers
 Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
