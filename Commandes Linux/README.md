@@ -98,6 +98,12 @@ cat file2 | tr ' ' '\n'
 ```
 <br/>
 
+### Scripts
+#### Date
+Pour dater dans un fichier de log, créer la variable (résultat : dd/mm/yyyy:hh:mm:ss) :
+```bash
+date=`date +"%m/%d/%Y:%T"`
+```
 
 ### Recherche
 Rechercher un fichier sur la machine : 
