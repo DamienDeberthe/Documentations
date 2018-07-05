@@ -3,7 +3,7 @@
 ### Install
 Install pip and module for ansible :
 ```bash
-apt-get install python-pip \
+apt-get install -y python-pip \
 && pip install ansible-cmdb
 ```
 <br>
