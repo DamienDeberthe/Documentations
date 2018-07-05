@@ -148,7 +148,7 @@ nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 
 
 ### Stresstest
-Prérequis : installer le paquet **stress** <code>apt-get install -y stress</code>
+**Prérequis** : installer le paquet **stress** <code>apt-get install -y stress</code>
 <br/>
 Simuler la RAM à 50% et 1 CPU à 100% :
 ```bash
