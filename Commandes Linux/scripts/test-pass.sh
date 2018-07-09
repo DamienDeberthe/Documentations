@@ -8,7 +8,6 @@ read -p "Entrez le login de connexion a tester : " user
 read -p "Entrez le mot de passe de connexion a tester : " mdp
 
 #--- Indiquer les adresses IP des serveurs a tester dans le fichier inc/ip.txt ---#
-
 for line in $(cat ip.txt)
 do
 echo -e "----------"
