@@ -11,7 +11,7 @@ read -p "Entrez le mot de passe de connexion a tester : " mdp
 for line in $(cat ip.txt)
 do
 echo -e "----------"
-echo -e "Test des id: $user/$user sur le serveur : $line\n"
+echo -e "Test des id: $user/$mdp sur le serveur : $line\n"
 patator ssh_login user=$user password=$mdp host=$line -x ignore:fgrep='Authentication failed.'
 echo -e "----------\n\n"
 
