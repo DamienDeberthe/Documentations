@@ -1,0 +1,20 @@
+# Install packages ...
+# install-packages.yml
+---
+
+- hosts: 
+  remote_user: 
+  become: yes
+
+  tasks:
+  - name: 1. Update (command: apt-get update)
+    apt:
+      update_cache: yes
+
+  - name: 2. Installation (command: apt-get install...)
+    apt:
+      name: "{{ packages }}"
+  vars:
+    packages:
+    - pack1
+    - pack2
