@@ -8,3 +8,5 @@ SSLforfree est un site permettant de générer vos certificats Let's Encrypt dir
 ```bash
 _acme-challenge.domain.com IN TXT XRq2tVV4427XF3V5Dg33fv9NaWd7MYkbkreh38ZGe37
 ```
+
+* Récuperez ensuite vos certificats. Vous pouvez également supprimer l'enregistrement TXT sur votre domaine, il est utile uniquement pour la génération des certificats.
