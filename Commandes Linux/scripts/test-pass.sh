@@ -2,10 +2,11 @@
 
 ### USE THIS SCRIPT ON A KALI LINUX OR INSTALL PATATOR COMMAND ###
 
-
+echo -e "---------- TEST-PASS ----------\n\n"
 #--- Indiquer le nom d'utilisateur et pass ---#
 read -p "Enter a login : " user
 read -p "Enter the pass : " pass
+echo -e "\n"
 
 #--- Indiquer les adresses IP des serveurs a tester dans le fichier inc/ip.txt ---#
 for line in $(cat ip.txt)
