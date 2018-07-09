@@ -5,7 +5,7 @@
 echo -e "\n-------------------------------\n---------- TEST-PASS ----------\n-------------------------------\n"
 
 #--- Indiquer le nom d'utilisateur et pass ---#
-read -p "- Enter a login : " user
+read -p "- Enter a login  : " user
 read -p "- Enter the pass : " pass
 echo -e "\n"
 
