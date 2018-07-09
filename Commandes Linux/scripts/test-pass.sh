@@ -13,7 +13,7 @@ echo -e "\n"
 for line in $(cat ip.txt)
 do
 echo -e "----------"
-echo -e "Test des id: $user/$pass sur le serveur : $line\n"
+echo -e "Test id: $user/$pass on : $line\n"
 patator ssh_login user=$user password=$pass host=$line -x ignore:fgrep='Authentication failed.'
 echo -e "----------\n\n"
 
