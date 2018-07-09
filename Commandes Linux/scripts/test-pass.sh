@@ -2,9 +2,7 @@
 
 ### USE THIS SCRIPT ON A KALI LINUX OR INSTALL PATATOR COMMAND ###
 
-echo -e "-------------------------------"
-echo -e "---------- TEST-PASS ----------"
-echo -e "-------------------------------\n"
+echo -e "\n-------------------------------\n---------- TEST-PASS ----------\n-------------------------------\n"
 
 #--- Indiquer le nom d'utilisateur et pass ---#
 read -p "- Enter a login : " user
