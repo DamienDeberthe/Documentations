@@ -28,11 +28,16 @@ echo -e "\n- Route par defaut: $gateway" >> /etc/motd
 
 
 #Taille disque:
-size=`df -h | grep /dev/sda1 | awk '{print $2}'`
-rest=`df -h | grep /dev/sda1 | awk '{print $5}'`
+#OLD
+#size=`df -h | grep /dev/sda1 | awk '{print $2}'`
+#rest=`df -h | grep /dev/sda1 | awk '{print $5}'`
+#echo -e "\n- Taille du disque dur: $size" >> /etc/motd
+#echo -e "  Utilisé à $rest" >> /etc/motd
 
-echo -e "\n- Taille du disque dur: $size" >> /etc/motd
-echo -e "  Utilisé à $rest" >> /etc/motd
+#NEW
+size=`df -h | grep /dev/sd | awk '{print "   - "$1" : "$2 " utilisé à "$5}'`
+echo -e "\n- Detail des partitions:" >> /etc/motd
+echo -e "$size" >> /etc/motd
 
 #Protocole d'ecoutes:
 echo -e "\n- Protocole d'ecoutes:" >> /etc/motd
