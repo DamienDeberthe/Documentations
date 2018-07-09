@@ -36,7 +36,7 @@ echo -e "\n\033[1;32m- Route par defaut:\033[0m $gateway" >> /etc/motd
 
 #NEW
 size=`df -h | grep /dev/sd | awk '{print "   - "$1" : "$2 " utilisé à "$5}'`
-echo -e "\n\033[1;32m- Detail des partitions:\033[0m >> /etc/motd
+echo -e "\n\033[1;32m- Detail des partitions:\033[0m" >> /etc/motd
 echo -e "$size" >> /etc/motd
 
 #Protocole d'ecoutes:
