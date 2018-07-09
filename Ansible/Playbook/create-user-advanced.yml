@@ -18,8 +18,13 @@
   - name: 2. Create user {{ user }}
     shell: useradd -g {{ user }} -s /bin/bash -d /home/{{ user }} -m {{ user }}
 
+#FOR Debian 8 and 9
   - name: 3. Generate the passwd
     shell: python3 -c 'import crypt; print(crypt.crypt("{{ user }}", crypt.mksalt(crypt.METHOD_SHA512)))'
+    register: hash_passwd
+#FOR Debian 7 and older
+  - name: 1. Generate the passwd with salt
+    shell: python -c "import crypt, getpass, pwd; print(crypt.crypt('{{ password }}', '\$6\$<8-random-characters>\$'))"
     register: hash_passwd
 
   - name: 3.1 Passwd to {{ user }} is {{ user }}
