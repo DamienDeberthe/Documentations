@@ -2,8 +2,8 @@
 # install-packages.yml
 ---
 
-- hosts: 
-  remote_user: 
+- hosts: <hosts>  #ADD the (group) host
+  remote_user: ansible
   become: yes
 
   tasks:
