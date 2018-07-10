@@ -19,7 +19,7 @@ sed -i "s|ServerTokens OS|ServerTokens Prod|g" /etc/apache2/conf-available/secur
 ```
 
 * File **conf-available/security.conf** :
-<br/>
+
 ServerTokens OS -> En tete Apache ; Remplacer par "Prod" pour cacher la version
 <br/>
 ServerSignature "Off" -> N'affiche pas sur la page
