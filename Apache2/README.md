@@ -5,7 +5,7 @@
 
 ```bash
 apt-get update \
-&& apt-get install apache2
+&& apt-get install -y apache2
 ```
 For test, open with your navigator and tape IP's server.
 <br/><br/>
