@@ -9,7 +9,7 @@ apt-get update \
 ```
 For test, open with your navigator and tape IP's server.
 
-
+<br/>
 #### Minimum security configuration
 
 ```bash
@@ -18,6 +18,8 @@ sed -i "s|ServerTokens OS|ServerTokens Prod|g" /etc/apache2/conf-available/secur
 && a2dismod -f autoindex
 ```
 
+
+<br/>
 * File **conf-available/security.conf** :
 
 ServerTokens OS -> En tete Apache ; Remplacer par "Prod" pour cacher la version
@@ -28,6 +30,7 @@ ServerSignature "Off" -> N'affiche pas sur la page
 a2dismod -f autoindex
 
 
+<br/>
 #### Restart service apache2
 
 ```bash
