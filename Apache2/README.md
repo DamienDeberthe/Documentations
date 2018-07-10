@@ -106,4 +106,16 @@ Redirect 302 /<dir>/<file_to_redirect> http(s)://<URL_to_redirect>
 
 #### HTTPS
 
+* Enable the module :
+```bash
+a2enmod ssl \
+&& service apache2 restart
+```
+
+* Configuration Vhost :
 https://mozilla.github.io/server-side-tls/ssl-config-generator/
+
+* Create certificats :
+```bash
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -out public-key.crt -keyout private-key.key
+```
