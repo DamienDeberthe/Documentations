@@ -87,6 +87,15 @@ DirectoryIndex index2.html
 
 * Redirect :
 
+HTTP to HTTPS :
+
+```bash
+<VirtualHost *:80>
+        ServerName www.domain.com
+        Redirect / https://www.domain.com/
+</VirtualHost>
+```
+
 302
 
 ```bash
