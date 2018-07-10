@@ -8,7 +8,7 @@ apt-get update \
 && apt-get install apache2
 ```
 For test, open with your navigator and tape IP's server.
-<br/>
+<br/><br/>
 
 
 #### Minimum security configuration
