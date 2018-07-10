@@ -87,7 +87,7 @@ DirectoryIndex index2.html
 
 * Redirect :
 
-HTTP to HTTPS :
+---> HTTP to HTTPS :
 
 ```bash
 <VirtualHost *:80>
@@ -96,7 +96,7 @@ HTTP to HTTPS :
 </VirtualHost>
 ```
 
-302
+---> 302 :
 
 ```bash
 Redirect 302 /<dir>/<file_to_redirect> http(s)://<URL_to_redirect>
