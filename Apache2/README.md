@@ -11,6 +11,14 @@ For test, open with your navigator and tape IP's server.
 <br/><br/>
 
 
+#### Restart service apache2
+
+```bash
+service apache2 restart
+```
+<br/>
+
+
 #### Minimum security configuration
 
 ```bash
@@ -28,10 +36,3 @@ ServerSignature "Off" -> N'affiche pas sur la page
 * Supprimer autoindex pour ne pas indexer automatiquement les dossiers :
 a2dismod -f autoindex
 <br/>
-
-
-#### Restart service apache2
-
-```bash
-service apache2 restart
-```
