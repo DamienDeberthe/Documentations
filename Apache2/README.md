@@ -92,3 +92,9 @@ DirectoryIndex index2.html
 ```bash
 Redirect 302 /<dir>/<file_to_redirect> http(s)://<URL_to_redirect>
 ```
+<br/>
+
+
+#### HTTPS
+
+https://mozilla.github.io/server-side-tls/ssl-config-generator/
