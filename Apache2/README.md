@@ -13,7 +13,8 @@ For test, open with your navigator and tape IP's server.
 
 File **conf-available/security.conf** :
 
-ServerTokens OS		-> En tete Apache ; Remplacer par "Prod" pour cacher la version
+ServerTokens OS -> En tete Apache ; Remplacer par "Prod" pour cacher la version
+<br/>
 ServerSignature "Off" -> N'affiche pas sur la page
 
 ```bash
