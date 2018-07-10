@@ -75,3 +75,18 @@ DirectoryIndex index2.html
                 Allow from 192.168.1.0/24
 </files>       
 ```
+
+* Restrict with IP access to directory :
+```bash
+<Directory /var/www/html/dir-blocked>
+                Order Allow,Deny
+                Allow from 192.168.0.1
+                Allow from 192.168.1.0/24
+</Directory>
+```
+
+* Redirect :
+** 302
+```bash
+Redirect 302 /<dir>/<file_to_redirect> http(s)://<URL_to_redirect>
+```
