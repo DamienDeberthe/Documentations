@@ -36,3 +36,6 @@ ServerSignature "Off" -> N'affiche pas sur la page
 * Supprimer autoindex pour ne pas indexer automatiquement les dossiers :
 a2dismod -f autoindex
 <br/>
+
+
+#### Minimum 
