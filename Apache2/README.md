@@ -11,8 +11,14 @@ For test, open with your navigator and tape IP's server.
 <br/><br/>
 
 
-#### Restart service apache2
+#### Test and restart service apache2
 
+* Test :
+```bash
+apachectl -t
+```
+
+* Restart :
 ```bash
 service apache2 restart
 ```
