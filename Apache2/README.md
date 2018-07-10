@@ -18,8 +18,6 @@ sed -i "s|ServerTokens OS|ServerTokens Prod|g" /etc/apache2/conf-available/secur
 && sed -i "s|ServerSignature On|ServerSignature Off|g" /etc/apache2/conf-available/security.conf \
 && a2dismod -f autoindex
 ```
-<br/>
-
 
 * File **conf-available/security.conf** :
 
