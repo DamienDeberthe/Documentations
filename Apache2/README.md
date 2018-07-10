@@ -86,7 +86,8 @@ DirectoryIndex index2.html
 ```
 
 * Redirect :
-** 302
+<br/>
+302
 ```bash
 Redirect 302 /<dir>/<file_to_redirect> http(s)://<URL_to_redirect>
 ```
