@@ -9,16 +9,26 @@ apt-get update \
 ```
 For test, open with your navigator and tape IP's server.
 
-#### Minimum configuration
 
-File **conf-available/security.conf** :
-
-ServerTokens OS -> En tete Apache ; Remplacer par "Prod" pour cacher la version
-<br/>
-ServerSignature "Off" -> N'affiche pas sur la page
+#### Minimum security configuration
 
 ```bash
 sed -i "s|ServerTokens OS|ServerTokens Prod|g" /etc/apache2/conf-available/security.conf \
 && sed -i "s|ServerSignature On|ServerSignature Off|g" /etc/apache2/conf-available/security.conf \
 && a2dismod -f autoindex
+```
+
+* File **conf-available/security.conf** :
+ServerTokens OS -> En tete Apache ; Remplacer par "Prod" pour cacher la version
+<br/>
+ServerSignature "Off" -> N'affiche pas sur la page
+
+* Supprimer autoindex pour ne pas indexer automatiquement les dossiers :
+a2dismod -f autoindex
+
+
+#### Restart service apache2
+
+```bash
+service apache2 restart
 ```
