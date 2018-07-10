@@ -55,6 +55,20 @@ a2dismod -f autoindex
 
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-
 </VirtualHost>
+```
+
+#### Advanced Vhost configuration
+
+* Change the file index :
+```bash
+DirectoryIndex index2.html
+```
+
+* Restrict with IP access to file :
+```bash
+<files block.html>
+                Order Allow,Deny
+                Allow from 192.168.0.0/24
+</files>       
 ```
