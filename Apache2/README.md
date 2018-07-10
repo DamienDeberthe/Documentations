@@ -118,5 +118,5 @@ https://mozilla.github.io/server-side-tls/ssl-config-generator/
 
 * Create certificats :
 ```bash
-openssl req -x509 -nodes -days 365 -newkey rsa:1024 -out public-key.crt -keyout private-key.key
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -out public-key.crt -keyout private-key.key
 ```
