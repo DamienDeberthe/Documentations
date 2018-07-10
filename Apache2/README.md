@@ -69,6 +69,7 @@ DirectoryIndex index2.html
 ```bash
 <files block.html>
                 Order Allow,Deny
-                Allow from 192.168.0.0/24
+                Allow from 192.168.0.1
+                Allow from 192.168.1.0/24
 </files>       
 ```
