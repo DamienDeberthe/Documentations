@@ -38,4 +38,18 @@ a2dismod -f autoindex
 <br/>
 
 
-#### Minimum 
+#### Minimum Vhost configuration
+
+```bash
+<VirtualHost *:80>
+        ServerName www.example.com
+
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+```
