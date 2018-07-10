@@ -86,7 +86,7 @@ DirectoryIndex index2.html
 ```
 
 * Redirect :
-<br/>
+
 302
 
 ```bash
