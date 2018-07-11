@@ -14,7 +14,9 @@ Pour fonctionner, le serveur Ansible doit pouvoir executer des commandes à dist
 # mv /etc/ansible/hosts /etc/ansible/hosts.old
 # touch /etc/ansible/hosts
 Ce fichier va contenir tous les hosts, machines que Ansible va administrer à distance.
-Il est possible d'organiser les machines en groupes dans ce fichier. Ainsi, il sera possible d'appliquer des modifs au groupe entier, plutot que de les appliquer avec tous les noms des machines. De préference utiliser le FQDN afin que le DNS gère la résolution de noms, en cas de changement d'adresse IP aucun changement à effectuer sur Ansible.
+Il est possible d'organiser les machines en groupes dans ce fichier. Ainsi, il sera possible d'appliquer des modifs au groupe
+entier, plutot que de les appliquer avec tous les noms des machines. De préference utiliser le FQDN afin que le DNS gère la
+résolution de noms, en cas de changement d'adresse IP aucun changement à effectuer sur Ansible.
 
 Exemple:
 [srv-web]
