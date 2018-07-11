@@ -29,7 +29,7 @@
     shell:
 
 ```
-
+<br/>
 
 ### Commandes utiles
 * Lancer le playbook en sudo, en renseignant le password dans le fichier (ne pas renseigner l'option -K lors du lancement du playbook) :
@@ -39,6 +39,8 @@
   vars:
     ansible_sudo_pass: <secret_password>
 ```
+<br/>
+
 * Exécuter une commande bash :
 ```bash
   - name: 1. Command 
@@ -52,7 +54,7 @@
   - name: 2. Affichage du resultat de la commande
     debug: var=<var>.stdout_lines
 ```
-<br>
+<br/>
 
 * Ignorer les erreurs et continuer l'execution du playbook (pour l'ensemble du playbook) :
 ```bash
