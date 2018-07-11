@@ -7,7 +7,8 @@ TUTO INSTALLATION ANSIBLE:
 # ssh-keygen
 
 - Partage de la clé publique du serveur aux machines clientes
-Pour fonctionner, le serveur Ansible doit pouvoir executer des commandes à distance via SSH. Pour cela il faut que sa clé publique soit installé sur chaque machine cliente.
+Pour fonctionner, le serveur Ansible doit pouvoir executer des commandes à distance via SSH. Pour cela il faut que sa clé 
+publique soit installé sur chaque machine cliente.
 # ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@[AdresseIP/hostname du client]
 
 - Fichier hosts Ansible
