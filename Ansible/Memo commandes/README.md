@@ -32,7 +32,7 @@
 
 
 ### Commandes utiles
-* Lancer le playbook en sudo, en renseignant le password dans le fichier :
+* Lancer le playbook en sudo, en renseignant le password dans le fichier (ne pas renseigner l'option -K lors du lancement du playbook) :
 ```bash
   become: yes
   
