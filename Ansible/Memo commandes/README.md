@@ -32,6 +32,11 @@
 
 
 ### Commandes utiles
+* Lancer le playbook en sudo, en renseignant le password dans le fichier :
+```bash
+  vars:
+    ansible_sudo_pass: <secret_password>
+```
 * Exécuter une commande bash :
 ```bash
   - name: 1. Command 
