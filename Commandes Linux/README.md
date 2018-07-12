@@ -1,5 +1,16 @@
 ## MEMO COMMANDES LINUX
 
+### Administration
+Lister toutes les connexions vers la machine Linux, avec les ports :
+```bash
+netstat -l
+```
+Lister tout les processus en cours, avec arborescence (f) :
+```bash
+ps auxf
+```
+<br/>
+
 
 ### Comptes Linux
 Ajouter un compte Linux : (les deux commandes sont équivalentes)
