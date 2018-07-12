@@ -1,7 +1,7 @@
 ## MEMO COMMANDES LINUX
 
 ### Administration
-Lister toutes les connexions vers la machine Linux, avec les ports :
+Lister toutes les connexions avec la machine Linux + numéros de ports :
 ```bash
 netstat -l
 ```
