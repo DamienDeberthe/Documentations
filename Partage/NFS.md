@@ -3,7 +3,7 @@
 #### Installation
 ```bash
 apt-get update \
-&& apt-get install nfs-kernel-server
+&& apt-get install -y nfs-kernel-server
 ```
 
 #### Configuration
@@ -21,7 +21,7 @@ File config is <code>/etc/exports</code> :
 #### Installation
 ```bash
 apt-get update \
-&& apt-get install nfs-common
+&& apt-get install -y nfs-common
 ```
 
 #### Configuration
