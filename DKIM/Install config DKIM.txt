@@ -94,11 +94,11 @@ chown opendkim:opendkim mail.private
 cat mail.txt
 
 mail._domainkey IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
-          "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuirDprBfOlbgqYa7aJ5pAgfds0yQyd5mgU51xpuRe5Wnx8PRy/qGMFoD8qc9D7bYB4Oz/AAEBthXDamZf81d1INR9lpoBgq5EtheUmMKh3at8KDvNWsDiKIJbQbBJ1UilBZvr9doFST3LkiYVMn7K5Dc7XbW+/sQFa929mvJjwnrNSRNFoXLPSxqF1SfUtXMG2h+E2SgFWp2pf"
-          "ke/J6dLORQwu+Nd6z4eS75KGfSt5+IpuWMPqo+RrhjblWaJJBkxUfmcbIePzxhESnNjwTfgb4zuMFbJ+m2a0JqGCFRHi/Wdx590QSkRWlCgOTdtxPYgooI1gbHJLSzvRlezEVO1wIDAQAB" )  ; ----- DKIM key mail for domain.com
+          "p=abcdefgh...xyz"
+          "abcdefgh...xyz" )  ; ----- DKIM key mail for domain.com
 
 -> PUBLIC KEY :		
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuirDprBfOlbgqYa7aJ5pAgfds0yQyd5mgU51xpuRe5Wnx8PRy/qGMFoD8qc9D7bYB4Oz/AAEBthXDamZf81d1INR9lpoBgq5EtheUmMKh3at8KDvNWsDiKIJbQbBJ1UilBZvr9doFST3LkiYVMn7K5Dc7XbW+/sQFa929mvJjwnrNSRNFoXLPSxqF1SfUtXMG2h+E2SgFWp2pfke/J6dLORQwu+Nd6z4eS75KGfSt5+IpuWMPqo+RrhjblWaJJBkxUfmcbIePzxhESnNjwTfgb4zuMFbJ+m2a0JqGCFRHi/Wdx590QSkRWlCgOTdtxPYgooI1gbHJLSzvRlezEVO1wIDAQAB
+abcdefgh...xyz
 
 ---
 
