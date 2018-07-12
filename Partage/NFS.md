@@ -27,7 +27,7 @@ apt-get update \
 #### Configuration
 * A simple test with the command <code>mount</code> :
 ```bash
-mount 
+mount -t nfs server-nfs.domain.com:/share/dir1 /mnt/dir1
 ```
 <br/>
 
