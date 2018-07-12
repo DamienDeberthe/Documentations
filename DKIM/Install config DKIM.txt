@@ -56,7 +56,7 @@ non_smtpd_milters = inet:localhost:12301
 
 ---
 
-mkdir -p /etc/opendkim/keys/qualigaz.com/
+mkdir -p /etc/opendkim/keys/domain.com/
 
 ---
 
@@ -66,27 +66,27 @@ nano /etc/opendkim/TrustedHosts
 localhost
 192.168.0.1/24
 
-*.qualigaz.com
+*.domain.com
 "
 
 ---
 
 nano /etc/opendkim/KeyTable
 "
-mail._domainkey.qualigaz.com qualigaz.com:mail:/etc/opendkim/keys/qualigaz.com/mail.private
+mail._domainkey.domain.com domain.com:mail:/etc/opendkim/keys/domain.com/mail.private
 "
 
 ---
 
 nano /etc/opendkim/SigningTable
 "
-*@qualigaz.com mail._domainkey.qualigaz.com
+*@domain.com mail._domainkey.domain.com
 "
 
 ---
 
-cd /etc/opendkim/keys/qualigaz.com/
-opendkim-genkey -s mail -d qualigaz.com
+cd /etc/opendkim/keys/domain.com/
+opendkim-genkey -s mail -d domain.com
 chown opendkim:opendkim mail.private
 
 ---
@@ -95,7 +95,7 @@ cat mail.txt
 
 mail._domainkey IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
           "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuirDprBfOlbgqYa7aJ5pAgfds0yQyd5mgU51xpuRe5Wnx8PRy/qGMFoD8qc9D7bYB4Oz/AAEBthXDamZf81d1INR9lpoBgq5EtheUmMKh3at8KDvNWsDiKIJbQbBJ1UilBZvr9doFST3LkiYVMn7K5Dc7XbW+/sQFa929mvJjwnrNSRNFoXLPSxqF1SfUtXMG2h+E2SgFWp2pf"
-          "ke/J6dLORQwu+Nd6z4eS75KGfSt5+IpuWMPqo+RrhjblWaJJBkxUfmcbIePzxhESnNjwTfgb4zuMFbJ+m2a0JqGCFRHi/Wdx590QSkRWlCgOTdtxPYgooI1gbHJLSzvRlezEVO1wIDAQAB" )  ; ----- DKIM key mail for qualigaz.com
+          "ke/J6dLORQwu+Nd6z4eS75KGfSt5+IpuWMPqo+RrhjblWaJJBkxUfmcbIePzxhESnNjwTfgb4zuMFbJ+m2a0JqGCFRHi/Wdx590QSkRWlCgOTdtxPYgooI1gbHJLSzvRlezEVO1wIDAQAB" )  ; ----- DKIM key mail for domain.com
 
 -> PUBLIC KEY :		
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuirDprBfOlbgqYa7aJ5pAgfds0yQyd5mgU51xpuRe5Wnx8PRy/qGMFoD8qc9D7bYB4Oz/AAEBthXDamZf81d1INR9lpoBgq5EtheUmMKh3at8KDvNWsDiKIJbQbBJ1UilBZvr9doFST3LkiYVMn7K5Dc7XbW+/sQFa929mvJjwnrNSRNFoXLPSxqF1SfUtXMG2h+E2SgFWp2pfke/J6dLORQwu+Nd6z4eS75KGfSt5+IpuWMPqo+RrhjblWaJJBkxUfmcbIePzxhESnNjwTfgb4zuMFbJ+m2a0JqGCFRHi/Wdx590QSkRWlCgOTdtxPYgooI1gbHJLSzvRlezEVO1wIDAQAB
