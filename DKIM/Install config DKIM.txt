@@ -1,0 +1,110 @@
+Source :
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-dkim-with-postfix-on-debian-wheezy
+
+apt-get install -y opendkim opendkim-tools
+
+mv /etc/opendkim.conf /etc/opendkim.conf.install
+
+---
+
+nano /etc/opendkim.conf
+
+"
+AutoRestart             Yes
+AutoRestartRate         10/1h
+UMask                   002
+Syslog                  yes
+SyslogSuccess           Yes
+LogWhy                  Yes
+
+Canonicalization        relaxed/simple
+
+ExternalIgnoreList      refile:/etc/opendkim/TrustedHosts
+InternalHosts           refile:/etc/opendkim/TrustedHosts
+KeyTable                refile:/etc/opendkim/KeyTable
+SigningTable            refile:/etc/opendkim/SigningTable
+
+Mode                    sv
+PidFile                 /var/run/opendkim/opendkim.pid
+SignatureAlgorithm      rsa-sha256
+
+UserID                  opendkim:opendkim
+
+Socket                  inet:12301@localhost
+"
+
+---
+
+nano /etc/default/opendkim
+ADD AFTER #SOCKET=inet:12345@localhost :
+"
+SOCKET=inet:12301@localhost
+"
+
+---
+
+nano /etc/postfix/main.cf
+
+"
+#DKIM
+milter_protocol = 2
+milter_default_action = accept
+
+smtpd_milters = inet:localhost:12301
+non_smtpd_milters = inet:localhost:12301
+"
+
+---
+
+mkdir -p /etc/opendkim/keys/qualigaz.com/
+
+---
+
+nano /etc/opendkim/TrustedHosts
+"
+127.0.0.1
+localhost
+192.168.0.1/24
+
+*.qualigaz.com
+"
+
+---
+
+nano /etc/opendkim/KeyTable
+"
+mail._domainkey.qualigaz.com qualigaz.com:mail:/etc/opendkim/keys/qualigaz.com/mail.private
+"
+
+---
+
+nano /etc/opendkim/SigningTable
+"
+*@qualigaz.com mail._domainkey.qualigaz.com
+"
+
+---
+
+cd /etc/opendkim/keys/qualigaz.com/
+opendkim-genkey -s mail -d qualigaz.com
+chown opendkim:opendkim mail.private
+
+---
+
+cat mail.txt
+
+mail._domainkey IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
+          "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuirDprBfOlbgqYa7aJ5pAgfds0yQyd5mgU51xpuRe5Wnx8PRy/qGMFoD8qc9D7bYB4Oz/AAEBthXDamZf81d1INR9lpoBgq5EtheUmMKh3at8KDvNWsDiKIJbQbBJ1UilBZvr9doFST3LkiYVMn7K5Dc7XbW+/sQFa929mvJjwnrNSRNFoXLPSxqF1SfUtXMG2h+E2SgFWp2pf"
+          "ke/J6dLORQwu+Nd6z4eS75KGfSt5+IpuWMPqo+RrhjblWaJJBkxUfmcbIePzxhESnNjwTfgb4zuMFbJ+m2a0JqGCFRHi/Wdx590QSkRWlCgOTdtxPYgooI1gbHJLSzvRlezEVO1wIDAQAB" )  ; ----- DKIM key mail for qualigaz.com
+
+-> PUBLIC KEY :		
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuirDprBfOlbgqYa7aJ5pAgfds0yQyd5mgU51xpuRe5Wnx8PRy/qGMFoD8qc9D7bYB4Oz/AAEBthXDamZf81d1INR9lpoBgq5EtheUmMKh3at8KDvNWsDiKIJbQbBJ1UilBZvr9doFST3LkiYVMn7K5Dc7XbW+/sQFa929mvJjwnrNSRNFoXLPSxqF1SfUtXMG2h+E2SgFWp2pfke/J6dLORQwu+Nd6z4eS75KGfSt5+IpuWMPqo+RrhjblWaJJBkxUfmcbIePzxhESnNjwTfgb4zuMFbJ+m2a0JqGCFRHi/Wdx590QSkRWlCgOTdtxPYgooI1gbHJLSzvRlezEVO1wIDAQAB
+
+---
+
+service postfix restart
+service opendkim restart
+
+---
+
+echo "" | mail -s "Objet test" -a "From: noreply@qualigaz.com" check-auth@verifier.port25.com
