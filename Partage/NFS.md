@@ -25,7 +25,7 @@ apt-get update \
 ```
 
 #### Configuration
-* Test with command <code>mount</code> :
+* A simple test with the command <code>mount</code> :
 ```bash
 mount 
 ```
