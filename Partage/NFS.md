@@ -14,7 +14,13 @@ File config is <code>/etc/exports</code> :
 # Read only access
 /share/dir2 192.168.0.0/24(ro)
 ```
+
+### Restart the service
+```bash
+service nfs-kernel-server restart
+```
 <br/>
+
 
 ### Client NFS
 
