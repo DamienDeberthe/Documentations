@@ -32,5 +32,9 @@ mount
 
 * Permanent config with <code>/etc/fstab</code> :
 ```bash
-
+server-nfs.domain.com:/share/dir1   /mnt/dir1   nfs   rw,tcp,soft     0       0
+```
+After, send this command to connect :
+```bash
+mount -a
 ```
