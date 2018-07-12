@@ -1,29 +1,38 @@
-- Installation des paquets:
-# apt-get update
-# apt-get install iscsitarget iscsitarget-dkms
+### Installation des paquets:
+```bash
+apt-get update
+apt-get install iscsitarget iscsitarget-dkms
+```
 
-- Identifier le disque/partition à mettre en iSCSI:
-# fdisk -l
+### Identifier le disque/partition à mettre en iSCSI:
+```bash
+fdisk -l
+```
 (Imaginons que le disque voulu est /dev/sdb)
 
-- Création de la LUN:
+### Création de la LUN:
 Editer le fichier: /etc/iet/ietd.conf
-"
+```bash
 Target iqn.2017.01.com.domain:iscsi.target	# iqn.[année].[mois].com.[entreprise]:[identifier_de_la_target]
 Lun 0 Path=/dev/sdb,Type=blockio		# Path=[disque_dur],Type=[blockio/fileio]
-"
-blockio -> Gros fichier, mode block
-fileio -> Petit fichier, mode fichier
+```
+* blockio -> Gros fichier, mode block
+* fileio -> Petit fichier, mode fichier
 
-- Activation iSCSI:
-# echo "ISCSITARGET_ENABLE=true" > /etc/default/iscsitarget
+### Activation iSCSI:
+```bash
+echo "ISCSITARGET_ENABLE=true" > /etc/default/iscsitarget
+```
 
-- Restart service:
-# service iscsitarget restart
+### Restart service:
+```bash
+service iscsitarget restart
+```
 
-- Verification de la LUN:
-# cat /proc/net/iet/volume
-
+### Verification de la LUN:
+```bash
+cat /proc/net/iet/volume
+```
 
 ---
 Source: http://denisrosenkranz.com/tuto-ha-iscsi-sur-debian-6/
