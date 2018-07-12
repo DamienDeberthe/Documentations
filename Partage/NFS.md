@@ -29,6 +29,7 @@ apt-get update \
 ```bash
 mount 
 ```
+<br/>
 
 * Permanent config with <code>/etc/fstab</code> :
 ```bash
