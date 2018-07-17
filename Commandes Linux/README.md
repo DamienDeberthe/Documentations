@@ -218,9 +218,9 @@ FLUSH PRIVILEGES;
 
 List users :
 ```bash
-use mysl;
+use myslq;
 select * from user;
-select * from user where user='owncloud';
+select * from user where user='<user>';
 ```
 <br/>
 
