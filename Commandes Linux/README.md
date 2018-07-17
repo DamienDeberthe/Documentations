@@ -181,6 +181,14 @@ stress --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.9;}' < /proc/memin
 
 
 ### MYSQL/MariaDB
+Authorize remote connexion :
+```bash
+rgrep bind-address /etc/mysql/*
+### CHANGE THE BIND ADDRESS WITH 0.0.0.0
+bind-address            = 0.0.0.0
+```
+<br/>
+
 Create database :
 ```bash
 CREATE DATABASE IF NOT EXISTS <new_database>;
