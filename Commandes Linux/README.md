@@ -186,6 +186,7 @@ Create database :
 CREATE DATABASE IF NOT EXISTS <new_database>;
 ```
 <br/>
+
 Create a intern user :
 ```bash
 CREATE USER '<user>'@'localhost' IDENTIFIED BY '<password>';
@@ -198,6 +199,7 @@ UPDATE mysql.user SET host = '%' WHERE host = 'localhost' AND user = '<user>';
 UPDATE mysql.user SET host = '192.168.43.%' WHERE host = 'localhost' AND user = '<user>';
 ```
 <br/>
+
 Create user with remote access :
 ```bash
 CREATE USER '<user>'@'%' IDENTIFIED BY '<password>';
@@ -205,6 +207,7 @@ GRANT ALL PRIVILEGES ON <new_database>.* TO '<user>'@'%' IDENTIFIED BY '<passwor
 FLUSH PRIVILEGES;
 ```
 <br/>
+
 List users :
 ```bash
 use mysl;
