@@ -181,7 +181,7 @@ stress --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.9;}' < /proc/memin
 
 
 ### MYSQL/MariaDB
-Authorize remote connexion :
+Authorize remote connection :
 ```bash
 rgrep "bind-address" /etc/mysql/*
 ### CHANGE THE BIND ADDRESS WITH 0.0.0.0
@@ -195,13 +195,13 @@ CREATE DATABASE IF NOT EXISTS <new_database>;
 ```
 <br/>
 
-Create a intern user :
+Create an intern user :
 ```bash
 CREATE USER '<user>'@'localhost' IDENTIFIED BY '<password>';
 GRANT ALL PRIVILEGES ON <new_database>.* TO '<user>'@'localhost' IDENTIFIED BY '<password>';
 FLUSH PRIVILEGES;
 ```
-Update a user for remote access :
+Update an user for remote access :
 ```bash
 UPDATE mysql.user SET host = '%' WHERE host = 'localhost' AND user = '<user>';
 UPDATE mysql.user SET host = '192.168.43.%' WHERE host = 'localhost' AND user = '<user>';
