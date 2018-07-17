@@ -209,7 +209,7 @@ Envoi simple de mail en ligne de commande :
 ```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
 ```
-Envoi simple de mail en ligne de commande, en ajoutant  :
+Envoi simple de mail en ligne de commande, en ajoutant l'expéditeur :
 ```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" -a "from:user@domain.com" <destinataire>@domain.com
 ```
