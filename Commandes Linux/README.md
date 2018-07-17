@@ -180,6 +180,40 @@ stress --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.9;}' < /proc/memin
 <br/>
 
 
+### MYSQL/MariaDB
+Create database :
+```bash
+CREATE DATABASE IF NOT EXISTS <new_database>;
+```
+<br/>
+Create a intern user :
+```bash
+CREATE USER '<user>'@'localhost' IDENTIFIED BY '<password>';
+GRANT ALL PRIVILEGES ON <new_database>.* TO '<user>'@'localhost' IDENTIFIED BY '<password>';
+FLUSH PRIVILEGES;
+```
+Update a user for remote access :
+```bash
+UPDATE mysql.user SET host = '%' WHERE host = 'localhost' AND user = '<user>';
+UPDATE mysql.user SET host = '192.168.43.%' WHERE host = 'localhost' AND user = '<user>';
+```
+<br/>
+Create user with remote access :
+```bash
+CREATE USER '<user>'@'%' IDENTIFIED BY '<password>';
+GRANT ALL PRIVILEGES ON <new_database>.* TO '<user>'@'%' IDENTIFIED BY '<password>';
+FLUSH PRIVILEGES;
+```
+<br/>
+List users :
+```bash
+use mysl;
+select * from user;
+select * from user where user='owncloud';
+```
+<br/>
+
+
 ### Autres/Divers
 Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
