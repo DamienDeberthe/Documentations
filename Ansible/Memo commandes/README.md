@@ -30,7 +30,23 @@ Exécution des commandes en sudo, avec le paramètre <code>--ask-become-pass</co
     shell:
 
 ```
+* Fichier executé avec droits root + variable
+```bash
+# file.yml
+---
+
+- hosts: 
+  remote_user: 
+  become: yes
+  
+  vars:
+  <var>: <ID_new_user> #ADD the new user
+  
+  tasks:
+  - name: 1. Use the {{ var }} like this
+```
 <br/>
+
 
 ### Commandes utiles
 * Lancer le playbook en sudo, en renseignant le password dans le fichier (ne pas renseigner l'option -K lors du lancement du playbook) :
