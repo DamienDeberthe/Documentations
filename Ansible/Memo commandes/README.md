@@ -15,7 +15,7 @@
     shell:
 
 ```
-* Fichier executé avec droits sudo :
+* Fichier executé avec droits sudo :<br/>
 Exécution des commandes en sudo, avec le paramètre <code>--ask-become-pass</code> ou <code>-K</code> lors de l’exécution du playbook demandant le mot de passe sudo :
 ```bash
 # file.yml
