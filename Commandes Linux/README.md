@@ -5,7 +5,7 @@ Lister toutes les connexions avec la machine Linux + numéros de ports :
 ```bash
 netstat -l
 ```
-Lister tout les processus en cours, avec arborescence (f) :
+Lister tout les processus en cours, avec arborescence ( f ) :
 ```bash
 ps auxf
 ```
