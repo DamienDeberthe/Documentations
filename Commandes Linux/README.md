@@ -15,40 +15,40 @@ ps auxf
 ### Comptes Linux
 Ajouter un compte Linux : (les deux commandes sont équivalentes)
 ```bash
-adduser user1
+adduser <user1>
 ```
 ```bash
-groupadd user1 \
-&& useradd -g user1 -s /bin/bash -d /home/user1 -m user1 \
-passwd user1
+groupadd <user1> \
+&& useradd -g <user1> -s /bin/bash -d /home/<user1> -m <user1> \
+&& passwd <user1>
 ```
 Supprimer utilisateur Linux :
 ```bash
-userdel -rf user
+userdel -rf <user1>
 ```
 <br/>
 
 Ajouter un compte à un un groupe existant :
 ```bash
-usermod -a -G groupe user
+usermod -a -G groupe <user1>
 ```
 Voir les groupes d'un compte :
 ```bash
-groups toto
+groups <user1>
 ```
 Supprimer un utilisateur d'un groupe : 
 ```bash
-deluser user groupe
+deluser <user1> <group>
 ```
 <br/>
 
 Verouiller compte Linux : 
 ```bash
-passwd -l user
+passwd -l <user1>
 ```
 Déverouiller compte Linux :
 ```bash
-passwd -u user
+passwd -u <user1>
 ```
 <br/>
 
