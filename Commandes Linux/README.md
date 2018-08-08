@@ -109,6 +109,7 @@ cat file2 | tr ' ' '\n'
 ```
 <br/>
 
+
 ### Scripts
 #### Date
 Pour dater dans un fichier de log, créer la variable (résultat : dd/mm/yyyy:hh:mm:ss) :
@@ -116,6 +117,18 @@ Pour dater dans un fichier de log, créer la variable (résultat : dd/mm/yyyy:hh
 date=`date +"%m/%d/%Y:%T"`
 ```
 <br/>
+
+
+### Variables
+#### Permanentes
+Pour rendre une variable permanente, il faut l’ajouter au fichier <code>/etc/environment</code> :
+```bash
+<my_variable>="<var1>"
+```
+Il faut ensuite recharger l'environment :
+```bash
+source /etc/environment
+```
 
 
 ### Recherche
