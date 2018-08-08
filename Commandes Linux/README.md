@@ -120,15 +120,26 @@ date=`date +"%m/%d/%Y:%T"`
 
 
 ### Variables
-#### Permanentes
+#### Temporaire
+Pour déclarer une variable permanente :
+```bash
+export <my_var>="<var1>"
+```
+#### Permanente
 Pour rendre une variable permanente, il faut l’ajouter au fichier <code>/etc/environment</code> :
 ```bash
-<my_variable>="<var1>"
+<my_var>="<var1>"
 ```
 Il faut ensuite recharger l'environment :
 ```bash
 source /etc/environment
 ```
+#### Vérification
+Pour afficher une variable :
+```bash
+echo $<my_var>
+```
+<br/>
 
 
 ### Recherche
