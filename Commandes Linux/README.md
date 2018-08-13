@@ -89,6 +89,10 @@ Dans un fichier, supprimer toutes les lignes contenant des commentaires (commen�
 ```bash
 sed -i "/#/d" file
 ```
+Pour supprimer les lignes vides :
+```bash
+sed -i "/^$/d" file
+```
 Dans un fichier, remplacer une chaine de caractère spécifique par une autre :
 ```bash
 sed -i "s|SEARCH_CONTENT|REPLACE_CONTENT|g" file
