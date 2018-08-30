@@ -232,7 +232,7 @@ FLUSH PRIVILEGES;
 Update an user for remote access :
 ```bash
 UPDATE mysql.user SET host = '%' WHERE host = 'localhost' AND user = '<user>';
-UPDATE mysql.user SET host = '192.168.43.%' WHERE host = 'localhost' AND user = '<user>';
+UPDATE mysql.user SET host = '192.168.x.%' WHERE host = 'localhost' AND user = '<user>';
 ```
 <br/>
 
