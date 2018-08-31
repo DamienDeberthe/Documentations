@@ -2,6 +2,7 @@
 
 Arboresence :
 
+```bash
 ├── bash
 │   ├── create_file_1.sh
 │   ├── create_file_2.sh
@@ -9,3 +10,4 @@ Arboresence :
 │   └── delete_files.sh
 ├── index.php
 └── test
+```
