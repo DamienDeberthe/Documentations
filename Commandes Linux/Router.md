@@ -3,7 +3,7 @@ Pour activer le routage, éditer le fichier <code>/etc/sysctl.conf</code> et dé
 ```bash
 net.ipv4.ip_forward=1
 ```
-Pour reload la configuration effectuer :
+Pour reload la configuration effectuée :
 ```bash
 sysctl -p /etc/sysctl.conf
 ```
