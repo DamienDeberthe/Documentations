@@ -3,6 +3,10 @@ Pour activer le routage, éditer le fichier <code>/etc/sysctl.conf</code> et dé
 ```bash
 net.ipv4.ip_forward=1
 ```
+Pour reload la configuration effectuer :
+```bash
+sysctl -p /etc/sysctl.conf
+```
 
 ### Activer le NAT
 * Règle IPTABLE, avec eth0 = interface réseau WAN :
