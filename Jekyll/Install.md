@@ -34,7 +34,10 @@ Create an index.html file like :
   </body>
 </html>
 ```
-Build the dev with the command:
+Build the dev with the command and go to <code>http://<IP>:4000</code>:
 ```bash
 jekyll serve --host 0.0.0.0
 ```
+
+
+https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/
