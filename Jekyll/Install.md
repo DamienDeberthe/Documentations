@@ -1,6 +1,6 @@
 ## Jekyll
 Jekyll is a static site generator, with easy configuration. It contains a lot of template for create simple site.
-
+<br><br>
 
 ### Install Jekyll
 Install pre-requist:
