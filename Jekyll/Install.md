@@ -18,6 +18,7 @@ Install Jekyll:
 ```bash
 gem install jekyll bundler
 ```
+<br>
 
 ### Create first site
 Create an index.html file like :
