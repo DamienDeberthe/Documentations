@@ -34,3 +34,7 @@ Create an index.html file like :
   </body>
 </html>
 ```
+Build the dev with the command:
+```bash
+jekyll serve --host 0.0.0.0
+```
