@@ -3,7 +3,7 @@
 ### Gestion de conteneurs
 <br>
 
-Pour lancer un conteneur :
+Lancer un conteneur :
 ```bash
 lxc launch <container> <name>
 ```
@@ -11,3 +11,22 @@ container :
 * ubuntu: (for stable Ubuntu images)
 * images: (for a bunch of other distros)
 * ubuntu-daily: (for daily Ubuntu images)
+
+Stopper un conteneur : 
+
+Détruire un conteneur :
+
+### Options supplémentaires
+
+
+### Utilisation du conteneur
+<br>
+
+Pour ouvrir un bash du conteneur :
+```bash
+lxc exec <name> -- /bin/bash
+```
+Pour lancer uniquement une commande dans un conteneur :
+```bash
+lxc exec <name> -- <command>
+```
