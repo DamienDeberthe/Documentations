@@ -22,6 +22,7 @@ container :
 * ubuntu: (for stable Ubuntu images)
 * images: (for a bunch of other distros)
 * ubuntu-daily: (for daily Ubuntu images)
+<br>
 
 Stopper un conteneur : 
 ```bash
