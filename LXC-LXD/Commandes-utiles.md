@@ -81,7 +81,7 @@ lxc file pull <container_name>/<dir>/<file> <destination_on_host>
 ### Utilisation du conteneur
 Pour ouvrir un bash du conteneur :
 ```bash
-lxc exec <container_name> -- /bin/bash
+lxc exec <container_name> -- bash
 ```
 Pour lancer uniquement une commande dans un conteneur :
 ```bash
