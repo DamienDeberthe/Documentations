@@ -36,6 +36,10 @@ Détruire un conteneur :
 ```bash
 lxc delete <container_name>
 ```
+Renommer un conteneur (le conteneur doit être éteind) :
+```bash
+lxc rename <current_container_name> <new_container_name>
+```
 
 ### Options supplémentaires
 #### Copie de fichiers
