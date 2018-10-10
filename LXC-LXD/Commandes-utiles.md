@@ -1,5 +1,18 @@
 ## Commande utiles
 
+### Affichages
+
+Lister tous les conteneurs (running et stopped) :
+```bash
+lxc list
+```
+
+Lister les images :
+```bash
+lxc image list ubuntu:
+lxc image list images:
+```
+
 ### Gestion de conteneurs
 <br>
 
