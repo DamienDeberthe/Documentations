@@ -14,9 +14,14 @@ lxc image list images:
 <br>
 
 ### Gestion de conteneurs
-Lancer un nouveau conteneur :
+Lancer un nouveau conteneur à l'état STOPPED, et le lancer :
 ```bash
-lxc launch <container> <container_name>
+lxc init <container_img> <container_name>
+lxc start <container_name>
+```
+Lancer un nouveau conteneur et l'allumer :
+```bash
+lxc launch <container_img> <container_name>
 ```
 container :
 * ubuntu: (for stable Ubuntu images)
@@ -24,7 +29,7 @@ container :
 * ubuntu-daily: (for daily Ubuntu images)
 <br>
 
-Lancer un conteneur :
+Lancer un conteneur et l'allumer :
 ```bash
 lxc start <container_name>
 ```
@@ -42,6 +47,10 @@ lxc rename <current_container_name> <new_container_name>
 ```
 
 ### Bonus
+Lancer tous les conteneurs :
+```bash
+lxc start `lxc list | grep STOPPED | awk '{print $2}'| xargs`
+```
 Stopper tous les conteneurs :
 ```bash
 lxc stop `lxc list | grep RUNNING | awk '{print $2}'| xargs`
