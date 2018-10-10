@@ -16,7 +16,7 @@ lxc image list images:
 ### Gestion de conteneurs
 Lancer un nouveau conteneur :
 ```bash
-lxc launch <container> <name>
+lxc launch <container> <container_name>
 ```
 container :
 * ubuntu: (for stable Ubuntu images)
@@ -26,26 +26,33 @@ container :
 
 Lancer un conteneur :
 ```bash
-lxc start <name>
+lxc start <container_name>
 ```
 Stopper un conteneur : 
 ```bash
-lxc stop <name>
+lxc stop <container_name>
 ```
 Détruire un conteneur :
 ```bash
-lxc delete <name>
+lxc delete <container_name>
 ```
 
 ### Options supplémentaires
-<br>
-
+#### Copie de fichiers
+Copier un fichier de la machine hote vers le conteneur :
+```bash
+lxc file push <file_on_host> <container_name>/<dir>/<file>
+```
+Copier un fichier du conteneur vers la machine hote :
+```bash
+lxc file pull <container_name>/<dir>/<file> <destination_on_host>
+```
 ### Utilisation du conteneur
 Pour ouvrir un bash du conteneur :
 ```bash
-lxc exec <name> -- /bin/bash
+lxc exec <container_name> -- /bin/bash
 ```
 Pour lancer uniquement une commande dans un conteneur :
 ```bash
-lxc exec <name> -- <command>
+lxc exec <container_name> -- <command>
 ```
