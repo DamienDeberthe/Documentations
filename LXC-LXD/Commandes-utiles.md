@@ -1,7 +1,6 @@
 ## Commande utiles
 
 ### Affichages
-
 Lister tous les conteneurs (running et stopped) :
 ```bash
 lxc list
@@ -15,8 +14,6 @@ lxc image list images:
 <br>
 
 ### Gestion de conteneurs
-<br>
-
 Lancer un conteneur :
 ```bash
 lxc launch <container> <name>
@@ -39,8 +36,6 @@ lxc delete <name>
 <br>
 
 ### Utilisation du conteneur
-<br>
-
 Pour ouvrir un bash du conteneur :
 ```bash
 lxc exec <name> -- /bin/bash
