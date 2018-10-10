@@ -45,6 +45,7 @@ Renommer un conteneur (le conteneur doit être éteind) :
 ```bash
 lxc rename <current_container_name> <new_container_name>
 ```
+<br>
 
 ### Bonus
 Lancer tous les conteneurs :
@@ -63,6 +64,7 @@ En une commande :
 ```bash
 lxc stop `lxc list | grep RUNNING | awk '{print $2}'| xargs` ; lxc delete `lxc list | grep STOPPED | awk '{print $2}'| xargs`
 ```
+<br>
 
 ### Options supplémentaires
 #### Copie de fichiers
@@ -74,6 +76,8 @@ Copier un fichier du conteneur vers la machine hote :
 ```bash
 lxc file pull <container_name>/<dir>/<file> <destination_on_host>
 ```
+<br>
+
 ### Utilisation du conteneur
 Pour ouvrir un bash du conteneur :
 ```bash
