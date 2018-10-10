@@ -14,7 +14,7 @@ lxc image list images:
 <br>
 
 ### Gestion de conteneurs
-Lancer un conteneur :
+Lancer un nouveau conteneur :
 ```bash
 lxc launch <container> <name>
 ```
@@ -24,6 +24,10 @@ container :
 * ubuntu-daily: (for daily Ubuntu images)
 <br>
 
+Lancer un conteneur :
+```bash
+lxc start <name>
+```
 Stopper un conteneur : 
 ```bash
 lxc stop <name>
