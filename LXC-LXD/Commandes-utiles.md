@@ -13,11 +13,16 @@ container :
 * ubuntu-daily: (for daily Ubuntu images)
 
 Stopper un conteneur : 
-
+```bash
+lxc stop <name>
+```
 Détruire un conteneur :
+```bash
+lxc delete <name>
+```
 
 ### Options supplémentaires
-
+<br>
 
 ### Utilisation du conteneur
 <br>
