@@ -41,6 +41,20 @@ Renommer un conteneur (le conteneur doit être éteind) :
 lxc rename <current_container_name> <new_container_name>
 ```
 
+### Bonus
+Stopper tous les conteneurs :
+```bash
+lxc stop `lxc list | grep RUNNING | awk '{print $2}'| xargs`
+```
+Détruire tous les conteneurs :
+```bash
+lxc delete `lxc list | grep STOPPED | awk '{print $2}'| xargs`
+```
+En une commande :
+```bash
+lxc stop `lxc list | grep RUNNING | awk '{print $2}'| xargs` ; lxc delete `lxc list | grep STOPPED | awk '{print $2}'| xargs`
+```
+
 ### Options supplémentaires
 #### Copie de fichiers
 Copier un fichier de la machine hote vers le conteneur :
