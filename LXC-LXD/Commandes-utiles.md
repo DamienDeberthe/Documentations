@@ -67,9 +67,13 @@ lxc stop `lxc list | grep RUNNING | awk '{print $2}'| xargs` ; lxc delete `lxc l
 ```
 <br>
 
-Redirection de port :
+Activer et redireger un port :
 ```bash
 iptables -t nat -A PREROUTING -p tcp -i <host_interface> --dport <host_port> -j DNAT --to-destination <container_IP>:<container_port>
+```
+Supprimer une redirection de port (même ligne que precedemment mais avec un -D au lieu de -A) :
+```bash
+iptables -t nat -D PREROUTING -p tcp -i <host_interface> --dport <host_port> -j DNAT --to-destination <container_IP>:<container_port>
 ```
 <br>
 
