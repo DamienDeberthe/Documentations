@@ -13,6 +13,7 @@ lxc image list images:
 ```
 <br>
 
+
 ### Gestion de conteneurs
 Lancer un nouveau conteneur à l'état STOPPED, et le lancer :
 ```bash
@@ -48,7 +49,9 @@ lxc rename <current_container_name> <new_container_name>
 ```
 <br>
 
+
 ### Bonus
+#### Commandes rapides
 Lancer tous les conteneurs :
 ```bash
 lxc start `lxc list | grep STOPPED | awk '{print $2}'| xargs`
@@ -67,6 +70,9 @@ lxc stop `lxc list | grep RUNNING | awk '{print $2}'| xargs` ; lxc delete `lxc l
 ```
 <br>
 
+
+### Options supplémentaires
+#### Ports
 Activer et rediriger un port host vers le conteneur :
 ```bash
 iptables -t nat -A PREROUTING -p tcp -i <host_interface> --dport <host_port> -j DNAT --to-destination <container_IP>:<container_port>
@@ -77,7 +83,13 @@ iptables -t nat -D PREROUTING -p tcp -i <host_interface> --dport <host_port> -j 
 ```
 <br>
 
-### Options supplémentaires
+#### Stockage
+Les fichiers/dossiers des conteneurs sont situés dans le dossier :
+```bash
+/var/lib/lxd/containers/<container_name>/rootfs/
+```
+<br>
+
 #### Copie de fichiers
 Copier un fichier de la machine hote vers le conteneur :
 ```bash
@@ -88,6 +100,7 @@ Copier un fichier du conteneur vers la machine hote :
 lxc file pull <container_name>/<dir>/<file> <destination_on_host>
 ```
 <br>
+
 
 ### Utilisation du conteneur
 Pour ouvrir un bash du conteneur :
