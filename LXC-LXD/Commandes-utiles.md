@@ -22,6 +22,7 @@ lxc start <container_name>
 Lancer un nouveau conteneur et l'allumer :
 ```bash
 lxc launch <container_img> <container_name>
+lxc launch ubuntu:16.04 c1
 ```
 container :
 * ubuntu: (for stable Ubuntu images)
