@@ -67,6 +67,12 @@ lxc stop `lxc list | grep RUNNING | awk '{print $2}'| xargs` ; lxc delete `lxc l
 ```
 <br>
 
+Redirection de port :
+```bash
+iptables -t nat -A PREROUTING -p tcp -i <host_interface> --dport <host_port> -j DNAT --to-destination <container_IP>:<container_port>
+```
+<br>
+
 ### Options supplémentaires
 #### Copie de fichiers
 Copier un fichier de la machine hote vers le conteneur :
