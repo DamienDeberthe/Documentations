@@ -26,11 +26,12 @@ ovs-vsctl del-br <bridge_name>
 ```
 <br>
 
-Ajout d'une interface à un bridge :
+Ajout d'une interface à un bridge + VLAN :
 ```bash
 ovs-vsctl add-port <bridge_name> <interface_name>
+ovs-vsctl add-port <bridge_name> <interface_name> tag=<vlan_number>
 ```
-Suppression d'une interface d'une bridge :
+Suppression d'une interface d'un bridge :
 ```bash
 ovs-vsctl del-port <bridge_name> <interface_name>
 ```
