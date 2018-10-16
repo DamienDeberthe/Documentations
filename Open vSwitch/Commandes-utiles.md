@@ -35,8 +35,11 @@ Suppression d'une interface d'un bridge :
 ```bash
 ovs-vsctl del-port <bridge_name> <interface_name>
 ```
+<br>
 
 ### Configuration bond
+
+<br>
 
 ### Bonus
 Supprimer tous les bridges :
