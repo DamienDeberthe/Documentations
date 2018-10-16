@@ -1,4 +1,4 @@
-##CONFIG
+## COMMANDES UTILES
 
 ### Affichage
 Afficher la configuration complète :
