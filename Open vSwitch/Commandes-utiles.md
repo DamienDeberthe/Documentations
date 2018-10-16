@@ -18,11 +18,27 @@ ovs-vsctl list-ports <bridge_name>
 ### Configuration bridge
 Création d'un bridge :
 ```bash
-ovs-vsctl add-br <interface_name>
+ovs-vsctl add-br <bridge_name>
 ```
 Suppression d'un bridge :
 ```bash
-ovs-vsctl del-br <interface_name>
+ovs-vsctl del-br <bridge_name>
+```
+<br>
+
+Ajout d'une interface à un bridge :
+```bash
+ovs-vsctl add-port <bridge_name> <interface_name>
+```
+Suppression d'une interface d'une bridge :
+```bash
+ovs-vsctl del-port <bridge_name> <interface_name>
 ```
 
 ### Configuration bond
+
+### Bonus
+Supprimer tous les bridges :
+```bash
+for i in $(ovs-vsctl list-br); do ovs-vsctl del-br $i; done
+```
