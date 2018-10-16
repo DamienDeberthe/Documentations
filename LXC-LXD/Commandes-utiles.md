@@ -72,6 +72,24 @@ lxc stop `lxc list | grep RUNNING | awk '{print $2}'| xargs` ; lxc delete `lxc l
 
 
 ### Options supplémentaires
+#### Copie de fichiers
+Copier un fichier de la machine hote vers le conteneur :
+```bash
+lxc file push <file_on_host> <container_name>/<dir>/<file>
+```
+Copier un fichier du conteneur vers la machine hote :
+```bash
+lxc file pull <container_name>/<dir>/<file> <destination_on_host>
+```
+<br>
+
+#### Réseaux
+Pour ajouter/modifier une carte réseau d'un conteneur afin de la faire pointer vers une autre interface hôte :
+```bash
+lxc config device add <container_name> <container_interface_name> nic name=<container_interface_name> nictype=bridged parent=<interface_host_name>
+```
+<br>
+
 #### Ports
 Activer et rediriger un port host vers le conteneur :
 ```bash
@@ -87,17 +105,6 @@ iptables -t nat -D PREROUTING -p tcp -i <host_interface> --dport <host_port> -j 
 Les fichiers/dossiers des conteneurs sont situés dans le dossier :
 ```bash
 /var/lib/lxd/containers/<container_name>/rootfs/
-```
-<br>
-
-#### Copie de fichiers
-Copier un fichier de la machine hote vers le conteneur :
-```bash
-lxc file push <file_on_host> <container_name>/<dir>/<file>
-```
-Copier un fichier du conteneur vers la machine hote :
-```bash
-lxc file pull <container_name>/<dir>/<file> <destination_on_host>
 ```
 <br>
 
