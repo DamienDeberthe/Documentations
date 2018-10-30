@@ -14,5 +14,5 @@ show databases;
 
 ### Dump a database
 ```bash
-mysqldump -u <user> -p <database_name> > /<database_name>.sql
+mysqldump -u <user> -p <database_name> > <database_name>.sql
 ```
