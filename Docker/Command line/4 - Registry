@@ -1,7 +1,6 @@
-Registry permit to store Docker images
+Registry permit to store Docker images on a host.
 
 --- Pre-requist ---
-
 - Create auto-signed certificate :
 openssl req -newkey rsa:2048 -nodes -keyout registry.key -x509 -days 3650 -out registry.crt
 
@@ -18,8 +17,8 @@ docker run -d \
 -p 443:443 \
 registry:2
 
---- Tests ---
 
+--- Tests ---
 docker pull alpine && \
 docker tag alpine:latest <URL_to_registry>/alpine
 docker push <URL_to_registry>/alpine
