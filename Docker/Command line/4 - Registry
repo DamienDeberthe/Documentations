@@ -1,0 +1,27 @@
+Registry permit to store Docker images
+
+--- Pre-requist ---
+
+- Create auto-signed certificate :
+openssl req -newkey rsa:2048 -nodes -keyout registry.key -x509 -days 3650 -out registry.crt
+
+
+--- Create Docker registry ---
+docker run -d \
+--restart=always \
+--name <registry_container_name> \
+-v /<path_to_certs_on_host>:/certs \
+-e REGISTRY_HTTP_ADDR=0.0.0.0:443 \
+-e REGISTRY_HTTP_TLS_CERTIFICATE=<path_to_certs_on_host>registry.crt \
+-e REGISTRY_HTTP_TLS_KEY=path_to_certs_on_host>registry.key \
+-v <path_to_store_image_on_host>:/var/lib/registry \
+-p 443:443 \
+registry:2
+
+--- Tests ---
+
+docker pull alpine && \
+docker tag alpine:latest <URL_to_registry>/alpine
+docker push <URL_to_registry>/alpine
+docker rmi <URL_to_registry>/alpine
+docker pull <URL_to_registry>/alpine
