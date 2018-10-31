@@ -20,7 +20,14 @@ registry:2
 
 --- TESTS ---
 docker pull alpine && \
-docker tag alpine:latest <URL_to_registry>/alpine
-docker push <URL_to_registry>/alpine
-docker rmi <URL_to_registry>/alpine
-docker pull <URL_to_registry>/alpine
+docker tag alpine:latest <URL_registry>/alpine
+docker push <URL_registry>/alpine
+docker rmi <URL_registry>/alpine
+docker pull <URL_registry>/alpine
+
+
+--- CLIENT CONNECTION ---
+We have to copy the registry.crt on client who will connect to our registry.
+mkdir -p /etc/docker/certs.d/<URL_registry>/
+Copy registry.crt into "/etc/docker/certs.d/<URL_registry>/"
+service docker restart
