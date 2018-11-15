@@ -43,3 +43,4 @@ Crée un arbre de switchs, <number> équivault au nombre de niveau/étages de l'
 sudo mn --topo tree,<number>
 ```
 Schéma d'explication :
+![alt text](https://github.com/DamienDeberthe/Documentations/blob/master/Mininet/Schema%20tree.png)
