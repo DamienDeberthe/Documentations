@@ -30,3 +30,11 @@ Traceroute :
 ```
 
 ### Configurations
+Crée n hosts connecté au même switch :
+```bash
+sudo mn --topo single,<host_number>
+```
+Crée n hosts avec chacun leur switch interconnecté les uns aux autres :
+```bash
+sudo mn --topo linear,<host_number>
+```
