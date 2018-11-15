@@ -29,7 +29,7 @@ Traceroute :
 <host> mtr <host> -n --report -c 2
 ```
 
-### Configurations
+### Topologies réseaux
 Crée n hosts connecté au même switch :
 ```bash
 sudo mn --topo single,<host_number>
@@ -38,3 +38,8 @@ Crée n hosts avec chacun leur switch interconnecté les uns aux autres :
 ```bash
 sudo mn --topo linear,<host_number>
 ```
+Crée un arbre de switchs, <number> équivault au nombre de niveau/étages de l'arbre :
+```bash
+sudo mn --topo tree,<number>
+```
+Schéma d'explication :
