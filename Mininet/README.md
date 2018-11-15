@@ -13,9 +13,9 @@ Ouvrir un terminal pour l'host :
 ```bash
 <host> bash
 ```
+<br>
 
-
-### Test
+### Tests
 Effectuer un ping depuis un host h1 vers un host h2 :
 ```bash
 h1 ping h2
@@ -28,6 +28,7 @@ Traceroute :
 ```bash
 <host> mtr <host> -n --report -c 2
 ```
+<br>
 
 ### Topologies réseaux
 Crée n hosts connecté au même switch :
