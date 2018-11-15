@@ -20,10 +20,13 @@ Effectuer un ping depuis un host h1 vers un host h2 :
 ```bash
 h1 ping h2
 ```
-
 Effectuer un ping sur tous les hosts :
 ```bash
 pingall
+```
+Traceroute :
+```bash
+<host> mtr <host> -n --report -c 2
 ```
 
 ### Configurations
