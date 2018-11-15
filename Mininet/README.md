@@ -5,7 +5,7 @@ Afficher la configuration réseau d'un host :
 ```bash
 <host> ifconfig
 ```
-Plus généralement pour executer des commandes sur les hosts :
+Plus généralement pour exécuter des commandes sur les hosts :
 ```bash
 <host> <command>
 ```
