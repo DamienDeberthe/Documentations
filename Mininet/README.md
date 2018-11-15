@@ -45,3 +45,11 @@ sudo mn --topo tree,<number>
 ```
 Schéma d'explication pour \<number>=3 :
 ![alt text](https://github.com/DamienDeberthe/Documentations/blob/master/Mininet/Schema%20tree.png)
+
+<br>
+
+### Options
+Pour que les hosts aient un accès internet :
+```bash
+sudo mn --nat
+```
