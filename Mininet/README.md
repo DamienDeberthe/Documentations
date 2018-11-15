@@ -39,7 +39,7 @@ Crée n hosts avec chacun leur switch interconnecté les uns aux autres :
 ```bash
 sudo mn --topo linear,<host_number>
 ```
-Crée un arbre de switchs, <number> équivault au nombre de niveau/étages de l'arbre :
+Crée un arbre de switchs, \<number> équivault au nombre de niveau/étages de l'arbre :
 ```bash
 sudo mn --topo tree,<number>
 ```
