@@ -22,6 +22,7 @@ docker run -d --tty -i -p <host_port>:<container_port> -v <host_dir>:<container_
 #EXEMPLE
 docker run -d --tty -i -p 8080:80 -v /var/www:/usr/share/nginx/html --name=nginx1 nginx:latest
 ```
+<br>
 
 ### Delete
 
@@ -39,6 +40,7 @@ Delete an image:
 ```bash
 docker rmi <image:tag>
 ```
+<br>
 
 Stop and delete all containers + delete all images:
 ```bash
