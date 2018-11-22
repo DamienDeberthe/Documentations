@@ -81,7 +81,7 @@ Secondly, run it into a daemon:
 ```bash
 docker run -d --tty -i --name=<MyAwesomeDockerCT> <MyAwesomeDockerImage> bash
 ```
-You can run services like into a dockerfile for start httpd for example (<code>docker run -d --tty -i  -p 80:80 <MyAwesomeDockerCT> <MyAwesomeDockerImage> apachectl -D FOREGROUND</code>).
+You can run services like a dockerfile for start httpd for example (<code>docker run -d --tty -i  -p 80:80 <MyAwesomeDockerCT> <MyAwesomeDockerImage> apachectl -D FOREGROUND</code>).
 
 <br><br>
 
