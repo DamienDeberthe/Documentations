@@ -1,5 +1,6 @@
 ## Convert VMDK to image
 
+### Convert VMDK to IMG
 Install required packages:
 ```bash
 apt-get update && apt-get install -y qemu libguestfs-tools
@@ -12,7 +13,11 @@ Convert our VMDK file to IMG:
 qemu-img convert -f vmdk -O raw <VM>.vmdk <VM>.img
 ```
 
+<br>
+
 * BEFORE convert our partition(s), we have to know wich partition(s) we want to convert into our Docker image. For that, power on the VM and execute <code>df -h</code> to see the partition(s).
+
+<br>
 
 Execute "guestfish" for recolt our partition(s):
 ```bash
@@ -57,6 +62,7 @@ Last step, we have to convert our image into ".xz" file:
 ><fs> exit
 ```
 
+<br>
 
 ### Import into Docker
 
@@ -64,6 +70,8 @@ Now we have our file "<IMG>.xz", we have to create the Docker image:
 ```bash
 cat <IMG>.xz | docker import - <MyAwesomeDockerImage>
 ```
+
+<br>
 
 First test to run the Docker container:
 ```bash
@@ -75,5 +83,6 @@ docker run -d --tty -i --name=<MyAwesomeDockerCT> <MyAwesomeDockerImage> bash
 ```
 You can run services like into a dockerfile for start httpd for example (<code>docker run -d --tty -i  -p 80:80 <MyAwesomeDockerCT> <MyAwesomeDockerImage> apachectl -D FOREGROUND</code>).
 
+<br><br>
 
 Source: https://blog.inslash.com/how-to-convert-vmdk-to-a-docker-image-be939745ed8a
