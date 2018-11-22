@@ -66,7 +66,7 @@ After we can push our image:
 ```bash
 docker push <image_name>
 ```
-Remember that the <image_name> need to begin with your account name, and the image name -> <code><account>/<image_name>:<tag></code>.
+Remember that the <image_name> need to begin with your account name, and the image name -> <code>\<account>/\<image_name>:\<tag></code>.
 <br>
 
 
