@@ -50,6 +50,26 @@ docker run -d --tty -i -p 8080:80 -v /var/www:/usr/share/nginx/html --name=nginx
 <br>
 
 
+### Commit/push containers
+
+Commit permit to transform a container into an image:
+```bash
+docker commit <container_name> <image_name>
+```
+<br>
+
+To push an image to Docker Hub, we have to login before:
+```bash
+docker login
+```
+After we can push our image:
+```bash
+docker push <image_name>
+```
+Remember that the <image_name> need to begin with your account name, and the image name -> <code><account>/<image_name>:<tag></code>.
+<br>
+
+
 ### Delete containers and images
 
 Stop a container:
