@@ -1,4 +1,4 @@
-## Convert VMDK to image
+## Convert VMDK to Docker image
 
 ### Convert VMDK to IMG
 Install required packages:
