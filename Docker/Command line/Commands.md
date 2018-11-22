@@ -1,5 +1,30 @@
 ## Docker commands
 
+### Infos containers and images
+
+See containers power on:
+```bash
+docker ps
+```
+
+See all containers (on and off):
+```bash
+docker ps -a
+```
+
+See all images:
+```bash
+docker images
+```
+
+See container information:
+```bash
+docker inspect <container_name>
+```
+
+<br>
+
+
 ### Create containers
 
 Simple container with interactive shell:
@@ -24,7 +49,8 @@ docker run -d --tty -i -p 8080:80 -v /var/www:/usr/share/nginx/html --name=nginx
 ```
 <br>
 
-### Delete
+
+### Delete containers and images
 
 Stop a container:
 ```bash
