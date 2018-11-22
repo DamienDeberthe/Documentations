@@ -31,15 +31,15 @@ Traceroute :
 <br>
 
 ### Topologies réseaux
-Crée n hosts connecté au même switch :
+Créer n hosts connecté au même switch :
 ```bash
 sudo mn --topo single,<n_host_number>
 ```
-Crée n hosts avec chacun leur switch interconnecté les uns aux autres :
+Créer n hosts avec chacun leur switch interconnecté les uns aux autres :
 ```bash
 sudo mn --topo linear,<n_host_number>
 ```
-Crée un arbre de switchs, \<number> équivault au nombre de niveau/étages de l'arbre :
+Créer un arbre de switchs, \<number> équivaut au nombre de niveau/étages de l'arbre :
 ```bash
 sudo mn --topo tree,<number>
 ```
