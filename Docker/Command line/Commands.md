@@ -50,6 +50,20 @@ docker run -d --tty -i -p 8080:80 -v /var/www:/usr/share/nginx/html --name=nginx
 <br>
 
 
+### Rename
+
+Rename a container:
+```bash
+docker rename <actual_container_name> <new_container_name>
+```
+
+Rename an image:
+```bash
+docker tag <actual_image_name> <new_image_name>
+```
+<br>
+
+
 ### Commit/push containers
 
 Commit permit to transform a container into an image:
