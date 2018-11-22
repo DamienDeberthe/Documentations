@@ -34,6 +34,12 @@ docker run -d --tty -i --name=<container_name> <image>
 docker run -d --tty -i --name=deb1 debian:latest
 ```
 
+Connect to a container:
+```bash
+docker exec -it <container_name> bash
+```
+<br>
+
 Container with interactive shell and port redirection:
 ```bash
 docker run -d --tty -i -p <host_port>:<container_port> --name=<container_name> <image>
