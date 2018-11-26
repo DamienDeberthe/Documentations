@@ -27,6 +27,11 @@ docker inspect <container_name>
 
 ### Create containers
 
+FOR INFO:
+* docker create + docker start = docker run
+
+<br>
+
 Download an image:
 ```bash
 docker pull <image>
@@ -37,11 +42,6 @@ Create and start a container:
 docker create --name=<container_name> <image>
 docker start <container_name>
 ```
-
-<br>
-
-FOR INFO:
-* docker create + docker start = docker run
 
 <br>
 
