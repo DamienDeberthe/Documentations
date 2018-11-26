@@ -27,6 +27,19 @@ docker inspect <container_name>
 
 ### Create containers
 
+Download an image:
+```bash
+docker pull <image>
+```
+
+Create and start a container:
+```bash
+docker create 
+```
+
+FOR INFO:
+> create + start = run
+
 Simple container with interactive shell:
 ```bash
 docker run -d --tty -i --name=<container_name> <image>
