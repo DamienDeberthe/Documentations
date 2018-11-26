@@ -38,7 +38,7 @@ docker create
 ```
 
 FOR INFO:
-> create + start = run
+*docker create + docker start = docker run*
 
 Simple container with interactive shell:
 ```bash
