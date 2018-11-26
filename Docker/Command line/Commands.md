@@ -34,13 +34,18 @@ docker pull <image>
 
 Create and start a container:
 ```bash
-docker create 
+docker create --name=<container_name> <image>
+docker start <container_name>
 ```
 
-FOR INFO:
-*docker create + docker start = docker run*
+<br>
 
-Simple container with interactive shell:
+FOR INFO:
+* docker create + docker start = docker run
+
+<br>
+
+Run a simple container with interactive shell:
 ```bash
 docker run -d --tty -i --name=<container_name> <image>
 #EXEMPLE
