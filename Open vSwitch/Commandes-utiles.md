@@ -1,5 +1,12 @@
 ## COMMANDES UTILES
 
+### Installation
+```bash
+apt-get update && apt-get install -y openvswitch-common openvswitch-switch
+```
+<br>
+
+
 ### Affichage
 Afficher la configuration complète :
 ```bash
@@ -14,6 +21,7 @@ Afficher les interfaces relié à un bridge :
 ovs-vsctl list-ports <bridge_name>
 ```
 <br>
+
 
 ### Configuration bridge
 Création d'un bridge :
@@ -40,6 +48,7 @@ ovs-vsctl del-port <bridge_name> <interface_name>
 ### Configuration bond
 
 <br>
+
 
 ### Bonus
 Supprimer tous les bridges :
