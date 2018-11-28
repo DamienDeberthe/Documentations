@@ -64,3 +64,10 @@ virt-install \
 --disk <path_to_disk_name> \
 --cdrom <path_to_ISO_file>
 ```
+
+### Configuration
+
+Modify a VM configuration:
+```bash
+virsh edit <VM_name>
+```
