@@ -30,6 +30,7 @@ Force power OFF a VM:
 ```bash
 virsh destroy <VM_name>
 ```
+<br>
 
 ### Create an easy VM
 
