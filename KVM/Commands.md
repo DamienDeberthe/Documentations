@@ -32,6 +32,16 @@ virsh destroy <VM_name>
 ```
 <br>
 
+Delete a VM:
+```bash
+virsh undefine <VM_name>
+```
+* If the VM is not running: delete
+* If the VM is running: nothing happen, but when VM will be shutdown, it will be delete in the same time.
+**You have to delete manually the disk.
+<br>
+
+
 ### Create an easy VM
 
 Create a disk (defaut format: .raw):
