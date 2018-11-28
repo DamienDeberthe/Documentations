@@ -41,6 +41,7 @@ virsh undefine <VM_name>
 <br>
 
 **You have to delete manually the disk.**
+
 <br>
 
 
