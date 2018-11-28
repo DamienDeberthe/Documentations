@@ -12,7 +12,7 @@ Informations about VM:
 ```bash
 virsh dominfo <VM_name__OR__ID_VM>
 ```
-
+<br>
 
 ### VM states
 
