@@ -39,7 +39,7 @@ virsh undefine <VM_name>
 * If the VM is not running: delete
 * If the VM is running: nothing happen, but when VM will be shutdown, it will be delete in the same time.
 <br>
-** You have to delete manually the disk. **
+**You have to delete manually the disk.**
 <br>
 
 
