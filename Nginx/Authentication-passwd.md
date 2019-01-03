@@ -3,7 +3,7 @@
 
 ### Create authentication file
 
-Create the file with username and password (-c is for create the file):
+Create the file with username and password:
 ```bash
 touch <path_to_secret_file>
 htpasswd <path_to_secret_file> <username>
