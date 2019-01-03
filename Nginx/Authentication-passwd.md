@@ -30,8 +30,11 @@ Add this encrypt pass after the line with your <username>
 
 In Nginx site, add:
 ```bash
-auth_basic "<Text_on_prompt>";
-auth_basic_user_file <path_to_secret_file>;
+location / {
+        index index.html;
+        auth_basic "<Text_on_prompt>";
+        auth_basic_user_file <path_to_secret_file>;
+    }
 ```
 
 Reload Nginx
