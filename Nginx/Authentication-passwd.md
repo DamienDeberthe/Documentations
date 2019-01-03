@@ -3,7 +3,7 @@
 
 ### Create authentication file
 
-Create the file with username and password:
+Create the file with username and password (-c is for create the file):
 ```bash
 htpasswd -c <path_to_secret_file> <username>
 New password:
