@@ -10,6 +10,8 @@ New password:
 Re-type new password:
 ```
 
+<br>
+
 If the command <code>htpasswd</code> not exist, do like this:
 ```bash
 echo "<username>" > <path_to_secret_file>
@@ -22,6 +24,7 @@ $apr1...........
 Add this encrypt pass after the line with your <username>
 
 <br>
+
 
 ### NGINX configurations
 
