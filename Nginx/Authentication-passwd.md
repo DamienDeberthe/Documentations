@@ -21,6 +21,7 @@ $apr1...........
 ```
 Add this encrypt pass after the line with your <username>
 
+<br>
 
 ### NGINX configurations
 
