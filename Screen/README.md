@@ -50,6 +50,7 @@ The number at the beginning is the ID_screen
 * Attached: You are in this screen
 * Detached: You are not into this screen, use <code>screen -r <ID_screen></code>
 
+<br><br>
 
 #### Example:
 Run a screen with a command:
