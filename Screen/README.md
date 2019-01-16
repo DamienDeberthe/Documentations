@@ -33,3 +33,8 @@ screen -r <ID_screen>
 screen -ls
 ```
 The number at the beginning is the ID_screen
+
+#### Delete a screen
+```bash
+screen -X -S <ID_screen> quit
+```
