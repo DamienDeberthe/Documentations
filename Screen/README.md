@@ -23,8 +23,13 @@ screen
 #### Detach to a screen
 Use the command "Ctrl" + "a" and after "d".
 
+#### Reatach to a screen
+```bash
+screen -r <ID_screen>
+```
+
 #### See screen actually run:
 ```bash
 screen -ls
 ```
-
+The number at the beginning is the ID_screen
