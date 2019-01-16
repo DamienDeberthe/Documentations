@@ -48,8 +48,6 @@ myRouter.route('/r2')
 //DELETE
 .delete(function(req,res){ res.json({message : "Delete r2", methode : req.method}); });
 
-
-
 // -----------------------------------------------------------------
 
 
