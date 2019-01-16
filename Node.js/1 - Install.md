@@ -20,10 +20,12 @@ Create a file <code>testnode.js</code> with content:
 ```bash
 console.log("Test123");
 ```
+
 <br>
 To execute this file with Node.js, run:
 ```bash
 node testnode.js
 ```
+
 <br>
 If you see <code>Test123</code> in terminal it's ok
