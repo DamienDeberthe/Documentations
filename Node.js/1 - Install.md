@@ -1,6 +1,9 @@
-## Install Node.js
+## Install and test Node.js
 
-### Debian
+
+### Install
+
+#### Debian
 
 ```bash
 curl -sL https://deb.nodesource.com/setup_11.x | bash -
@@ -9,3 +12,14 @@ apt-get install -y nodejs
 
 Source:
 https://github.com/nodesource/distributions/blob/master/README.md#deb
+
+
+### Test
+Create a file "testnode.js" with content:
+```bash
+console.log("Test123");
+```
+To execute this file with Node.js, run:
+```bash
+node testnode.js
+```
