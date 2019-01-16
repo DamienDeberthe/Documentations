@@ -27,26 +27,37 @@ myRouter.route('/')
 myRouter.route('/r1')
 // Implémente méthodes GET, PUT, UPDATE, DELETE
 // GET
-.get(function(req,res){ res.json({message : "Get r1", methode : req.method}); })
+.get(function(req,res){ res.json({message : "GET r1", methode : req.method}); })
 //POST
-.post(function(req,res){ res.json({message : "Post r1", methode : req.method}); })
+.post(function(req,res){ res.json({message : "POST r1", methode : req.method}); })
 //PUT
-.put(function(req,res){ res.json({message : "Put r1", methode : req.method}); })
+.put(function(req,res){ res.json({message : "PUT r1", methode : req.method}); })
 //DELETE
-.delete(function(req,res){ res.json({message : "Delete r1", methode : req.method}); });
+.delete(function(req,res){ res.json({message : "DELETE r1", methode : req.method}); });
+
+// Route '/r1/id'
+myRouter.route('/r1/:id')
+//GET
+.get(function(req,res){ res.json({message : "GET r1 id" + req.params.r1_id}); })
+//POST
+.post(function(req,res){ res.json({message : "POST r1 id" + req.params.r1_id}); })
+//PUT
+.put(function(req,res){ res.json({message : "PUT r1 id" + req.params.r1_id}); })
+//DELETE
+.delete(function(req,res){ res.json({message : "DELETE r1 id" + req.params.r1_id}); });
 
 
 // Route '/r2'
 myRouter.route('/r2')
 // Implémente méthodes GET, PUT, UPDATE, DELETE
 // GET
-.get(function(req,res){ res.json({message : "Get r2", methode : req.method}); })
+.get(function(req,res){ res.json({message : "GET r2", methode : req.method}); })
 //POST
-.post(function(req,res){ res.json({message : "Post r2", methode : req.method}); })
+.post(function(req,res){ res.json({message : "POST r2", methode : req.method}); })
 //PUT
-.put(function(req,res){ res.json({message : "Put r2", methode : req.method}); })
+.put(function(req,res){ res.json({message : "PUT r2", methode : req.method}); })
 //DELETE
-.delete(function(req,res){ res.json({message : "Delete r2", methode : req.method}); });
+.delete(function(req,res){ res.json({message : "DELETE r2", methode : req.method}); });
 
 // -----------------------------------------------------------------
 
