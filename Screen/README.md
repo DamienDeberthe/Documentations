@@ -49,3 +49,10 @@ screen -ls
 The number at the beginning is the ID_screen
 * Attached: You are in this screen
 * Detached: You are not into this screen, use <code>screen -r <ID_screen></code>
+
+
+#### Example:
+Run a screen with a command:
+````bash
+screen -dmS <screen_name> <command_to_execute>
+```
