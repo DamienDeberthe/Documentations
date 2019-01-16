@@ -7,6 +7,7 @@ mkdir mod && cd mod
 ```
 
 <br>
+
 Install a module, for example 
 ```bash
 npm install <module name>
@@ -14,6 +15,7 @@ npm install <module name>
 List of all modules at: https://www.npmjs.com/
 
 <br>
+
 ### Test with http-server
 We want to create a simple http-server with Node.js:
 
