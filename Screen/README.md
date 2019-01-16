@@ -15,10 +15,22 @@ apt-get install -y screen
 ### Configure
 
 #### Create a screen
-
 ```bash
 screen
 ```
+
+#### Rename a screen
+When you are into your screen, use command: "Ctrl" + "a" and type:
+```bash
+:sessionname <new_session_name>
+```
+
+#### Delete a screen
+```bash
+screen -X -S <ID_screen> quit
+```
+
+<br>
 
 #### Detach to a screen
 Use the command "Ctrl" + "a" and after "d".
@@ -28,13 +40,12 @@ Use the command "Ctrl" + "a" and after "d".
 screen -r <ID_screen>
 ```
 
+<br>
+
 #### See screen actually run:
 ```bash
 screen -ls
 ```
 The number at the beginning is the ID_screen
-
-#### Delete a screen
-```bash
-screen -X -S <ID_screen> quit
-```
+* Attached: You are in this screen
+* Detached: You are not into this screen, use <code>screen -r <ID_screen></code>
