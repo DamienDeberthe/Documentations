@@ -53,6 +53,6 @@ The number at the beginning is the ID_screen
 
 #### Example:
 Run a screen with a command:
-````bash
+```bash
 screen -dmS <screen_name> <command_to_execute>
 ```
