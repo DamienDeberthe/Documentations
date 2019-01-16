@@ -16,7 +16,7 @@ https://github.com/nodesource/distributions/blob/master/README.md#deb
 <br>
 
 ### Test
-Create a file "testnode.js" with content:
+Create a file <code>testnode.js</code> with content:
 ```bash
 console.log("Test123");
 ```
@@ -24,3 +24,4 @@ To execute this file with Node.js, run:
 ```bash
 node testnode.js
 ```
+If you see <code>Test123</code> in terminal it's that ok
