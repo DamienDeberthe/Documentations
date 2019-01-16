@@ -30,6 +30,8 @@ npm install http-server
 echo "http-server test" > index.html
 ```
 
+<br>
+
 * Run http-server:
 ```bash
 node_modules/http-server/bin/http-server
@@ -40,5 +42,7 @@ node_modules/http-server/bin/http-server
 ln -s /tmp/http-server/node_modules/http-server/bin/http-server /usr/bin/http-server
 http-server
 ```
+
+<br>
 
 * Connect to <code>http://<IP>:8080</code> and see our wonderful page
