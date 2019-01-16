@@ -45,4 +45,4 @@ http-server
 
 <br>
 
-* Connect to <code>http://<IP>:8080</code> and see our wonderful page
+* Connect to <code>http://\<IP\>:8080</code> and see our wonderful page
