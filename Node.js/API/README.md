@@ -18,4 +18,5 @@ touch api.js
 ### Run
 ```bash
 node api.js
+Go to: http://localhost:3000
 ```
