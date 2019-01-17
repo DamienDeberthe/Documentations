@@ -57,7 +57,7 @@ myRouter.route('/r2')
 // .get(function(req,res){ res.json({message : "GET r2", methode : req.method}); })
 // GET with id
 .get(function(req,res){ res.json({
-        message : "GET r1",
+        message : "GET r2",
         r2_id1 : req.query.r2_id1,
         r2_id2 : req.query.r2_id2,
         methode : req.method }); })
