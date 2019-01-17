@@ -27,13 +27,15 @@ myRouter.route('/')
 myRouter.route('/r1')
 // Implémente méthodes GET, PUT, UPDATE, DELETE
 // GET
-.get(function(req,res){ res.json({message : "GET r1", methode : req.method}); })
+//.get(function(req,res){ res.json({message : "GET r1", methode : req.method}); })
+.get(function(req,res){ res.json({ message : "GET r1", r1_id1 : req.query.id1, methode : req.method });
 //POST
 .post(function(req,res){ res.json({message : "POST r1", methode : req.method}); })
 //PUT
 .put(function(req,res){ res.json({message : "PUT r1", methode : req.method}); })
 //DELETE
 .delete(function(req,res){ res.json({message : "DELETE r1", methode : req.method}); });
+
 
 // Route '/r1/id'
 myRouter.route('/r1/:id')
