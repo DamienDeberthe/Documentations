@@ -5,7 +5,7 @@ var express = require('express');
 var hostname = 'localhost';
 var port = 3000;
 
-// Creation objet Express 
+// Creation objet Express
 var app = express();
 
 //Afin de faciliter le routage (les URL que nous souhaitons prendre en charge dans notre API), nous créons un objet Router.
@@ -19,16 +19,17 @@ var myRouter = express.Router();
 
 // Route '/'
 myRouter.route('/')
-// all permet de prendre en charge toutes les méthodes. 
+// all permet de prendre en charge toutes les méthodes.
 .all(function(req,res){ res.json({message : "Welcome to API", methode : req.method}); });
 
 
 // Route '/r1'
 myRouter.route('/r1')
 // Implémente méthodes GET, PUT, UPDATE, DELETE
-// GET
-//.get(function(req,res){ res.json({message : "GET r1", methode : req.method}); })
-.get(function(req,res){ res.json({ message : "GET r1", r1_id1 : req.query.id1, methode : req.method });
+// GET simple
+// .get(function(req,res){ res.json({message : "GET r1", methode : req.method}); })
+// GET with id
+.get(function(req,res){ res.json({ message : "GET r1", r1_id1 : req.query.r1_id1, methode : req.method }); })
 //POST
 .post(function(req,res){ res.json({message : "POST r1", methode : req.method}); })
 //PUT
@@ -52,14 +53,21 @@ myRouter.route('/r1/:id')
 // Route '/r2'
 myRouter.route('/r2')
 // Implémente méthodes GET, PUT, UPDATE, DELETE
-// GET
-.get(function(req,res){ res.json({message : "GET r2", methode : req.method}); })
+// GET simple
+// .get(function(req,res){ res.json({message : "GET r2", methode : req.method}); })
+// GET with id
+.get(function(req,res){ res.json({
+        message : "GET r1",
+        r2_id1 : req.query.r2_id1,
+        r2_id2 : req.query.r2_id2,
+        methode : req.method }); })
 //POST
 .post(function(req,res){ res.json({message : "POST r2", methode : req.method}); })
 //PUT
 .put(function(req,res){ res.json({message : "PUT r2", methode : req.method}); })
 //DELETE
 .delete(function(req,res){ res.json({message : "DELETE r2", methode : req.method}); });
+
 
 // -----------------------------------------------------------------
 
@@ -69,5 +77,5 @@ app.use(myRouter);
 
 // Démarrer le serveur
 app.listen(port, hostname, function(){
-	console.log("Go to: http://"+ hostname +":"+port);
+        console.log("Go to: http://"+ hostname +":"+port);
 });
