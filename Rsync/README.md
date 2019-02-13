@@ -15,5 +15,6 @@ Explication :
 * -e "/bin/ssh" : indique l’utilisation d’une connexion à distance pour atteindre les fichiers. Dans notre cas, c’est par ssh et c’est pour la source qui se trouve à distance.
 * root@192.168.0.x:/source : indique la source. Elle se trouve à distance et on utilise l’utilisateur root sur la machine distante 192.168.0.x<br>
 
+Source:<br>
 https://www.konectik.com/2016/02/04/sauvegarde-rsync/
 
