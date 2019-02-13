@@ -12,7 +12,7 @@ NAME_VM=
 IP_VM=192.168.0.1/24
 GW_VM=192.168.0.254
 SIZE_DISK=100G
-PATH_PUBLICKEY=~/.ssh/id_rsa.pub
+PATH_PUBLICKEY=~/.ssh/id_rsa.pub #Use Ansible/Puppet/Chef keys for deploiment
 
 
 # Create VM
