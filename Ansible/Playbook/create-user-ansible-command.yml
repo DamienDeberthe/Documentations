@@ -13,10 +13,10 @@
     user: <name_new_user> #ADD the new user
 
   tasks:
-- name: 1. Create new group {{ user }}
-  user:
-    name: {{ user }}
-    state: present
+  - name: 1. Create new group {{ user }}
+    user:
+      name: {{ user }}
+      state: present
     
   - name: 2. Create new user {{ user }}
     user:
