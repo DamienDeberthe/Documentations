@@ -1,0 +1,31 @@
+# Create a user as "adduser" command with Ansible syntax.
+# Create group and user with password.
+# Generate the pass with:
+# ansible all -i localhost, -m debug -a "msg={{ '<PASSWORD>' | password_hash('sha512', 'mysecretsalt') }}"
+# create-user-ansible-command.yml
+---
+
+- hosts: <hosts>  #ADD the (group) host
+  remote_user: ansible
+  become: yes
+  
+  vars:
+    user: <name_new_user> #ADD the new user
+
+  tasks:
+- name: 1. Create new group {{ user }}
+  user:
+    name: {{ user }}
+    state: present
+    
+  - name: 2. Create new user {{ user }}
+    user:
+      name: {{ user }}
+      password: <hash>
+      groups: {{ user }}
+      shell: /bin/bash
+      append: yes
+
+#Optionnal
+  - name: 3. Add {{ user }} to sudoers
+    shell: sed -i "/root/a{{ user }}   ALL=(ALL:ALL) ALL" /etc/sudoers && service sudo restart
