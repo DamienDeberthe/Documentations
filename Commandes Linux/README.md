@@ -1,7 +1,7 @@
 ## MEMO COMMANDES LINUX
 
 ### Administration
-Lister toutes les connexions avec la machine Linux + numéros de ports :
+Lister toutes les connexions avec la machine Linux + numéros de ports (Debian 9 : paquet net-tools) :
 ```bash
 netstat -l
 ```
