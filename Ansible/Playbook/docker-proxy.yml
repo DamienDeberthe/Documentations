@@ -1,0 +1,31 @@
+# This playbook configure docker proxy
+# docker-proxy.yml
+---
+
+- hosts: <hosts>  #ADD the (group) host
+  remote_user: ansible
+  become: yes
+
+  vars:
+    proxy: <http://proxy.domain.com:8080>
+
+  tasks:
+  - name: 1. Create directory /etc/systemd/system/docker.service.d and file /etc/systemd/system/docker.service.d/http-proxy.conf
+    file:
+      path: /etc/systemd/system/docker.service.d
+      state: directory
+      mode: 0755
+    file:
+      path: /etc/systemd/system/docker.service.d/http-proxy.conf
+      state: touch
+      mode: 0644
+
+  - name: Add proxy information into /etc/systemd/system/docker.service.d/http-proxy.conf
+    blockinfile:
+      dest: /etc/systemd/system/docker.service.d/http-proxy.conf
+      block: |
+        [Service]
+        Environment="HTTP_PROXY={{ proxy }}"
+
+  - name: 3. Restart Docker service
+    shell: systemctl daemon-reload && systemctl restart docker
