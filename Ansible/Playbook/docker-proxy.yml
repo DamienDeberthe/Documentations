@@ -15,12 +15,13 @@
       path: /etc/systemd/system/docker.service.d
       state: directory
       mode: 0755
+  - name: 2. Create file /etc/systemd/system/docker.service.d/http-proxy.conf
     file:
       path: /etc/systemd/system/docker.service.d/http-proxy.conf
       state: touch
       mode: 0644
 
-  - name: Add proxy information into /etc/systemd/system/docker.service.d/http-proxy.conf
+  - name: 3. Add proxy information into /etc/systemd/system/docker.service.d/http-proxy.conf
     blockinfile:
       dest: /etc/systemd/system/docker.service.d/http-proxy.conf
       block: |
