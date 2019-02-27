@@ -13,9 +13,17 @@ docker run -d \
 -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \
 -e REGISTRY_HTTP_TLS_CERTIFICATE=<path_to_certs_on_host>/registry.crt \
 -e REGISTRY_HTTP_TLS_KEY=<path_to_certs_on_host>/registry.key \
--v <path_to_store_images_on_host>:/var/lib/registry \
+-v "<path_to_store_images_on_host>":"/var/lib/registry" \
 -p 443:443 \
 registry:2
+
+--- Optionnal: web server ---
+docker run -dit \
+--restart always \
+--name <web_registry_container_name> \
+-v "<path_to_store_images_on_host>":"/usr/local/apache2/htdocs/" \
+-p 80:80 \
+httpd:latest
 
 
 --- TESTS ---
