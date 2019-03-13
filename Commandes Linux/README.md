@@ -146,6 +146,24 @@ echo $<my_var>
 <br/>
 
 
+### Liste dossiers 
+
+Afficher seulement les dossiers :
+```bash
+tree -d
+```
+
+Afficher les dossiers avec un niveau de 3 :
+```bash
+tree -d -L 3
+```
+
+Afficher les dossiers sauf le/les dossier(s) contenant "test" :
+```bash
+tree -d -I test
+```
+
+
 ### Recherche
 Rechercher un fichier sur la machine : 
 ```bash
