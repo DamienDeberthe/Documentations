@@ -162,6 +162,7 @@ Afficher les dossiers sauf le/les dossier(s) contenant "test" :
 ```bash
 tree -d -I test
 ```
+<br/>
 
 
 ### Recherche
