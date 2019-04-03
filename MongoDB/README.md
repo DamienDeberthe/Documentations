@@ -21,6 +21,7 @@ sudo mongod
 
 To connect the base, use the command <code>mongo</code> in another terminal.
 
+<br><br>
 
 ### Explications
 
@@ -28,6 +29,7 @@ MongoDB have 2 elemnts:
 * Document : 
 * Collection : Contains the documents
 
+<br><br>
 
 ### Mongo Shell
 
