@@ -75,3 +75,9 @@ Create a document into a collection:
 ```bash
 db.<collection_name>.insert({<doc1>: "<value1>", <doc2>: "<value2>", <doc3>: "<value3>"})
 ```
+
+* UPDATE
+Update a document into a collection:
+```bash
+db.<collection_name>.updateOne({"<doc1>": "value1"},{$set: {"<doc1>": "<value2>"}})
+```
