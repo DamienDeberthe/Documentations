@@ -57,7 +57,7 @@ db.createCollection("<collection_name>");
 
 #### Documents
 
-SHOW <br>
+* SHOW <br>
 Show all documents into a collection:
 ```bash
 db.<collection_name>.find()
@@ -68,8 +68,7 @@ Show a specific document into a collection:
 db.<collection_name>.find({"<doc1>: "<value1>"})
 ```
 
-
-<br>CREATE <br>
+* CREATE <br>
 Create a document into a collection:
 ```bash
 db.<collection_name>.insert({<doc1>: "<value1>", <doc2>: "<value2>", <doc3>: "<value3>"})
