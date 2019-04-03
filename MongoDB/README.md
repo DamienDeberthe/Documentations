@@ -67,7 +67,7 @@ db.<collection_name>.find()
 
 Show a specific document into a collection:
 ```bash
-db.<collection_name>.find({"<doc1>: "<value1>"})
+db.<collection_name>.find({"<doc1>": "<value1>"})
 ```
 
 * CREATE <br>
