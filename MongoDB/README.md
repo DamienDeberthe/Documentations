@@ -43,6 +43,7 @@ Create and use a database:
 ```bash
 use <db_name>
 ```
+<br>
 
 #### Collections
 Show collections into the database in use:
@@ -54,6 +55,7 @@ Create a collection into the database in use:
 ```bash
 db.createCollection("<collection_name>");
 ```
+<br>
 
 #### Documents
 
