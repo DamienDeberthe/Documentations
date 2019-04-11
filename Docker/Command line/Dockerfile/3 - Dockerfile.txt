@@ -49,3 +49,7 @@ RUN   sed -i "s|original|text_modify|g" /tmp/file1
 
 Git clone dans un dossier :
 RUN   git clone https://github.com/ <directory>
+
+
+TEST du fichier Dockerfile:
+https://www.fromlatest.io/#/
