@@ -15,6 +15,6 @@ La configuration se trouve dans le dossier <code>/etc/logrotate.d/\<app\></code>
 ### Test
 
 Pour tester, utiliser la commande :
-<code>
+```bash
 logrotate --force <config_file_in_logrotate.d>
-</code>
+```
