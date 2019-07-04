@@ -9,3 +9,12 @@ De base logrotate est installé sur la distribution Debian.
 ### Configuration
 
 La configuration se trouve dans le dossier <code>/etc/logrotate.d/\<app\></code>
+
+<br/>
+
+### Test
+
+Pour tester, utiliser la commande :
+<code>
+logrotate --force <config_file_in_logrotate.d>
+</code>
