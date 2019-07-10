@@ -55,6 +55,10 @@ passwd -u <user1>
 
 ### Manipulation de chaines de caractères
 #### Awk
+Le résultat d'une commande contenant plusieurs colonnes, séparé par des espaces. Afficher la première colonne :
+```bash
+ls -l | awk '{print $1}'
+```
 Un fichier contenant plusieurs colonnes, séparé par des espaces. Afficher la première colonne :
 ```bash
 awk '{print $1}' file
