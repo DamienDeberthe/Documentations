@@ -1,5 +1,7 @@
 ## MEMO COMMANDES LINUX
 
+Lien utile : https://cheat.sh/
+
 ### Administration
 Lister toutes les connexions avec la machine Linux + numéros de ports (Debian 9 : paquet net-tools) :
 ```bash
