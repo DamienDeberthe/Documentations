@@ -151,6 +151,11 @@ Pour afficher une variable :
 ```bash
 echo $<my_var>
 ```
+#### Resultat commande dans une commande
+Pour afficher le résultat d'une commande dans une commande :
+```bash
+echo "Today is: $(date +"%Y%m%d")"
+```
 <br/>
 
 
@@ -208,13 +213,13 @@ up route add -net 192.168.99.0/24 gw 192.168.1.0 dev eth0
 ```
 <br/>
 
-Connaitre le pourcentage de pertes de paquets en direct (**Nécessaire** : <code>apt-get install mtr</code>):
+Connaitre le pourcentage de pertes de paquets en direct (**Nécessaire** : <code>apt-get install -y mtr</code>) :
 ```bash
 mtr <X.X.X.X>
 ```
 <br/>
 
-Scanner la plage réseau : 
+Scanner la plage réseau (**Nécessaire** : <code>apt-get install -y nmap</code>) : 
 ```bash
 nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 ```
