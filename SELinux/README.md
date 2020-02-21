@@ -26,7 +26,7 @@ Afficher les informations SELinux sur un fichier/dossier :
 ```bash
 ls -lZ <file>
 utilisateur:rôle:type:niveau <file>
-user:role:type:level <file> #English
+user:role:type/context:level <file> #English
 ```
 
 Afficher le contexte que devrait posséder un fichier/dossier :
