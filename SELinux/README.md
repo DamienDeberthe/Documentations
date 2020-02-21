@@ -18,3 +18,12 @@ SELINUX=permissive
 SELINUX=enforcing
 ```
 
+<br>
+
+### Contextes
+Afficher les informations SELinux sur un fichier/dossier :
+```bash
+ls -lZ <file>
+utilisateur:rôle:type:niveau <file>
+```
+
