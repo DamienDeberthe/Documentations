@@ -27,3 +27,12 @@ ls -lZ <file>
 utilisateur:rôle:type:niveau <file>
 ```
 
+Afficher le contexte que devrait posséder un fichier/dossier :
+```bash
+matchpathcon <file>
+```
+
+Restaurer le contexte du fichier/dossier :
+```bash
+restorecon -v
+```
