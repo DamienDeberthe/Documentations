@@ -11,9 +11,10 @@ getenforce
 
 <br>
 
-Changer état SELinux, fichier <code>/etc/selinux/config</code> :
+Changer état SELinux, fichier <code>/etc/selinux/config</code> & reboot la machine :
 ```bash
 SELINUX=disabled
 SELINUX=permissive
 SELINUX=enforcing
 ```
+
