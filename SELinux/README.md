@@ -34,5 +34,5 @@ matchpathcon <file>
 
 Restaurer le contexte du fichier/dossier :
 ```bash
-restorecon -v
+restorecon -v <file>
 ```
