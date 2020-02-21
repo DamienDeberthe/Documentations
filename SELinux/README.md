@@ -11,7 +11,7 @@ getenforce
 
 <br>
 
-Changer état SELinux, fichier <code>/etc/selinux/config</code> & reboot la machine :
+Changer état SELinux, fichier <code>/etc/selinux/config</code> & reboot la machine pour que les changements soient effectif :
 ```bash
 SELINUX=disabled
 SELINUX=permissive
