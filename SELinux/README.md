@@ -10,6 +10,7 @@ getenforce
 * Enforcing : SELinux est activé. Toutes les actions non préalablement autorisées sont bloquées par sécurité et logué dans <code>/var/log/audit/audit.log</code> et <code>/var/log/messages</code>.
 
 <br>
+
 Changer état SELinux, fichier <code>/etc/selinux/config</code> :
 ```bash
 SELINUX=disabled
