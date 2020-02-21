@@ -20,11 +20,13 @@ SELINUX=enforcing
 
 <br>
 
+
 ### Contextes
 Afficher les informations SELinux sur un fichier/dossier :
 ```bash
 ls -lZ <file>
 utilisateur:rôle:type:niveau <file>
+user:role:type:level <file> #English
 ```
 
 Afficher le contexte que devrait posséder un fichier/dossier :
@@ -35,4 +37,13 @@ matchpathcon <file>
 Restaurer le contexte du fichier/dossier :
 ```bash
 restorecon -v <file>
+```
+
+<br>
+
+Modifier le contexte d'un fichier/dossier :
+```bash
+semanage fcontext -a -t <type> <file>
+restorecon -v <file>
+
 ```
