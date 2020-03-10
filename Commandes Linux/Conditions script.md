@@ -33,6 +33,7 @@ fi
 
 Syntax:
 ```bash
+#!/bin/bash
 for i in <value/command>; do
   echo "Value for i: $i"
 done
