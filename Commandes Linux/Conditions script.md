@@ -1,4 +1,5 @@
 ### IF
+Syntax:
 ```bash
 #!/bin/bash
 
@@ -8,8 +9,8 @@ else
   echo "Result command NONOK"
 fi
 ```
-<br>
 
+Exemple:
 ```bash
 #!/bin/bash
 
