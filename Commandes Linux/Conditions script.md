@@ -2,7 +2,6 @@
 Syntax:
 ```bash
 #!/bin/bash
-
 if <command> ; then
   echo "Result command OK"
 else
@@ -13,7 +12,6 @@ fi
 Exemple:
 ```bash
 #!/bin/bash
-
 if find . -type f | grep <file> > /dev/null ; then #Si fichier existe renvoie OK, sinon NONOK
   echo "File exist"
 else
