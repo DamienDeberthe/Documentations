@@ -28,3 +28,18 @@ fi
 ```
 
 ### FOR
+
+Syntax:
+```bash
+for i in <value/command>; do
+  echo "Value for i: $i"
+done
+```
+
+Example 1:
+```bash
+#!/bin/bash
+for i in `seq 1 5`; do
+  echo "Value for i: $i"
+done
+```
