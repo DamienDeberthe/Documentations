@@ -3,9 +3,9 @@
 #!/bin/bash
 
 if <command> ; then
-    echo "Result command OK"
+  echo "Result command OK"
 else
-    echo "Result command NONOK"
+  echo "Result command NONOK"
 fi
 ```
 <br>
@@ -14,9 +14,9 @@ fi
 #!/bin/bash
 
 if find . -type f | grep <file> > /dev/null ; then #Si fichier existe renvoie OK, sinon NONOK
-        echo "File exist"
+  echo "File exist"
 else
-        echo "File not exist"
+  echo "File not exist"
 fi
 
 ```
