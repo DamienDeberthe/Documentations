@@ -286,6 +286,8 @@ select * from user where user='<user>';
 
 
 ### LVM
+Physical volume --> volume group ---> logical group
+<br/>
 Afficher les volumes physiques et volumes groupes:
 ```bash
 pvdisplay 
