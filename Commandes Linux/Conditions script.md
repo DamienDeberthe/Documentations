@@ -17,7 +17,6 @@ if find . -type f | grep <file> > /dev/null ; then #Si fichier existe renvoie OK
 else
   echo "File not exist"
 fi
-
 ```
 
 ### FOR
