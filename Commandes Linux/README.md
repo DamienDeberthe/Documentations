@@ -285,6 +285,18 @@ select * from user where user='<user>';
 <br/>
 
 
+### LVM
+Afficher les volumes physiques et volumes groupes:
+```bash
+pvdisplay 
+```
+Afficher les volumes logiques:
+```bash
+lvdisplay
+```
+<br/>
+
+
 ### Autres/Divers
 Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
