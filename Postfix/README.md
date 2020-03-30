@@ -4,6 +4,8 @@
 
 * Source: https://www.howtoforge.com/tutorial/configure-postfix-to-use-gmail-as-a-mail-relay/
 
+<br/>
+
 Install:
 ```bash
 apt-get update && apt-get -y install postfix mailutils
