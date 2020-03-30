@@ -7,8 +7,8 @@ Install:
 apt-get update && apt-get -y install postfix mailutils
 ```
 
-<br/>
 Select "No configuration".
+<br/>
 
 Edit file <code>/etc/postfix/sasl_passwd</code> with content:
 ```bash
