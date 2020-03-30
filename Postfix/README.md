@@ -46,7 +46,7 @@ service postfix restart
 
 Go to: [link](https://myaccount.google.com/lesssecureapps) and disable security.
 
-<br/><br/><br/>
+<br/><br/>
 
 Test with:
 ```bash
