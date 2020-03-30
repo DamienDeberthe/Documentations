@@ -42,10 +42,12 @@ Restart postfix service:
 service postfix restart
 ```
 
-<br/><br/>
+<br/>
 
 Go to: [link](https://myaccount.google.com/lesssecureapps) and disable security.
-<br/><br/>
+
+<br/><br/><br/>
+
 Test with:
 ```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
