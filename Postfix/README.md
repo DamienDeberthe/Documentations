@@ -2,6 +2,8 @@
 
 ### GMAIL
 
+* Source: https://www.howtoforge.com/tutorial/configure-postfix-to-use-gmail-as-a-mail-relay/
+
 Install:
 ```bash
 apt-get update && apt-get -y install postfix mailutils
@@ -27,6 +29,7 @@ postmap /etc/postfix/sasl_passwd
 
 File <code>/etc/postfix/main.cf</code>:
 ```bash
+#myhostname = <change_with_what_you_want> #This will be use in the mail information
 relayhost = [smtp.gmail.com]:587
 smtp_use_tls = yes
 smtp_sasl_auth_enable = yes
