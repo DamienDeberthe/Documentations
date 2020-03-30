@@ -3,6 +3,10 @@
 ### Identifiants
 Permanent authentification:
 ```bash
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git config --global user.password "your password"
+
 git clone <repo>
 Username for 'https://gitlab.com': <username>
 Password for 'https://<username>@gitlab.com': <password>
