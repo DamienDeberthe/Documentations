@@ -332,6 +332,10 @@ Envoi simple de mail en ligne de commande, en ajoutant l'expéditeur :
 ```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" -a "from:user@domain.com" <destinataire>@domain.com
 ```
+Envoi de mail en ligne de commande en utilisant un fichier html comme contenu :
+```bash
+mailx -a 'Content-Type: text/html' -s "Subject" <destinataire>@domain.com <index.htm
+```
 Afficher les mails en attente : 
 ```bash
 mailq
