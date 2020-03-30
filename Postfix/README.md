@@ -14,7 +14,7 @@ Edit file <code>/etc/postfix/sasl_passwd</code> with content:
 ```bash
 [smtp.gmail.com]:587    <username>@gmail.com:<password>
 ```
-
+<br/>
 Right to this file and compile datas for Postfix:
 ```bash
 chmod 600 /etc/postfix/sasl_passwd
