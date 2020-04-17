@@ -14,7 +14,6 @@ line="\n" #New line
 function_1 () {
   echo -e "Folder /tmp"
   ls -l /tmp
-
 }
 
 #function_2
