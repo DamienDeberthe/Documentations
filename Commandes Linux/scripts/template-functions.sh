@@ -28,6 +28,12 @@ function_3 () {
   ls -l /srv
 }
 
+#function_3
+end_script () {
+  echo -e "$line${red}END OF SCRIPT$normal"
+  ls -l /srv
+}
+
 
 ### MAIN
 
@@ -40,6 +46,10 @@ main () {
   #...
 }
 
-
-#Exec program
+#Exec program main
 main
+
+#Exec separate function
+end_script
+
+exit 0
