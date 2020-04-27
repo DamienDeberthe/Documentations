@@ -2,6 +2,17 @@
 
 ### Identifiants
 Permanent authentification:
+
+* Repo already clone:
+```bash
+cd <repo>
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git config --global user.password "your password"
+git config credential.helper store
+```
+
+* Git clone + authentication:
 ```bash
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
