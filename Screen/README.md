@@ -50,6 +50,13 @@ The number at the beginning is the ID_screen
 * Attached: You are in this screen
 * Detached: You are not into this screen, use <code>screen -r <ID_screen></code>
 
+<br>
+
+#### Delete a screen:
+```bash
+screen -XS <ID_screen_OR_name_screen> quit
+```
+
 <br><br>
 
 #### Example:
