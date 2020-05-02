@@ -57,3 +57,8 @@ Test with:
 ```bash
 echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
 ```
+
+Advanced:
+```bash
+mailx -a "From: <NoReply> <<NoReply@mail.com>>" -a 'Content-Type: text/html' -s "<Subject>" <destinataire>@gmail.com < <mail_file>.html
+```
