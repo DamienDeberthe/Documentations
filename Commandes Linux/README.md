@@ -250,6 +250,10 @@ nmap -sP 192.168.1.0/24 | sed 's/.*Nmap/\nNmap/'
 ```
 <br/>
 
+Afficher le ou les serveurs DNS utilisé(s):
+```bash
+systemd-resolve --status
+```
 
 ### Stresstest
 **Prérequis** : installer le paquet **stress** <code>apt-get install -y stress</code>
