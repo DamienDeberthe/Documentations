@@ -5,11 +5,11 @@ Lien utile : https://cheat.sh/
 <br/>
 
 - [Administration](#Administration)
-- ["Comptes Linux"](#"Comptes Linux")
-- [Manipulation de chaines de caractères](#Manipulation de chaines de caractères)
+- [Comptes_Linux](#"Comptes_Linux")
+- [Manipulation_de_chaines_de_caractères](#Manipulation_de_chaines_de_caractères)
 - [Scripts](#Scripts)
 - [Variables](#Variables)
-- [Liste dossiers](#Liste dossiers)
+- [Liste_dossiers](#Liste_dossiers)
 - [Recherche](#Recherche)
 - [Network](#Network)
 - [Stresstest](#Stresstest)
