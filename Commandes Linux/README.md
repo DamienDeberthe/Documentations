@@ -4,9 +4,9 @@ Lien utile : https://cheat.sh/
 
 <br/>
 
-1 .[Administration](#Administration)
+1. [Administration](#Administration)
 2. [Comptes Linux] (#Comptes Linux)
-[Manipulation de chaines de caractères] (#Manipulation de chaines de caractères)
+3. [Manipulation de chaines de caractères] (#Manipulation de chaines de caractères)
 [Scripts] (#Scripts)
 [Variables] (#Variables)
 [Liste dossiers] (#Liste dossiers)
