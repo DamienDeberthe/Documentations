@@ -5,6 +5,18 @@ Lien utile : https://cheat.sh/
 <br/>
 
 [Administration](#Administration)
+[Comptes Linux] (#Comptes Linux)
+[Manipulation de chaines de caractères] (#Manipulation de chaines de caractères)
+[Scripts] (#Scripts)
+[Variables] (#Variables)
+[Liste dossiers] (#Liste dossiers)
+[Recherche] (#Recherche)
+[Network] (#Network)
+[Stresstest] (#Stresstest)
+[MYSQL/MariaDB] (#MYSQL/MariaDB)
+[LVM] (#LVM)
+[Autres/Divers] (#Autres/Divers)
+
 
 ### Administration
 Lister toutes les connexions avec la machine Linux + numéros de ports (Debian 9 : paquet net-tools) :
@@ -173,8 +185,7 @@ echo "Today is: $(date +"%Y%m%d")"
 <br/>
 
 
-### Liste dossiers 
-
+### Liste dossiers
 Afficher seulement les dossiers :
 ```bash
 tree -d
