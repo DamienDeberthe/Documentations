@@ -4,8 +4,8 @@ Lien utile : https://cheat.sh/
 
 <br/>
 
-[Administration](#Administration)
-[Comptes Linux] (#Comptes Linux)
+1 .[Administration](#Administration)
+2. [Comptes Linux] (#Comptes Linux)
 [Manipulation de chaines de caractères] (#Manipulation de chaines de caractères)
 [Scripts] (#Scripts)
 [Variables] (#Variables)
