@@ -5,7 +5,7 @@ Lien utile : https://cheat.sh/
 <br/>
 
 - [Administration](#Administration)
-- [Comptes_Linux](#Comptes Linux)
+- [Comptes_Linux](#Comptes_Linux)
 - [Manipulation_de_chaines_de_caractères](#Manipulation_de_chaines_de_caractères)
 - [Scripts](#Scripts)
 - [Variables](#Variables)
@@ -30,7 +30,7 @@ ps auxf
 <br/>
 
 
-### Comptes Linux
+### Comptes_Linux
 Ajouter un compte Linux : (les deux commandes sont équivalentes)
 ```bash
 adduser <user1>
@@ -71,7 +71,7 @@ passwd -u <user1>
 <br/>
 
 
-### Manipulation de chaines de caractères
+### Manipulation_de_chaines_de_caractères
 #### Awk
 Le résultat d'une commande contenant plusieurs colonnes, séparé par des espaces. Afficher la première colonne :
 ```bash
@@ -185,7 +185,7 @@ echo "Today is: $(date +"%Y%m%d")"
 <br/>
 
 
-### Liste dossiers
+### Liste_dossiers
 Afficher seulement les dossiers :
 ```bash
 tree -d
