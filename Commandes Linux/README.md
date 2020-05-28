@@ -13,6 +13,7 @@ Lien utile : https://cheat.sh/
 - [Recherche](#Recherche)
 - [Network](#Network)
 - [Stresstest](#Stresstest)
+- [Mail](#Mail)
 - [MYSQL/MariaDB](#MYSQL/MariaDB)
 - [LVM](#LVM)
 - [Autres/Divers](#Autres/Divers)
@@ -254,6 +255,8 @@ Afficher le ou les serveurs DNS utilisé(s):
 ```bash
 systemd-resolve --status
 ```
+<br/>
+
 
 ### Stresstest
 **Prérequis** : installer le paquet **stress** <code>apt-get install -y stress</code>
@@ -265,6 +268,32 @@ stress --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.5;}' < /proc/memin
 Simuler la RAM à 90% et 2 CPU à 100% :
 ```bash
 stress --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.9;}' < /proc/meminfo)k --vm-keep -m 2
+```
+<br/>
+
+
+### Mail
+Envoi simple de mail en ligne de commande :
+```bash
+echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
+```
+Envoi simple de mail en ligne de commande, en ajoutant l'expéditeur :
+```bash
+echo "Email send from '$HOSTNAME'" | mail -s "Mail test" -a "from:user@domain.com" <destinataire>@domain.com
+```
+Envoi de mail en ligne de commande en utilisant un fichier html comme contenu :
+```bash
+mailx -a 'Content-Type: text/html' -s "Subject" <destinataire>@domain.com <index.htm
+```
+Afficher les mails en attente : 
+```bash
+mailq
+#OR
+postqueue -p
+```
+Pour supprimer tout les mails en attentes :
+```bash
+postsuper -d ALL
 ```
 <br/>
 
@@ -346,33 +375,18 @@ tree <dir> -F -h --sort=size --du --nolinks -C -H TITLE_OF_TREE -T TITLE_OF_WEB_
 <br/>
 
 
+Modifier le hostname d'une machine Debian sans reboot :
+```bash
+# Modify /etc/hosts
+# Modify /etc/hostname
+hostnamectl set-hostname <HOSTNAME>
+```
+<br/>
+
+
 Crée rapidement un serveur web pour récuperer des données dans un dossier.
 Executer cette commande à la racine du dossier de partage :
 ```bash
 python -m SimpleHTTPServer 80
-```
-<br/>
-
-Envoi simple de mail en ligne de commande :
-```bash
-echo "Email send from '$HOSTNAME'" | mail -s "Mail test" <destinataire>@domain.com
-```
-Envoi simple de mail en ligne de commande, en ajoutant l'expéditeur :
-```bash
-echo "Email send from '$HOSTNAME'" | mail -s "Mail test" -a "from:user@domain.com" <destinataire>@domain.com
-```
-Envoi de mail en ligne de commande en utilisant un fichier html comme contenu :
-```bash
-mailx -a 'Content-Type: text/html' -s "Subject" <destinataire>@domain.com <index.htm
-```
-Afficher les mails en attente : 
-```bash
-mailq
-#OR
-postqueue -p
-```
-Pour supprimer tout les mails en attentes :
-```bash
-postsuper -d ALL
 ```
 <br/>
