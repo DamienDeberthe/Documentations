@@ -26,7 +26,7 @@ netstat -l
 ```
 Lister tous les ports en écoute :
 ```bash
-netstat -plnt
+netstat -tulpn
 ```
 Lister tout les processus en cours, avec arborescence ( f ) :
 ```bash
