@@ -24,6 +24,10 @@ Lister toutes les connexions avec la machine Linux + numéros de ports (Debian 9
 ```bash
 netstat -l
 ```
+Lister tous les ports en écoute :
+```bash
+netstat -plnt
+```
 Lister tout les processus en cours, avec arborescence ( f ) :
 ```bash
 ps auxf
