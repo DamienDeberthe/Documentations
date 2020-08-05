@@ -211,25 +211,26 @@ tree -d -I test
 ### Recherche
 Rechercher un fichier sur la machine : 
 ```bash
-find / -type f -iname "*file*" #Conserver les étoiles avant et après le nom du fichier
+find / -type f -iname "*<file>*" #Conserver les étoiles avant et après le nom du fichier
 ```
 Rechercher un dossier sur la machine :
 ```bash
-find / -type d -iname "*dir*" #Conserver les étoiles avant et après le nom du dossier
+find / -type d -iname "*<folder>*" #Conserver les étoiles avant et après le nom du dossier
 ```
 Rechercher un fichier dans un dossier :
 ```bash
-cd <directory> && find -name "*file*" #Conserver les étoiles avant et après le nom du fichier
+cd <directory> && find -name "*<file>*" #Conserver les étoiles avant et après le nom du fichier
 ```
 <br/>
 
 Rechercher une chaine de caractère dans les fichier présent dans le dossier actuel :
 ```bash
-grep SEARCH *
+grep <search> *
 ```
 Rechercher une chaine de caractère dans les fichiers présent dans le dossier actuel et récursivement :
 ```bash
-rgrep SEARCH *
+rgrep <search> *
+grep -ri <search> *
 ```
 <br/>
 
