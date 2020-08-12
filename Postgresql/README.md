@@ -2,7 +2,6 @@
 
 ### Server
 #### Install
-
 ```bash
 apt-get update && apt-get install -y postgresql96-server
 ```
@@ -46,3 +45,14 @@ Configure for distant access
 <br/>
 
 ### Client
+
+#### Install
+```bash
+apt-get update && apt-get install -y postgresql
+```
+
+#### Test
+```bash
+psql -h <POSTGRESQL_SERVER_IP> -p 5432 -U postgres
+psql -h <POSTGRESQL_SERVER_IP> -p 5432 -U postgres <DATABASE_NAME>
+```
