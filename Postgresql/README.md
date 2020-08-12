@@ -1,4 +1,4 @@
-### Postgresql
+## Postgresql
 
 ### Server
 #### Install
