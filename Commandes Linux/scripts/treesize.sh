@@ -1,4 +1,6 @@
 #/bin/sh
+
+#Use "ncdu" command or this program
 echo -e "\n**************************************\n************** TREESIZE **************\n**************************************\n"
 
 read -p "Quel dossier analyser? (ex: '/home') : " dir
