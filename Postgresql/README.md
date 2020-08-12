@@ -29,6 +29,8 @@ su - postgres
 psql
 ```
 
+<br/>
+
 #### Local access
 Configure for local access
 * Modify <code>/var/lib/pgsql/9.6/data/pg_hba.conf</code>: <code>local   all             all                                     trust</code>
@@ -40,5 +42,7 @@ Configure for distant access
 * Uncomment and modify <code>/var/lib/pgsql/9.6/data/postgresql.conf</code>: <code>listen_addresses = '*'</code>
 * Add at the end of the file <code>/var/lib/pgsql/9.6/data/pg_hba.conf</code>: <code>host    all             all             0.0.0.0/0               trust</code>
 * Restart service: <code>service postgresql-9.6 restart</code>
+
+<br/>
 
 ### Client
