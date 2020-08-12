@@ -54,5 +54,6 @@ apt-get update && apt-get install -y postgresql
 #### Test
 ```bash
 psql -h <POSTGRESQL_SERVER_IP> -p 5432 -U postgres
+#OR
 psql -h <POSTGRESQL_SERVER_IP> -p 5432 -U postgres <DATABASE_NAME>
 ```
