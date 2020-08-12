@@ -1,15 +1,26 @@
 ## Posgresql commands
 
-* List all databases
+* List all databases:
 ```bash
-
+\list
 ```
 
-* Connect to a database
+* Create a new database:
 ```bash
-
+create database <NEW_DATABASE>;
 ```
+
+* Connect to a database:
+```bash
+\c <DATABASE>
+```
+
 * List all tables in a database:
 ```bash
+\d
+```
 
+Leave PSQL prompt:
+```bash
+\q
 ```
