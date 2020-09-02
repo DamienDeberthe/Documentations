@@ -41,7 +41,7 @@ git config --global http.proxy http://proxy.domain.com:port
 
 ### File ~/.netrc
 
-This file contain the authentication for each site you use
+This file contain the authentication for each sites you use:
 ```bash
 machine <git.example.com>
 login <login>
