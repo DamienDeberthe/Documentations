@@ -37,6 +37,8 @@ Utiliser git au travers d'un proxy :
 git config --global http.proxy http://proxy.domain.com:port
 ```
 
+<br/>
+
 ### File ~/.netrc
 
 This file contain the authentication for each site you use
