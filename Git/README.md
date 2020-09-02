@@ -1,6 +1,6 @@
 # Git
 
-### Identifiants
+### Git ID
 Permanent authentification:
 
 * Repo already clone:
@@ -31,8 +31,17 @@ Password for 'https://<username>@gitlab.com': <password>
 
 <br/>
 
-### Options
+#### Options
 Utiliser git au travers d'un proxy :
 ```bash
 git config --global http.proxy http://proxy.domain.com:port
+```
+
+### File ~/.netrc
+
+This file contain the authentication for each site you use
+```bash
+machine <git.example.com>
+login <login>
+password <password>
 ```
