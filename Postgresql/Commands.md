@@ -2,6 +2,7 @@
 
 Postgresql command line:
 ```bash
+su - postgres
 psql
 ```
 
