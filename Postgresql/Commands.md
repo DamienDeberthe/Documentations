@@ -26,6 +26,21 @@ List all tables in a database:
 \d
 ```
 
+Create database:
+```bash
+CREATE DATABASE <DATABASE>;
+```
+
+Create user:
+```bash
+CREATE USER <USER> WITH PASSWORD '<PASSWORD>';
+```
+
+Give privilege to a user on a dabatase:
+```bash
+GRANT ALL PRIVILEGES ON DATABASE "<DATABASE>" to <USER>;
+```
+
 Leave PSQL prompt:
 ```bash
 \q
