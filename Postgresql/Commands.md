@@ -1,5 +1,10 @@
 ## Posgresql commands
 
+Postgresql command line:
+```bash
+psql
+```
+
 List all databases:
 ```bash
 \list
