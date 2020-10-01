@@ -66,4 +66,5 @@ do
    echo "PACKAGE $line"
    dpkg -i | grep $line
    echo -e "------------\n\n"
+done
 ```
