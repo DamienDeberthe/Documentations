@@ -46,3 +46,24 @@ for i in `seq 1 5`; do
   echo "Value for i: $i"
 done
 ```
+
+<br>
+
+### WHILE
+
+Syntax:
+```bash
+cat <file> | while read line
+do
+  echo "$line"
+done
+```
+
+Example 1:
+```bash
+cat packages.txt | while read line
+do
+   echo "PACKAGE $line"
+   dpkg -i | grep $line
+   echo -e "------------\n\n"
+```
