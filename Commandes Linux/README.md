@@ -398,12 +398,11 @@ python -m SimpleHTTPServer 80
 
 
 Codes d'erreur :<br/>
-Pour appel :
 * 0 : Command success
 * 1 : Minor problem
 * 2 : Serious problem
 ```bash
-mkdir test &> /dev/null
+<command>
 result=$?
 echo "$result"
 ```
