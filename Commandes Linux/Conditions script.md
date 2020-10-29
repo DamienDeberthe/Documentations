@@ -11,7 +11,7 @@ fi
 Example 1:
 ```bash
 #!/bin/bash
-# Test with argument in command line like: ./script.sh 2 2
+# Test with argument in command line like: ./script.sh 2
 if [ "$1" == "2" ] ; then
   echo "Result command OK"
 else
