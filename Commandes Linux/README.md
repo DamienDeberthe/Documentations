@@ -303,7 +303,7 @@ postsuper -d ALL
 <br/>
 
 
-### MYSQL/MariaDB
+### MYSQL_MariaDB
 Authorize remote connection :
 ```bash
 rgrep "bind-address" /etc/mysql/*
@@ -362,7 +362,7 @@ lvdisplay
 <br/>
 
 
-### Autres
+### Autres_Divers
 Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
 du -sh --time * | sort -hr
