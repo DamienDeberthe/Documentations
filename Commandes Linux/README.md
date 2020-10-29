@@ -395,3 +395,15 @@ Executer cette commande à la racine du dossier de partage :
 python -m SimpleHTTPServer 80
 ```
 <br/>
+
+
+Codes d'erreur :<br/>
+Pour appel :
+* 0 : Command success
+* 1 : Minor problem
+* 2 : Serious problem
+```bash
+mkdir test &> /dev/null
+result=$?
+echo "$result"
+```
