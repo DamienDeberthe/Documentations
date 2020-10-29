@@ -16,7 +16,7 @@ Lien utile : https://cheat.sh/
 - [Mail](#Mail)
 - [MYSQL/MariaDB](#MYSQL/MariaDB)
 - [LVM](#LVM)
-- [Autres/Divers](#Autres/Divers)
+- [Autres/Divers](#Autres)
 
 
 ### Administration
@@ -362,7 +362,7 @@ lvdisplay
 <br/>
 
 
-### Autres/Divers
+### Autres
 Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
 du -sh --time * | sort -hr
