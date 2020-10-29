@@ -11,7 +11,8 @@ fi
 Example 1:
 ```bash
 #!/bin/bash
-if [ "$1" == "2" ] ; then #Test with variable in command line like: ./script.sh 2
+# Test with argument in command line like: ./script.sh 2 2
+if [ "$1" == "2" ] ; then
   echo "Result command OK"
 else
   echo "Result command NONOK"
@@ -20,10 +21,11 @@ fi
 Exemple 2:
 ```bash
 #!/bin/bash
-if find . -type f | grep <file> > /dev/null ; then #Si fichier existe renvoie OK, sinon NONOK
-  echo "File exist"
+# Si fichier existe renvoie OK, sinon NONOK
+if find . -type f | grep <file> > /dev/null ; then
+  echo "OK File exist"
 else
-  echo "File not exist"
+  echo "NONOK File not exist"
 fi
 ```
 
