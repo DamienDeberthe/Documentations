@@ -14,7 +14,7 @@ Lien utile : https://cheat.sh/
 - [Network](#Network)
 - [Stresstest](#Stresstest)
 - [Mail](#Mail)
-- [MYSQL/MariaDB](#MYSQL/MariaDB)
+- [MYSQL MariaDB](#MYSQL MariaDB)
 - [LVM](#LVM)
 - [Autres/Divers](#Autres)
 
