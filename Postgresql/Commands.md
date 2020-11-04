@@ -6,19 +6,21 @@ su - postgres
 psql
 ```
 
+Leave PSQL prompt:
+```bash
+\q
+```
+
+### List
+
 List all databases:
 ```bash
 \list
 ```
 
-Create a new database:
-```bash
-create database <NEW_DATABASE>;
-```
-
 Connect to a database:
 ```bash
-\c <DATABASE>
+\c <database>
 ```
 
 List all tables in a database:
@@ -26,22 +28,24 @@ List all tables in a database:
 \d
 ```
 
+### Actions
+
 Create database:
 ```bash
-CREATE DATABASE <DATABASE>;
+CREATE DATABASE <database>;
 ```
 
 Create user:
 ```bash
-CREATE USER <USER> WITH PASSWORD '<PASSWORD>';
+CREATE USER <user> WITH PASSWORD '<password>';
 ```
 
 Give privilege to a user on a dabatase:
 ```bash
-GRANT ALL PRIVILEGES ON DATABASE "<DATABASE>" to <USER>;
+GRANT ALL PRIVILEGES ON DATABASE "<database>" to <user>;
 ```
 
-Leave PSQL prompt:
+Delete database:
 ```bash
-\q
+DROP DATABASE <database>;
 ```
