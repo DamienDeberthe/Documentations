@@ -130,7 +130,7 @@ sed -i "/SEARCH_CONTENT/aADD_CONTENT" file
 ```
 
 #### Xargs
-Un fichier contenant une chaine de caractères (exemple: 1234) sur plusieurs lignes, resultat en 1 ligne separé par "espace" :
+Un fichier contenant plusieurs lignes (exemple: line1, line2, line3...), resultat en 1 ligne separé par "espace" :
 ```bash
 cat file1 | xargs
 ```
