@@ -42,7 +42,7 @@ function_mkdir
 
 exit 0
 ```
-
+<br>
 
 #### Date
 To create a date, for log for example (result: dd/mm/yyyy:hh:mm:ss):
