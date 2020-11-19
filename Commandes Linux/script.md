@@ -15,16 +15,17 @@ test
 ```
 <br/>
 
+#### 
+
 #### Date
-Pour dater dans un fichier de log, créer la variable (résultat : dd/mm/yyyy:hh:mm:ss) :
+To create a date, for log for example (result: dd/mm/yyyy:hh:mm:ss):
 ```bash
 date=`date +"%m/%d/%Y:%T"`
 ```
-
 <br/>
 
-#### Valeur aléatoire
-Générer des valeurs aléatoires :
+#### Random value
+To generate random values:
 ```bash
 # 6 random letters (lowercase only)
 rand=$(cat /dev/urandom | tr -dc 'a-z' | fold -w 6 | head -n 1)
