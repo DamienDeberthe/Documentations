@@ -15,7 +15,34 @@ test
 ```
 <br/>
 
-#### 
+#### Call function from another script
+Two files:
+* main.sh: Contain main program
+* functions.sh: Contain two the functions simple touch and mkdir
+
+functions.sh
+```bash
+#!/bin/bash
+function_touch()
+{
+  touch $1
+}
+function_mkdir()
+{
+  mkdir $1
+}
+```
+
+main.sh
+```bash
+#!/bin/bash
+source functions.sh
+function_touch
+function_mkdir
+
+exit 0
+```
+
 
 #### Date
 To create a date, for log for example (result: dd/mm/yyyy:hh:mm:ss):
