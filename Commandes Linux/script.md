@@ -13,7 +13,6 @@ Execution:
 # Result
 test
 ```
-
 <br/>
 
 #### Date
