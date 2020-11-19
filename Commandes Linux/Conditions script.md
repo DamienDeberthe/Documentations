@@ -21,12 +21,13 @@ fi
 Exemple 2:
 ```bash
 #!/bin/bash
-# Si fichier existe alors je fais rien, sinon je lance la commande
-if [ -f "<file>" ]; then
+# -f : file /// -d : directory
+# Si fichier n'existe pas je lance la commande, sinon je fais rien
+if [ ! -f "1" ]; then
   echo "File not exist"
-fi
-# Si fichier n'existe pas alors je fais rien, sinon je lance la commande
-if [ ! -f "<file>" ]; then
+#fi
+# Si fichier existe je lance la commande, sinon je fais rien
+if [ -f "1" ]; then
   echo "File exist"
 fi
 ```
