@@ -1,6 +1,6 @@
 ## SCRIPTS
 
-#### Parameters
+### Parameters
 Script:
 ```bash
 #!/bin/bash
