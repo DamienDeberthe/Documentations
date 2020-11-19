@@ -16,7 +16,7 @@ test
 <br/>
 
 
-#### Call function from another script
+### Call function from another script
 Two files:
 * main.sh: Contain main program
 * functions.sh: Contain functions. Here two simple commands touch and mkdir
@@ -54,7 +54,7 @@ test1 test2
 <br/>
 
 
-#### Date
+### Date
 To create a date, for log for example (result: dd/mm/yyyy:hh:mm:ss):
 ```bash
 date=`date +"%m/%d/%Y:%T"`
@@ -62,7 +62,7 @@ date=`date +"%m/%d/%Y:%T"`
 <br/>
 
 
-#### Random value
+### Random value
 To generate random values:
 ```bash
 # 6 random letters (lowercase only)
