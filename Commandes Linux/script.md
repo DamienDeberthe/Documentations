@@ -1,23 +1,29 @@
 ## SCRIPTS
 
-Use parameters:
+#### Parameters
+Script:
 ```bash
 #!/bin/bash
 echo "$1"
 ```
 
+Execution:
 ```bash
 ./script.sh test
 # Result
 test
 ```
 
+<br/>
 
 #### Date
 Pour dater dans un fichier de log, créer la variable (résultat : dd/mm/yyyy:hh:mm:ss) :
 ```bash
 date=`date +"%m/%d/%Y:%T"`
 ```
+
+<br/>
+
 #### Valeur aléatoire
 Générer des valeurs aléatoires :
 ```bash
