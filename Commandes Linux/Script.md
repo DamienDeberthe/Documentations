@@ -26,7 +26,7 @@ functions.sh
 #!/bin/bash
 function_touch()
 {
-  touch $1
+  touch test1
 }
 function_mkdir()
 {
@@ -38,7 +38,7 @@ main.sh
 ```bash
 #!/bin/bash
 source functions.sh
-function_touch test1
+function_touch
 function_mkdir test2
 
 exit 0
