@@ -21,11 +21,13 @@ fi
 Exemple 2:
 ```bash
 #!/bin/bash
-# Si fichier existe renvoie OK, sinon NONOK
-if find . -type f | grep <file> > /dev/null ; then
-  echo "OK File exist"
-else
-  echo "NONOK File not exist"
+# Si fichier existe alors je fais rien, sinon je lance la commande
+if [ -f "<file>" ]; then
+  echo "File not exist"
+fi
+# Si fichier n'existe pas alors je fais rien, sinon je lance la commande
+if [ ! -f "<file>" ]; then
+  echo "File exist"
 fi
 ```
 
