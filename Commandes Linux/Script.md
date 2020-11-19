@@ -15,10 +15,11 @@ test
 ```
 <br/>
 
+
 #### Call function from another script
 Two files:
 * main.sh: Contain main program
-* functions.sh: Contain two the functions simple touch and mkdir
+* functions.sh: Contain functions. Here two simple commands touch and mkdir
 
 functions.sh
 ```bash
@@ -37,12 +38,21 @@ main.sh
 ```bash
 #!/bin/bash
 source functions.sh
-function_touch
-function_mkdir
+function_touch test1
+function_mkdir test2
 
 exit 0
 ```
-<br>
+
+Execution:
+```bash
+$ ./main.sh
+# Result
+$ ls
+test1 test2
+```
+<br/>
+
 
 #### Date
 To create a date, for log for example (result: dd/mm/yyyy:hh:mm:ss):
@@ -50,6 +60,7 @@ To create a date, for log for example (result: dd/mm/yyyy:hh:mm:ss):
 date=`date +"%m/%d/%Y:%T"`
 ```
 <br/>
+
 
 #### Random value
 To generate random values:
