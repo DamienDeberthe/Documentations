@@ -5,8 +5,10 @@
 apt-get install haproxy
 ```
 
+<br/>
+
 # Configuration
-File in <code>/etc/haproxy/haproxy.cfg</code>
+File in <code>/etc/haproxy/haproxy.cfg</code>:
 
 ```bash
 global
@@ -72,6 +74,8 @@ backend backend_test
 #----------------------------------------------#
 
 ```
+
+<br/>
 
 ### Service
 To test config file:
