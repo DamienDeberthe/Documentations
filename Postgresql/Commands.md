@@ -1,4 +1,4 @@
-## Posgresql commands
+## Postgresql commands
 
 Postgresql command line:
 ```bash
