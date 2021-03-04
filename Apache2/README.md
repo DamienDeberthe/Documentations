@@ -116,7 +116,7 @@ a2enmod ssl \
 
 https://mozilla.github.io/server-side-tls/ssl-config-generator/
 
-* Create certificats :
+* Create auto-signed certificats :
 ```bash
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -out public-key.crt -keyout private-key.key
 ```
