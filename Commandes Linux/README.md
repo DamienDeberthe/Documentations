@@ -142,9 +142,13 @@ cat file2 | tr ' ' '\n'
 
 
 ### Certificats
+Créer un certificat SSL auto-signé :
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -out <public-key.crt> -keyout <private-key.key>
+```
 Lire un certificat déjà crée:
 ```bash
-openssl x509 -noout -subject -in <certificat.cert>
+openssl x509 -noout -subject -in <certificat.crt>
 ```
 <br/>
 
