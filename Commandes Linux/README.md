@@ -7,7 +7,7 @@ Lien utile : https://cheat.sh/
 - [Administration](#Administration)
 - [Comptes_Linux](#Comptes_Linux)
 - [Manipulation_de_chaines_de_caractères](#Manipulation_de_chaines_de_caractères)
-- [Scripts](#Scripts)
+- [Certificats](#Certificats)
 - [Variables](#Variables)
 - [Liste_dossiers](#Liste_dossiers)
 - [Recherche](#Recherche)
@@ -137,6 +137,14 @@ cat file1 | xargs
 Un fichier contenant plusieurs chaines de caractères sur une même ligne separé par "espace", resultat en un fichier contenant une chaine de caractères (exemple: 1234 5678 910) sur plusieurs lignes :
 ```bash
 cat file2 | tr ' ' '\n'
+```
+<br/>
+
+
+### Certificats
+Lire un certificat déjà crée:
+```bash
+openssl x509 -noout -subject -in <certificat.cert>
 ```
 <br/>
 
