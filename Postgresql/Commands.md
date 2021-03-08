@@ -28,6 +28,11 @@ List all tables in a database:
 \d
 ```
 
+List all roles:
+````bash
+\du
+```
+
 ### Actions
 
 Create database:
