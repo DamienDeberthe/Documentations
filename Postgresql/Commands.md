@@ -29,7 +29,7 @@ List all tables in a database:
 ```
 
 List all roles:
-````bash
+```bash
 \du
 ```
 
