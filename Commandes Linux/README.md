@@ -16,6 +16,7 @@ Lien utile : https://cheat.sh/
 - [Mail](#Mail)
 - [MYSQL_MariaDB](#MYSQL_MariaDB)
 - [LVM](#LVM)
+- [Zip](#Zip)
 - [Autres_Divers](#Autres_Divers)
 
 
@@ -349,6 +350,24 @@ pvdisplay
 Afficher les volumes logiques:
 ```bash
 lvdisplay
+```
+<br/>
+
+
+### Zip
+Compresser des fichiers:
+```bash
+zip -r <compress.zip> <file1> <file2> <file3>
+```
+
+Compresser un dossier:
+```bash
+zip -r <compress.zip> <folder>
+```
+
+Décompresser un zip:
+```bash
+unzip <compress.zip> -d <destination>
 ```
 <br/>
 
