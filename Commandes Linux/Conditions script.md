@@ -18,7 +18,8 @@ else
   echo "Result command NONOK"
 fi
 ```
-Exemple 2:
+
+Example 2:
 ```bash
 #!/bin/bash
 # -f : file /// -d : directory
@@ -31,7 +32,8 @@ if [ -f "<file>" ]; then
   echo "File exist"
 fi
 ```
-Exemple 3:
+
+Example 3:
 ```bash
 #!/bin/bash
 # Si fichier existe pas afficher "file not exist", sinon afficher "file exist"
