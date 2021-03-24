@@ -63,6 +63,17 @@ for i in `seq 1 5`; do
 done
 ```
 
+Example 2:<br>
+Display every minute for waiting.
+```bash
+minutes=5 && echo_minutes=$(($minutes + 1))
+for i in `seq 1 $minutes`; do
+  res=$(($echo_minutes - $i))
+  echo "Waiting $res min..."
+  sleep 60
+done
+```
+
 <br>
 
 ### WHILE
