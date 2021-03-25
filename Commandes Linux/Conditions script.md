@@ -36,13 +36,12 @@ fi
 Example 3:
 ```bash
 #!/bin/bash
-# Si fichier existe pas afficher "file not exist", sinon afficher "file exist"
-if [ ! -f "<file>" ]; then
-  echo "File not exist"
-else
+# Si fichier existe afficher "file exist", sinon existe pas afficher "file not exist"
+if [ -f "<file>" ]; then
   echo "File exist"
+else
+  echo "File not exist"
 fi
-
 ```
 
 <br>
