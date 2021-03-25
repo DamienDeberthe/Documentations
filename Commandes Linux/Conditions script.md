@@ -65,8 +65,10 @@ for i in `seq 1 5`; do
 done
 ```
 
-Example 2: Display every minute for waiting.
+Example 2:
 ```bash
+#!/bin/bash
+# Display every minute for waiting
 minutes=5 && echo_minutes=$(($minutes + 1))
 for i in `seq 1 $minutes`; do
   res=$(($echo_minutes - $i))
