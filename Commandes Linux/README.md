@@ -33,6 +33,11 @@ Lister tout les processus en cours, avec arborescence ( f ) :
 ```bash
 ps auxf
 ```
+<br/>
+Afficher nombre de coeurs:
+```bash
+cat /proc/cpuinfo | grep -i "^processor" | wc -l
+```
 Afficher RAM :
 ```bash
 free -h
