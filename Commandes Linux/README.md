@@ -33,6 +33,10 @@ Lister tout les processus en cours, avec arborescence ( f ) :
 ```bash
 ps auxf
 ```
+Afficher RAM :
+```bash
+free -h
+```
 <br/>
 
 
