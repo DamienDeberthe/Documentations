@@ -26,7 +26,7 @@ Example 2:
 # Si fichier n'existe pas je lance la commande, sinon je fais rien
 if [ ! -f "file>" ]; then
   echo "File not exist"
-#fi
+fi
 # Si fichier existe je lance la commande, sinon je fais rien
 if [ -f "<file>" ]; then
   echo "File exist"
