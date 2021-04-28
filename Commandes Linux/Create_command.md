@@ -7,6 +7,7 @@ Create alias from script to /usr/local/bin:
 ln -s <script> /usr/local/bin/<new_command>
 ```
 
+<br/>
 
 ### Code
 ```bash
@@ -69,7 +70,4 @@ fi
 
 
 exit 0
-
-
-
 ```
