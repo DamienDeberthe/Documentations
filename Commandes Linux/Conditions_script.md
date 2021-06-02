@@ -44,6 +44,19 @@ else
 fi
 ```
 
+Example 4:
+```bash
+if [ condition ]
+then
+  <execute command>
+elif [ condition ]
+then
+  <execute another command>
+else
+  <execute default command>
+fi
+```
+
 <br>
 
 ### FOR
