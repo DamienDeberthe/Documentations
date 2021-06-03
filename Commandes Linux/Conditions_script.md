@@ -22,6 +22,8 @@ else
 fi
 ```
 
+<br>
+
 Example 1:
 ```bash
 #!/bin/bash
