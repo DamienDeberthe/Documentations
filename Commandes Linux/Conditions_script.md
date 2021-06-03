@@ -9,7 +9,7 @@ else
 fi
 ```
 
-Template 1:
+Template 2:
 ```bash
 if [ condition ]
 then
