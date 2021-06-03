@@ -60,7 +60,7 @@ else
 fi
 ```
 
-Exemple 5:
+Exemple 4:
 ```bash
 #!/bin/bash
 # Si "<SEARCH_CONTENT>" existe dans <file> remplacer la ligne avec <REPLACE_CONTENT>
