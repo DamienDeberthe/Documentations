@@ -133,11 +133,15 @@ sed -i "/^$/d" file
 ```
 Dans un fichier, remplacer une chaine de caractère spécifique par une autre :
 ```bash
-sed -i "s|SEARCH_CONTENT|REPLACE_CONTENT|g" file
+sed -i "s|<SEARCH_CONTENT>|<REPLACE_CONTENT>|g" file
+```
+Dans un fichier, remplacer une ligne entière contenant une chaine de caractère par une autre:
+```bash
+sed -i "s/.*<SEARCH_CONTENT>.*/<REPLACE_CONTENT>" file
 ```
 Dans un fichier, ajouter une chaine de caractère après une chaine de caractère spécifique, sur la ligne suivante :
 ```bash
-sed -i "/SEARCH_CONTENT/aADD_CONTENT" file
+sed -i "/<SEARCH_CONTENT>/a<ADD_CONTENT>" file
 ```
 
 #### Xargs
