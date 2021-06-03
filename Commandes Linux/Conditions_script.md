@@ -1,5 +1,5 @@
 ### IF
-Syntax:
+Template 1:
 ```bash
 #!/bin/bash
 if <command> ; then
@@ -8,6 +8,20 @@ else
   echo "Result command NONOK"
 fi
 ```
+
+Template 1:
+```bash
+if [ condition ]
+then
+  <execute command>
+elif [ condition ]
+then
+  <execute another command>
+else
+  <execute default command>
+fi
+```
+
 Example 1:
 ```bash
 #!/bin/bash
@@ -44,16 +58,15 @@ else
 fi
 ```
 
-Example 4:
+Exemple 5:
 ```bash
-if [ condition ]
+#!/bin/bash
+# Si "<SEARCH_CONTENT>" existe dans <file> remplacer la ligne avec <REPLACE_CONTENT>
+# Sinon ajouter la ligne en fin du fichier <file>
+if [[ ! -z $(grep "<SEARCH_CONTENT>" "<file>") ]]; then
+  sed -i "s/.*<SEARCH_CONTENT>.*/<REPLACE_CONTENT>" <file>
 then
-  <execute command>
-elif [ condition ]
-then
-  <execute another command>
-else
-  <execute default command>
+  echo "<REPLACE_CONTENT>" >> <file>
 fi
 ```
 
