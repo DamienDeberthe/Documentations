@@ -47,11 +47,7 @@ fi
 if [ -f "<file>" ]; then
   echo "File exist"
 fi
-```
 
-Example 3:
-```bash
-#!/bin/bash
 # Si fichier existe afficher "file exist", sinon existe pas afficher "file not exist"
 if [ -f "<file>" ]; then
   echo "File exist"
@@ -60,7 +56,7 @@ else
 fi
 ```
 
-Exemple 4:
+Exemple 3:
 ```bash
 #!/bin/bash
 # Si "<SEARCH_CONTENT>" existe dans <file> remplacer la ligne avec <REPLACE_CONTENT>
