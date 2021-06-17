@@ -62,7 +62,7 @@ Exemple 3:
 # Si "<SEARCH_CONTENT>" existe dans <file> remplacer la ligne avec <REPLACE_CONTENT>
 # Sinon ajouter la ligne en fin du fichier <file>
 if [[ ! -z $(grep "<SEARCH_CONTENT>" "<file>") ]]; then
-  sed -i "s/.*<SEARCH_CONTENT>.*/<REPLACE_CONTENT>" <file>
+  sed -i "s/.*<SEARCH_CONTENT>.*/<REPLACE_CONTENT>/" <file>
 else
   echo "<REPLACE_CONTENT>" >> <file>
 fi
