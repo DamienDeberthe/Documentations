@@ -63,7 +63,7 @@ Exemple 3:
 # Sinon ajouter la ligne en fin du fichier <file>
 if [[ ! -z $(grep "<SEARCH_CONTENT>" "<file>") ]]; then
   sed -i "s/.*<SEARCH_CONTENT>.*/<REPLACE_CONTENT>" <file>
-then
+else
   echo "<REPLACE_CONTENT>" >> <file>
 fi
 ```
