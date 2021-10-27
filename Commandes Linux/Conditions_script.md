@@ -1,4 +1,10 @@
 ### IF
+
+For help use command:
+```bash
+help test
+```
+
 Template 1:
 ```bash
 #!/bin/bash
