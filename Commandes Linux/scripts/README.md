@@ -59,6 +59,11 @@ To create a date, for log for example (result: dd/mm/yyyy:hh:mm:ss):
 ```bash
 date=`date +"%m/%d/%Y:%T"`
 ```
+
+Example: yyyymmddhhmmss
+```bash
+date +"%Y%m%d%H%M%S"
+```
 <br/>
 
 
