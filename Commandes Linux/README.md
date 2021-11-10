@@ -131,6 +131,12 @@ Pour supprimer les lignes vides :
 ```bash
 sed -i "/^$/d" file
 ```
+Supprimer les derniers caractères du retour d'une commande:
+```bash
+echo "123456789" | sed 's/789$//'
+# Result:
+123456
+```
 Dans un fichier, remplacer une chaine de caractère spécifique par une autre :
 ```bash
 sed -i "s|<SEARCH_CONTENT>|<REPLACE_CONTENT>|g" file
