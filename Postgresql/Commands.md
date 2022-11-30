@@ -18,6 +18,11 @@ List all databases:
 \list
 ```
 
+List all schema:
+```
+\dn
+```
+
 Connect to a database:
 ```bash
 \c <database>
