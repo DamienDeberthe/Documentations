@@ -11,6 +11,8 @@ Leave PSQL prompt:
 \q
 ```
 
+<br/>
+
 ### List
 
 List all databases:
@@ -37,6 +39,8 @@ List all roles:
 ```bash
 \du
 ```
+
+<br/>
 
 ### Actions
 
