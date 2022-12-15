@@ -7,10 +7,10 @@ Terraform permit to create Infrastructure As Code (IAS) in cloud.
 Folder organization:
 ```bash
 terraform/
-├── main.tf      # Contain
-├── outputs.tf   # Ouput
-├── providers.tf # Module installed
-└── variables.tf # Variables
+├── main.tf      # Contain Terraform code.
+├── outputs.tf   # Contain output to display at the end of apply.
+├── providers.tf # Backend to initialize provider plugin.
+└── variables.tf # Variables to use for Terraform code.
 ```
 
 
@@ -21,15 +21,21 @@ Init repo:
 terraform init
 ```
 
-Plan for test:
+Plan for test code:
 ```bash
 terraform plan
 ```
 
-Apply config:
+Apply Terraform infra:
 ```bash
 terraform apply
 terraform apply -auto-approve
+```
+
+Destroy Terraform infra:
+```bash
+terraform destroy
+terraform destroy -auto-approve
 ```
 
 ## Sources
