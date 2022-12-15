@@ -39,4 +39,4 @@ terraform destroy -auto-approve
 ```
 
 ## Sources
-Source: https://learn.microsoft.com/fr-fr/azure/virtual-machines/linux/quick-create-terraform
+Azure good example: https://learn.microsoft.com/fr-fr/azure/virtual-machines/linux/quick-create-terraform
