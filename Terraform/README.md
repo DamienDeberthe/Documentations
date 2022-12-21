@@ -2,9 +2,8 @@
 
 Terraform permit to create Infrastructure As Code (IAS) in cloud.
 
-## Organization
+## Structure
 
-Folder organization:
 ```bash
 terraform/
 ├── main.tf      # Contain Terraform code.
