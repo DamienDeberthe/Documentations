@@ -2,8 +2,10 @@
 
 ## Docker runner
 
+### Prerequisite
 Install docker.
-<br/><br/>
+
+### Install and configure
 Create directory for save configurations:
 
 ```bash
@@ -37,9 +39,15 @@ docker run --rm -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-ru
 ```
 Source: https://docs.gitlab.com/runner/register/
 
-<br/>
-
+### Restart config
 If you modify configurations or need to restart:
 ```bash
 docker restart gitlab-runner
 ```
+
+### Execute simultaneous jobs
+In file <code>/srv/gitlab-runner/config/config.toml</code> update <code>concurrent</code> like that:
+```bash
+concurrent = 3
+```
+Don't forget to restart config.
