@@ -7,7 +7,7 @@ Install docker.
 Create directory for save configurations:
 
 ```bash
-mkdir -p /srv/gitlab-runner/config/certs
+mkdir -p /srv/gitlab-runner/config
 ```
 
 Run gitlab-runner container:
@@ -29,6 +29,7 @@ docker run --rm -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-ru
  --registration-token "<GITLAB_RUNNER_TOKEN>" \
  --description "<GITLAB_RUNNER_NAME>" \
  --maintenance-note "" \
+ --docker-privileged \ 
  --tag-list "" \
  --run-untagged="true" \
  --locked="false" \
