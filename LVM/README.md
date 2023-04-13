@@ -38,7 +38,7 @@ lvdisplay
 
 Create ext4 filesystem on logical volume:
 ```bash
-mkfs.ext4 <LOGICAL_VOLUME_NAME>
+mkfs.ext4 <LOGICAL_VOLUME_NAME_DEVICE> (/dev/...)
 ```
 
 <br/>
