@@ -26,7 +26,7 @@ vgdisplay
 
 Create logical volume:
 ```bash
-lvcreate -n <LOGICAL_VOLUME_NAME> -L <SIZE> <VOLUME_GROUP_NAME>
+lvcreate -n <LOGICAL_VOLUME_NAME> -L <SIZE>g <VOLUME_GROUP_NAME>
 ```
 
 See logical volumes:
