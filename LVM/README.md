@@ -45,7 +45,7 @@ mkfs.ext4 <LOGICAL_VOLUME_NAME_DEVICE> (/dev/...)
 
 Modify /etc/fstab:
 ```bash
-<LOGICAL_VOLUME_NAME> <PATH_TO_MOUNT> ext4 defaults 0 0
+<LOGICAL_VOLUME_NAME_DEVICE> <PATH_TO_MOUNT> ext4 defaults 0 0
 ```
 
 Mount:
