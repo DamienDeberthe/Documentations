@@ -76,7 +76,7 @@ else
 fi
 ```
 
-<br>
+<br/>
 
 ### FOR
 
@@ -89,14 +89,24 @@ done
 ```
 
 Example 1:
+- Script:
 ```bash
 #!/bin/bash
 for i in `seq 1 5`; do
   echo "Value for i: $i"
 done
 ```
+- Result:
+```bash
+Value for i: 1
+Value for i: 2
+Value for i: 3
+Value for i: 4
+Value for i: 5
+```
 
 Example 2:
+- Script:
 ```bash
 #!/bin/bash
 # Display every minute for waiting
@@ -107,8 +117,16 @@ for i in `seq 1 $minutes`; do
   sleep 60
 done
 ```
+- Result:
+```bash
+Waiting 5 min...
+Waiting 4 min...
+Waiting 3 min...
+Waiting 2 min...
+Waiting 1 min...
+```
 
-<br>
+<br/>
 
 ### WHILE
 
