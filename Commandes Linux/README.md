@@ -48,40 +48,40 @@ free -h
 ### Comptes_Linux
 Ajouter un compte Linux : (les deux commandes sont équivalentes)
 ```bash
-adduser <user1>
+adduser <USERNAME>
 ```
 ```bash
-groupadd <user1> \
-&& useradd -g <user1> -s /bin/bash -d /home/<user1> -m <user1> \
-&& passwd <user1>
+groupadd <USERNAME> \
+&& useradd -g <USERNAME> -s /bin/bash -d /home/<USERNAME> -m <USERNAME> \
+&& passwd <USERNAME>
 ```
 Supprimer utilisateur Linux :
 ```bash
-userdel -rf <user1>
+userdel -rf <USERNAME>
 ```
 <br/>
 
 Ajouter un compte à un un groupe existant :
 ```bash
-usermod -a -G groupe <user1>
+usermod -a -G <GROUP_NAME> <USERNAME>
 ```
 Voir les groupes d'un compte :
 ```bash
-groups <user1>
+groups <USERNAME>
 ```
 Supprimer un utilisateur d'un groupe : 
 ```bash
-deluser <user1> <group>
+deluser <USERNAME> <GROUP_NAME>
 ```
 <br/>
 
 Verouiller compte Linux : 
 ```bash
-passwd -l <user1>
+passwd -l <USERNAME>
 ```
 Déverouiller compte Linux :
 ```bash
-passwd -u <user1>
+passwd -u <USERNAME>
 ```
 <br/>
 
