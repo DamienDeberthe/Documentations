@@ -347,6 +347,18 @@ unzip <compress.zip> -d <destination>
 
 
 ### Autres_Divers
+Créer un fichier vide de:
+- 10 Mo:
+```bash
+dd if=/dev/zero of=10m bs=1 count=0 seek=10M
+```
+- 1 Go:
+```bash
+dd if=/dev/zero of=10m bs=1 count=0 seek=1G
+```
+<br/>
+
+
 Afficher la taille des éléments du dossier actuel avec leur date, trié par taille :
 ```bash
 du -sh --time * | sort -hr
