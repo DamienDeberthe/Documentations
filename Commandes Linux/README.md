@@ -350,11 +350,11 @@ unzip <compress.zip> -d <destination>
 Créer un fichier vide de:
 - 10 Mo:
 ```bash
-dd if=/dev/zero of=10m bs=1 count=0 seek=10M
+dd if=/dev/zero of=10m bs=<FILE_NAME> count=0 seek=10M
 ```
 - 1 Go:
 ```bash
-dd if=/dev/zero of=10m bs=1 count=0 seek=1G
+dd if=/dev/zero of=<FILE_NAME> bs=1 count=0 seek=1G
 ```
 <br/>
 
