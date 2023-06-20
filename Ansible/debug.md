@@ -9,7 +9,7 @@ To debug a command return we can use this example with debug module:
   tasks:
     - name: Cat a file.
       shell: "cat /etc/hosts"
-    register: r_result
+      register: r_result
 
     - debug:
         var: r_result.stdout
