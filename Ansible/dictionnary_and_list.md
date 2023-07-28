@@ -11,7 +11,7 @@ Playbook example:
   vars:
     mon_dictionnaire:
       nom: "John"
-      âge: 30
+      age: 30
       ville: "Paris"
   tasks:
     - name: Afficher la valeur associée à la clé "ville".
